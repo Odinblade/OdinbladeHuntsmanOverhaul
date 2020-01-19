@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="0f95f232-1b23-421c-abe5-6c82d95f2bb9">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="TacticalRetreat" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="4" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="SELF:OdinHUN_NIMBLE,100,2" />
+        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="13" />
+        <field name="Damage On Jump" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Damage On Landing" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="Skill_Ranger_TacticalRetreat" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Tactical Retreat" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Jump to target position and become &lt;font color='#81AB00'&gt;Nimble&lt;/font&gt;, providing &lt;font color='#75b907'&gt;[1]% Movement Speed&lt;/font&gt; and &lt;font color='#75b907'&gt;[2]% Accuracy&lt;/font&gt; for its duration." />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Potion:Stats_OdinHUN_Nimble:MovementSpeedBoost;Potion:Stats_OdinHUN_Nimble:AccuracyBoost" />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_air_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_air_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Air_Wind_Prepare_Hand_01:Dummy_BodyFX;RS3_FX_Skills_Air_Wind_Prepare_Ground_01:Dummy_BodyFX;RS3_FX_Skills_Air_Lightning_Prepare_Hand_01:Dummy_CastFX;RS3_FX_Skills_Air_Lightning_Overlay_Loop_01" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_teleport_air_01_cast" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="TeleportTextEvent" type="StringStatObjectFieldDefinition" value="teleport" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Air_Wind_Cast_Ground_02:root:cast;RS3_FX_Skills_Air_Wind_TakeOff_01:Dummy_Root:teleport_start;RS3_FX_Skills_Air_Wind_Landing_01:Dummy_Root:teleport_end" />
+        <field name="PreviewEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_UI_TargetPreviewer_Air_01" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="Requirements" type="StringStatObjectFieldDefinition" value="!Immobile" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="RangerLore 2" />
+        <field name="StatsDescription" type="TranslatedStringStatObjectFieldDefinition" value="Range: [1]" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

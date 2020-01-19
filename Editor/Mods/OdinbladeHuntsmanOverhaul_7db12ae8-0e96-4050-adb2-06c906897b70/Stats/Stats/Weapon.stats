@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="a1fa1d2f-c335-4902-898c-4228c3c07d52">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="Status_Arrowhead_Fire" />
+        <field name="ModifierType" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ModifierType" />
+        <field name="Damage Type" type="EnumerationStatObjectFieldDefinition" value="6" enumeration_type_name="Damage Type" />
+        <field name="Damage" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="5" />
+        <field name="DamageFromBase" type="IntegerStatObjectFieldDefinition" value="20" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="Status_Arrowhead_Electric" />
+        <field name="ModifierType" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ModifierType" />
+        <field name="Damage Type" type="EnumerationStatObjectFieldDefinition" value="7" enumeration_type_name="Damage Type" />
+        <field name="Damage" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="5" />
+        <field name="DamageFromBase" type="IntegerStatObjectFieldDefinition" value="20" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="Status_Arrowhead_Oil" />
+        <field name="ModifierType" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ModifierType" />
+        <field name="Damage Type" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="Damage Type" />
+        <field name="Damage" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="5" />
+        <field name="DamageFromBase" type="IntegerStatObjectFieldDefinition" value="20" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="Status_Arrowhead_Poison" />
+        <field name="ModifierType" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ModifierType" />
+        <field name="Damage Type" type="EnumerationStatObjectFieldDefinition" value="10" enumeration_type_name="Damage Type" />
+        <field name="Damage" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="5" />
+        <field name="DamageFromBase" type="IntegerStatObjectFieldDefinition" value="20" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="Status_Arrowhead_Water" />
+        <field name="ModifierType" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ModifierType" />
+        <field name="Damage Type" type="EnumerationStatObjectFieldDefinition" value="8" enumeration_type_name="Damage Type" />
+        <field name="Damage" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="5" />
+        <field name="DamageFromBase" type="IntegerStatObjectFieldDefinition" value="20" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="Status_Arrowhead_Blood" />
+        <field name="ModifierType" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ModifierType" />
+        <field name="Damage Type" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="Damage Type" />
+        <field name="Damage" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="5" />
+        <field name="DamageFromBase" type="IntegerStatObjectFieldDefinition" value="20" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="Damage_OdinHUN_TRAP_ICE" />
+        <field name="ModifierType" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ModifierType" />
+        <field name="Damage Type" type="EnumerationStatObjectFieldDefinition" value="8" enumeration_type_name="Damage Type" />
+        <field name="Damage" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="10" />
+        <field name="DamageFromBase" type="IntegerStatObjectFieldDefinition" value="80" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

@@ -1,0 +1,17 @@
+//SKILL -> REANIMATOR_ADD_AP_SAFELY
+EVENTS
+EVENT OdinHUN_Set_Cone
+VARS
+CHARACTER:_Dealer
+CHARACTER:_Target
+FLOAT:_CharAP
+FLOAT:_CharMaxAP
+
+ON
+	OnCharacterEvent(_Dealer, "OdinHUN_SHRAPNELSHOT_SET_CONE")
+ACTIONS
+IF "c1"
+	GetVar(_Target, _Dealer, "OdinHUN_SHRAPNELSHOT_TARGET")
+THEN
+	ShootLocalConeAt("Cone_EnemyCorrosiveSpray", _Dealer, {0.0;0.0;0.0}, _Target)
+ENDIF

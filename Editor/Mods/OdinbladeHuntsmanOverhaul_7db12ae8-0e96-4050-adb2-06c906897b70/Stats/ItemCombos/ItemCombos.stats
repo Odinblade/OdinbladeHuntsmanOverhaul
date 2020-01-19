@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="21465eb6-ebaf-4455-9f29-369759e000a9">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="SKILLBOOK_OdinHUN_Trap_Ice" />
+        <field name="RecipeCategory" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="RecipeCategory" />
+        <field name="Type 1" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="IngredientType" />
+        <field name="Object 1" type="StringStatObjectFieldDefinition" value="SkillbookWater" />
+        <field name="Transform 1" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="IngredientTransformType" />
+        <field name="Type 2" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="IngredientType" />
+        <field name="Object 2" type="StringStatObjectFieldDefinition" value="SkillbookRanger" />
+        <field name="Transform 2" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="IngredientTransformType" />
+        <field name="Result 1" type="StringStatObjectFieldDefinition" value="SKILLBOOK_Fire_LaunchExplosiveTrap" />
+        <field name="PreviewStatsID" type="StringStatObjectFieldDefinition" value="SKILLBOOK_Fire_LaunchExplosiveTrap" />
+        <field name="Type 3" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="IngredientType" />
+        <field name="Object 3" type="StringStatObjectFieldDefinition" value="Metal" />
+        <field name="Transform 3" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="IngredientTransformType" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

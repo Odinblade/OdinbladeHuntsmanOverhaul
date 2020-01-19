@@ -1,0 +1,38 @@
+new entry "OdinHUN_EA_EXCLUDEDSKILL"
+type "StatusData"
+data "StatusType" "EFFECT"
+data "ForGameMaster" "No"
+data "InitiateCombat" "No"
+
+new entry "OdinHUN_ARROWSPRAY"
+type "StatusData"
+data "StatusType" "EFFECT"
+data "ForGameMaster" "No"
+data "InitiateCombat" "No"
+data "DisplayName" "OdinHUN_ARROWSPRAY_DisplayName"
+data "DisplayNameRef" "ARROW SPRAY"
+
+new entry "OdinHUN_SHRAPNELSHOT"
+type "StatusData"
+data "StatusType" "EFFECT"
+data "ForGameMaster" "No"
+data "InitiateCombat" "No"
+
+new entry "OdinHUN_GRENADE_USE"
+type "StatusData"
+data "StatusType" "EFFECT"
+data "ForGameMaster" "No"
+data "InitiateCombat" "No"
+
+new entry "OdinHUN_HIT_TRAP_ICE"
+type "StatusData"
+data "StatusType" "EFFECT"
+data "ForGameMaster" "No"
+data "InitiateCombat" "No"
+
+new entry "OdinHUN_HIT_BARRAGE"
+type "StatusData"
+data "StatusType" "EFFECT"
+data "ForGameMaster" "No"
+data "InitiateCombat" "No"
+

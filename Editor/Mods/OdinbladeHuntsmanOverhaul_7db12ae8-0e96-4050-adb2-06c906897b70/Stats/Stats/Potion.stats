@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="48e63fff-81e0-42bb-ac51-39f5904b97be">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="Stats_OdinHUN_Nimble" />
+        <field name="Act" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="Act" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ActPart" />
+        <field name="Duration" type="IntegerStatObjectFieldDefinition" value="2" />
+        <field name="MovementSpeedBoost" type="IntegerStatObjectFieldDefinition" value="50" />
+        <field name="AccuracyBoost" type="IntegerStatObjectFieldDefinition" value="10" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="Stats_OdinHUN_Vulnerable" />
+        <field name="Act" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="Act" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ActPart" />
+        <field name="Duration" type="IntegerStatObjectFieldDefinition" value="2" />
+        <field name="FireResistance" type="IntegerStatObjectFieldDefinition" value="-10" />
+        <field name="EarthResistance" type="IntegerStatObjectFieldDefinition" value="-10" />
+        <field name="WaterResistance" type="IntegerStatObjectFieldDefinition" value="-10" />
+        <field name="AirResistance" type="IntegerStatObjectFieldDefinition" value="-10" />
+        <field name="PoisonResistance" type="IntegerStatObjectFieldDefinition" value="-10" />
+        <field name="PiercingResistance" type="IntegerStatObjectFieldDefinition" value="-10" />
+        <field name="PhysicalResistance" type="IntegerStatObjectFieldDefinition" value="-10" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="Stats_OdinHUN_Vulnerable_Double" />
+        <field name="Act" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="Act" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ActPart" />
+        <field name="Duration" type="IntegerStatObjectFieldDefinition" value="2" />
+        <field name="FireResistance" type="IntegerStatObjectFieldDefinition" value="-20" />
+        <field name="EarthResistance" type="IntegerStatObjectFieldDefinition" value="-20" />
+        <field name="WaterResistance" type="IntegerStatObjectFieldDefinition" value="-20" />
+        <field name="AirResistance" type="IntegerStatObjectFieldDefinition" value="-20" />
+        <field name="PoisonResistance" type="IntegerStatObjectFieldDefinition" value="-20" />
+        <field name="PiercingResistance" type="IntegerStatObjectFieldDefinition" value="-20" />
+        <field name="PhysicalResistance" type="IntegerStatObjectFieldDefinition" value="-20" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

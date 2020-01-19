@@ -1,0 +1,100 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+//REGION Enter scenarios
+//Character with the NTH skill has entered combat - begin apply process
+IF
+ObjectEnteredCombat((CHARACTERGUID)_Hunter, _Combat)
+AND
+DB_OBHUN_NTH_Users(_Hunter)
+THEN
+DB_OBHUN_NTH_TEMP_FARTHEST(_Hunter, _Hunter, 0.0);
+SetStoryEvent(_Hunter, "OBHUN_NTH_START");
+//END_REGION
+
+//REGION Main logic
+//Iterate enemies in combat which are alive and are not already marked
+IF
+StoryEvent((CHARACTERGUID)_Hunter, "OBHUN_NTH_START")
+AND
+DB_CombatCharacters(_Enemy, _CombatID)
+AND
+CharacterIsDead(_Enemy, 0)
+AND
+HasActiveStatus(_Enemy, "OdinHUN_VULNERABLE", 0)
+AND
+HasActiveStatus(_Enemy, "OdinHUN_VULNERABLE_DOUBLE", 0)
+AND
+CharacterIsEnemy(_Hunter, _Enemy, 1)
+AND
+GetDistanceTo(_Hunter, _Enemy, _Distance)
+THEN
+OBHUN_Enemies_Found(_Enemy, _Hunter, _Distance);
+
+//Called for each combat character, and stores the furthest target
+PROC
+OBHUN_Enemies_Found((CHARACTERGUID)_Enemy, (CHARACTERGUID)_Hunter, (REAL)_Distance)
+AND
+DB_OBHUN_NTH_TEMP_FARTHEST(_LastEnemy, _Hunter, _LastDistance)
+AND
+_Distance > _LastDistance
+THEN
+NOT DB_OBHUN_NTH_TEMP_FARTHEST(_LastEnemy, _Hunter, _LastDistance);
+DB_OBHUN_NTH_TEMP_FARTHEST(_Enemy, _Hunter, _Distance);
+
+//Furthest target has been identified - apply the Vulnerable status
+IF
+StoryEvent((CHARACTERGUID)_Hunter, "OBHUN_NTH_START")
+AND
+DB_OBHUN_NTH_Users(_Hunter)
+AND
+DB_OBHUN_NTH_TEMP_FARTHEST(_Enemy, _Hunter, _Distance)
+THEN
+ApplyStatus(_Enemy, "OdinHUN_VULNERABLE", 12.0, 1, _Hunter);
+DB_OBHUN_NTH_Furthest(_Enemy, _Hunter);
+NOT DB_OBHUN_NTH_TEMP_FARTHEST(_Enemy, _Hunter, _Distance);
+
+//Character has used the NTH skill in combat, doubling the effects of Vulnerable
+IF
+CharacterUsedSkill(_Hunter, "Shout_OdinHUN_NowhereToHide", _, _)
+AND
+DB_OBHUN_NTH_Furthest(_Enemy, _Hunter)
+THEN
+RemoveStatus(_Enemy, "OdinHUN_VULNERABLE");
+ApplyStatus(_Enemy, "OdinHUN_VULNERABLE_DOUBLE", 12.0, 1, _Hunter);
+//END_REGION
+
+//REGION Leave Vulnerable scenarios
+//Vulnerable status timed out
+IF
+CharacterStatusRemoved(_Enemy, "OdinHUN_VULNERABLE", _)
+AND
+DB_OBHUN_NTH_Furthest(_Enemy, _Hunter)
+AND
+HasActiveStatus(_Enemy, "OdinHUN_VULNERABLE_DOUBLE", 0)
+THEN
+NOT DB_OBHUN_NTH_Furthest(_Enemy, _Hunter);
+
+//Vulnerable: Double status timed out
+IF
+CharacterStatusRemoved(_Enemy, "OdinHUN_VULNERABLE_DOUBLE", _)
+AND
+DB_OBHUN_NTH_Furthest(_Enemy, _Hunter)
+THEN
+NOT DB_OBHUN_NTH_Furthest(_Enemy, _Hunter);
+
+//Character which applied Vulnerable has left combat - remove from target.
+IF
+ObjectLeftCombat((CHARACTERGUID)_Hunter, _Combat)
+AND
+DB_OBHUN_NTH_Furthest(_Enemy, _Hunter)
+THEN
+RemoveStatus(_Enemy, "OdinHUN_VULNERABLE");
+RemoveStatus(_Enemy, "OdinHUN_VULNERABLE_DOUBLE");
+NOT DB_OBHUN_NTH_Furthest(_Enemy, _Hunter);
+//END_REGION
+EXITSECTION
+
+ENDEXITSECTION

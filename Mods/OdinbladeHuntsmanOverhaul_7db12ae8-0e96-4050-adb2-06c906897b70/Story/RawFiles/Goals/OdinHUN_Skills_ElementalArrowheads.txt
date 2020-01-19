@@ -1,0 +1,27 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+//REGION Damage/Type check
+IF
+NRD_OnPrepareHit(_Target, _Dealer, _Damage, _HitHandle)
+AND
+HasActiveStatus(_Dealer, "OdinHUN_EA_EXCLUDEDSKILL", 0)
+AND
+DB_OBHUN_Elemental_Arrowhead((STRING)_Status, (STRING)_DamageType)
+AND
+HasActiveStatus(_Dealer, _Status, 1)
+AND
+DB_OBHUN_EA_HitType((INTEGER)_CompatibleHitType)
+AND
+NRD_HitGetInt(_HitHandle, "HitType", _CompatibleHitType)
+AND
+NRD_HitGetString(_HitHandle, "DamageType", _PreDamageType)
+THEN
+OBHUN_ApplyEAHit(_HitHandle, _PreDamageType, _DamageType, _Damage);
+//END_REGION
+
+EXITSECTION
+
+ENDEXITSECTION

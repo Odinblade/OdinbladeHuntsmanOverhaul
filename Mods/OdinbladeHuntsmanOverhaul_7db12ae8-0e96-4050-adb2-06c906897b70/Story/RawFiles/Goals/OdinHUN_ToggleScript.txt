@@ -1,0 +1,87 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+//REGION Generic Script Toggle - credit to LL. Move to OdinCore pls!
+PROC
+OBHUN_ToggleScript_Enable((STRING)_Script)
+AND
+NOT SysIsActive(_Script)
+THEN
+SysActivateGoal(_Script);
+
+PROC
+OBHUN_ToggleScript_Disable((STRING)_Script)
+AND
+SysIsActive(_Script)
+THEN
+SysCompleteGoal(_Script);
+
+PROC
+OBHUN_ToggleScript_Disable((STRING)_Script, (STRING)_UsersDB)
+AND
+SysIsActive(_Script)
+AND
+SysCount(_UsersDB, 1, 0)
+THEN
+SysCompleteGoal(_Script);
+//END_REGION
+
+//REGION OBHUN_EA_TOGGLESCRIPT
+IF
+CharacterStatusApplied(_Character, _Status, _)
+AND
+DB_OBHUN_Elemental_Arrowhead(_Status, _)
+AND
+NOT DB_OBHUN_Elemental_Arrowhead_Users(_Character)
+THEN
+DB_OBHUN_Elemental_Arrowhead_Users(_Character);
+OBHUN_ToggleScript_Enable("OdinHUN_ElementalArrowheads");
+
+IF
+CharacterStatusRemoved(_Character, _Status, _)
+AND
+DB_OBHUN_Elemental_Arrowhead(_Status, _)
+THEN
+NOT DB_OBHUN_Elemental_Arrowhead_Users(_Character);
+OBHUN_ToggleScript_Disable("OdinHUN_ElementalArrowheads", "DB_OBHUN_Elemental_Arrowhead_Users");
+//END_REGION
+
+//REGION OBHUN_ARROWSPRAY_TOGGLESCRIPT
+IF
+CharacterUsedSkill(_Character, "Projectile_ArrowSpray", _, _)
+THEN
+OBHUN_ToggleScript_Enable("OdinHUN_Skills_ArrowSpray");
+ApplyStatus(_Character, "OdinHUN_ARROWSPRAY", 6.0, 1, _Character);
+ProcObjectTimer(_Character, "OdinHUN_ARROWSPRAY", 2650);
+
+PROC
+ProcObjectTimerFinished(_Character, "OdinHUN_ARROWSPRAY")
+THEN
+RemoveStatus(_Character, "OdinHUN_ARROWSPRAY");
+OBHUN_ToggleScript_Disable("OdinHUN_Skills_ArrowSpray");
+//END_REGION
+
+//REGION OBHUN_NTH_TOGGLESCRIPT
+IF
+SkillActivated(_Character, "Shout_OdinHUN_NowhereToHide")
+AND
+NOT DB_OBHUN_NTH_Users(_Character)
+THEN
+OBHUN_ToggleScript_Enable("OdinHUN_NowhereToHide");
+DB_OBHUN_NTH_Users(_Character);
+CharacterStatusText(_Character, "NTH_Start");
+
+IF
+SkillDeactivated(_Character, "Shout_OdinHUN_NowhereToHide")
+AND
+DB_OBHUN_NTH_Users(_Character)
+THEN
+OBHUN_ToggleScript_Disable("OdinHUN_NowhereToHide", "DB_OBHUN_NTH_Users");
+NOT DB_OBHUN_NTH_Users(_Character);
+CharacterStatusText(_Character, "NTH_End");
+//END_REGION
+EXITSECTION
+
+ENDEXITSECTION

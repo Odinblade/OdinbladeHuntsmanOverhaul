@@ -1,0 +1,101 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+//REGION EA DamageTypes
+DB_OBHUN_Elemental_Arrowhead("ARROWHEAD_BLOOD", "Physical");
+DB_OBHUN_Elemental_Arrowhead("ARROWHEAD_ELECTRIC", "Air");
+DB_OBHUN_Elemental_Arrowhead("ARROWHEAD_FIRE", "Fire");
+DB_OBHUN_Elemental_Arrowhead("ARROWHEAD_OIL", "Earth");
+DB_OBHUN_Elemental_Arrowhead("ARROWHEAD_POISON", "Poison");
+DB_OBHUN_Elemental_Arrowhead("ARROWHEAD_WATER", "Water");
+//END_REGION
+
+//REGION EA HitTypes
+DB_OBHUN_EA_HitType(2);
+DB_OBHUN_EA_HitType(3);
+//END_REGION
+
+//REGION Excluded EA Skills
+//Crafted arrow skills
+DB_OBHUN_EA_ExcludedSkill("Projectile_BleedingArrow");
+DB_OBHUN_EA_ExcludedSkill("Projectile_BlessedWaterArrow");
+DB_OBHUN_EA_ExcludedSkill("Projectile_CharmingArrow");
+DB_OBHUN_EA_ExcludedSkill("Projectile_CursedFireArrow");
+DB_OBHUN_EA_ExcludedSkill("Projectile_DebuffAllArrow");
+DB_OBHUN_EA_ExcludedSkill("Projectile_ExplosionArrow");
+DB_OBHUN_EA_ExcludedSkill("Projectile_FireArrow");
+DB_OBHUN_EA_ExcludedSkill("Projectile_FreezingArrow");
+DB_OBHUN_EA_ExcludedSkill("Projectile_KnockedOutArrow");
+DB_OBHUN_EA_ExcludedSkill("Projectile_PoisonArrow");
+DB_OBHUN_EA_ExcludedSkill("Projectile_PoisonedCloudArrow");
+DB_OBHUN_EA_ExcludedSkill("Projectile_SilverArrow");
+DB_OBHUN_EA_ExcludedSkill("Projectile_SlowDownArrow");
+DB_OBHUN_EA_ExcludedSkill("Projectile_SmokescreenArrow");
+DB_OBHUN_EA_ExcludedSkill("Projectile_StaticCloudArrow");
+DB_OBHUN_EA_ExcludedSkill("Projectile_SteamCloudArrow");
+DB_OBHUN_EA_ExcludedSkill("Projectile_StunningArrow");
+DB_OBHUN_EA_ExcludedSkill("Projectile_WaterArrow");
+
+//Skills
+DB_OBHUN_EA_ExcludedSkill("Projectile_ArrowSpray"); //Has own damage number calcs
+//END_REGION
+
+//REGION Grenades
+//Grenade skills
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_ArmorPiercing");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_BlessedIce");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_BlessedOilFlask");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_ChemicalWarfare");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_CursedMolotov");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_CursedPoisonFlask");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Flashbang");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Holy");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Ice");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Love");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_MindMaggot");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Molotov");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_MustardGas");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Nailbomb");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_OilFlask");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_PoisonFlask");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_SmokeBomb");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Taser");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Terror");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Tremor");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_WaterBalloon");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_WaterBlessedBalloon");
+DB_OBHUN_GrenadeSkill("ProjectileStrike_Grenade_ClusterBomb");
+DB_OBHUN_GrenadeSkill("ProjectileStrike_Grenade_CursedClusterBomb");
+//END_REGION
+
+KBSECTION
+//REGION Apply Elemental Arrowheads damage
+PROC
+OBHUN_ApplyEAHit((INTEGER64)_HitHandle, (STRING)_PreDamageType, (STRING)_ConvertedDamageType, (INTEGER)_Damage)
+AND
+_PreDamageType != _ConvertedDamageType
+AND
+_PreDamageType != "Piercing"
+THEN
+NRD_HitClearAllDamage(_HitHandle);
+NRD_HitAddDamage(_HitHandle, _ConvertedDamageType, _Damage);
+//END_REGION
+
+//REGION Excluded skill status flag
+//When the player is using an EA-excluded skill, e.g. crafted arrows, set status for damage calculation
+IF
+CharacterUsedSkill(_Character, _Skill, _, _)
+AND
+DB_OBHUN_EA_ExcludedSkill(_Skill)
+THEN
+ApplyStatus(_Character, "OdinHUN_EA_EXCLUDEDSKILL", 6.0, 1, _Character);
+ProcObjectTimer(_Character, "OdinHUN_EA_EXCLUDEDSKILL", 1000);
+
+PROC
+ProcObjectTimerFinished(_Character, "OdinHUN_EA_EXCLUDEDSKILL")
+THEN
+RemoveStatus(_Character, "OdinHUN_EA_EXCLUDEDSKILL");
+//END_REGION
+EXITSECTION
+
+ENDEXITSECTION

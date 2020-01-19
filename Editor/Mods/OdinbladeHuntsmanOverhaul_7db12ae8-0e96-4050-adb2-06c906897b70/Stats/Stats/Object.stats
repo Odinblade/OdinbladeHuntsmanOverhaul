@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="e078e210-b9ba-48e5-afe3-c5eb91ba8545">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="SKILLBOOK_Ranger_Mark" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="_Skillbooks" />
+        <field name="RootTemplate" type="RootTemplateStatObjectFieldDefinition" value="6e0fcc26-8e87-4739-8bba-4b86e81801b1" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="ActPart" />
+        <field name="Value" type="IntegerStatObjectFieldDefinition" value="500" />
+        <field name="ComboCategory" type="StringStatObjectFieldDefinition" value="SkillbookRanger" />
+        <field name="Requirements" type="StringStatObjectFieldDefinition" value="RangerLore 3" />
+        <field name="ObjectCategory" type="StringStatObjectFieldDefinition" value="SkillbookRangerMid" />
+        <field name="MinAmount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="MaxAmount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Priority" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="MinLevel" type="IntegerStatObjectFieldDefinition" value="9" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

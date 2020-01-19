@@ -1,0 +1,55 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+IF
+NRD_OnPrepareHit(_Target, _Dealer, _Damage, _HitHandle)
+AND
+NRD_HitGetInt(_HitHandle, "HitType", 1)
+AND
+HasActiveStatus(_Dealer, "OdinHUN_GRENADE_USE", 1)
+AND
+CharacterGetAbility((CHARACTERGUID)_Dealer, "RangerLore", _HuntsmanPointsInt)
+AND
+Real(_HuntsmanPointsInt, _HuntsmanPoints)
+AND
+Real(_Damage, _RealDamage)
+THEN
+PROC_OBHUN_Calculate_Grenade_Damage(_HuntsmanPoints, _RealDamage, _HitHandle);
+
+PROC
+PROC_OBHUN_Calculate_Grenade_Damage((REAL)_HuntsmanPoints, (REAL)_RealDamage, (INTEGER64)_HitHandle)
+AND
+RealProduct(_HuntsmanPoints, 0.05, _GrenadeMultiplier)
+AND
+RealProduct(_GrenadeMultiplier, _RealDamage, _ExtraDamage)
+AND
+RealSum(_ExtraDamage, _RealDamage, _TotalDamage)
+AND
+Integer(_TotalDamage, _FinalDamage)
+AND
+NRD_HitGetString(_HitHandle, "DamageType", _DamageType)
+THEN
+// CharacterStatusText(_Dealer, _HitType);
+// RemoveStatus(_Dealer, "OdinHUN_GRENADE_USE");
+NRD_HitClearAllDamage(_HitHandle);
+NRD_HitAddDamage(_HitHandle, _DamageType, _FinalDamage);
+
+IF
+CharacterUsedSkill(_Character, _Skill, _, _)
+AND
+DB_OBHUN_GrenadeSkill(_Skill)
+THEN
+CharacterStatusText(_Character, "Grenade amp applied");
+ApplyStatus(_Character, "OdinHUN_GRENADE_USE", 6.0);
+ProcObjectTimer(_Character, "OdinHUN_GRENADE", 3500);
+
+PROC
+ProcObjectTimerFinished((CHARACTERGUID)_Character, "OdinHUN_GRENADE")
+THEN
+CharacterStatusText(_Character, "Grenade amp removed");
+RemoveStatus(_Character, "OdinHUN_GRENADE_USE");
+EXITSECTION
+
+ENDEXITSECTION

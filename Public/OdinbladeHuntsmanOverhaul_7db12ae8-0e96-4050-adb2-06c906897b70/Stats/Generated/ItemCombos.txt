@@ -1,0 +1,16 @@
+new ItemCombination "SKILLBOOK_OdinHUN_Trap_Ice"
+data "RecipeCategory" "Grimoire"
+data "Type 1" "Category"
+data "Object 1" "SkillbookWater"
+data "Transform 1" "Transform"
+data "Type 2" "Category"
+data "Object 2" "SkillbookRanger"
+data "Transform 2" "Consume"
+data "Type 3" "Category"
+data "Object 3" "Metal"
+data "Transform 3" "Consume"
+
+new ItemCombinationResult "SKILLBOOK_OdinHUN_Trap_Ice_1"
+data "Result 1" "SKILLBOOK_Fire_LaunchExplosiveTrap"
+data "PreviewStatsID" "SKILLBOOK_Fire_LaunchExplosiveTrap"
+

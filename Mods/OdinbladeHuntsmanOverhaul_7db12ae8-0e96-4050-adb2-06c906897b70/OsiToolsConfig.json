@@ -1,0 +1,7 @@
+{
+    "FeatureFlags": [
+        "OsirisExtensions",
+        "Lua",
+        "Preprocessor"
+    ]
+}

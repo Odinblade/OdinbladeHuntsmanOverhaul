@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="e2a8d59b-0e34-4a7c-bf5f-db7a2bb34cde">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_LETHALFOCUS" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Lethal Focus" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="|Character is crippled. Cured by Rested.|" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
+        <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="28" enumeration_type_name="FormatStringColor" />
+        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_GP_Status_Crippled_01:Dummy_BodyFX" />
+        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_LethalFocus" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_ARROWSPRAY_TEMP" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Arrow Spray" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="|Character is crippled. Cured by Rested.|" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
+        <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="28" enumeration_type_name="FormatStringColor" />
+        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_GP_Status_Crippled_01:Dummy_BodyFX" />
+        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_LethalFocus" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_NIMBLE" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Nimble" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
+        <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="28" enumeration_type_name="FormatStringColor" />
+        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinNECRO_Status_OathOfDesecration_01:Dummy_BodyFX" />
+        <field name="StatsId" type="StringStatObjectFieldDefinition" value="Stats_OdinHUN_Nimble" />
+        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_Hasted" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Character is demonstrating excellent agility." />
+        <field name="ImmuneFlag" type="EnumerationStatObjectFieldDefinition" value="34" enumeration_type_name="AttributeFlag" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_VULNERABLE" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Vulnerable" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
+        <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="28" enumeration_type_name="FormatStringColor" />
+        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinNECRO_Status_OathOfDesecration_01:Dummy_BodyFX" />
+        <field name="StatsId" type="StringStatObjectFieldDefinition" value="Stats_OdinHUN_Vulnerable" />
+        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_Vulnerable" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Character has been exposed by an expert marksman." />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_VULNERABLE_DOUBLE" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Vulnerable" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
+        <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="28" enumeration_type_name="FormatStringColor" />
+        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinNECRO_Status_OathOfDesecration_01:Dummy_BodyFX" />
+        <field name="StatsId" type="StringStatObjectFieldDefinition" value="Stats_OdinHUN_Vulnerable_Double" />
+        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_Vulnerable" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Character has been exposed by an expert marksman." />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

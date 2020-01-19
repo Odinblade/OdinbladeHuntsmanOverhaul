@@ -1,0 +1,31 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+IF
+CharacterUsedItem(_Char, 1f7d1d7b-fff1-4d7f-be3f-41020d4515a0)
+AND
+IsGameLevel("OdinHUN_T", 1)
+THEN
+CharacterLevelUpTo(_Char, 20);
+CharacterAddAbility(_Char, "Ranged", 10);
+CharacterAddAbility(_Char, "RangerLore", 10);
+CharacterOverrideMaxSourcePoints(_Char, 3);
+CharacterAddSourcePoints(_Char, 100);
+CharacterAddGold(_Char, 100000);
+
+//DEBUG_SKILLS
+CharacterAddSkill(_Char, "Jump_TacticalRetreat");
+
+CharacterAddSkill(_Char, "Projectile_ArrowSpray");
+CharacterAddSkill(_Char, "Projectile_Mark");
+CharacterAddSkill(_Char, "Projectile_Multishot");
+CharacterAddSkill(_Char, "Projectile_PinDown");
+CharacterAddSkill(_Char, "Projectile_OdinHUN_HeavyShot");
+
+CharacterAddSkill(_Char, "Target_ElementalArrowheads");
+CharacterAddSkill(_Char, "Target_FirstAid");
+EXITSECTION
+
+ENDEXITSECTION

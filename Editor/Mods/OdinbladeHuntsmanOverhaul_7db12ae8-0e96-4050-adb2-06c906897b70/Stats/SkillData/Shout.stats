@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="9fd4ac7a-fad7-424f-83df-0893eae93c38">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_Arrowtips_Poison" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="3" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="OdinHUN_ARROWTIPS_POISON,100,2" />
+        <field name="AreaRadius" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="AddWeaponRange" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Self" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Autocast" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="RangerLore 1" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Poison Arrowtips" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Coat your arrows, causing your weapon attacks to instead deal &lt;font color='#65C900'&gt;Poison&lt;/font&gt; damage equal to their original amount. &lt;font size='16'&gt;&lt;br&gt;---------------------------------------------------------------------&lt;br&gt;This effect converts any additional damage bonuses to be of this type. The arrowtips do not affect &lt;font color='#c80030'&gt;Piercing&lt;/font&gt; damage attacks.&lt;br&gt;---------------------------------------------------------------------&lt;br&gt;&lt;/font&gt;" />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_earth_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_earth_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Earth_Prepare_Earth_SteelSkin_Foot_01,KeepRot,Detach:Dummy_Root:foot01;RS3_FX_Skills_Earth_Prepare_Earth_SteelSkin_Foot_02,KeepRot,Detach:Dummy_Root:foot02;RS3_FX_Skills_Earth_Prepare_Earth_SteelSkin_Root_01,KeepRot,Detach:Dummy_Root:root01" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_self_earth_01_cast" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Earth_Cast_Self_Earth_SteelSkin_Root_01:root;RS3_FX_Skills_Earth_Cast_Self_Earth_SteelSkin_Root_01:Dummy_R_Hand:Dummy_L_Hand" />
+        <field name="HitEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Earth_Impact_SteelSkin_Root_01" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Potion:Stats_SteelSkin:Armor" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_LethalFocus" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="3" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="OdinHUN_LETHALFOCUS,100,3" />
+        <field name="AreaRadius" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="AddWeaponRange" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Self" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Autocast" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="RangerLore 1" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Lethal Focus" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Gain Lethal Focus until the end of the current turn." />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_earth_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_earth_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Earth_Prepare_Earth_SteelSkin_Foot_01,KeepRot,Detach:Dummy_Root:foot01;RS3_FX_Skills_Earth_Prepare_Earth_SteelSkin_Foot_02,KeepRot,Detach:Dummy_Root:foot02;RS3_FX_Skills_Earth_Prepare_Earth_SteelSkin_Root_01,KeepRot,Detach:Dummy_Root:root01" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_self_earth_01_cast" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Earth_Cast_Self_Earth_SteelSkin_Root_01:root;RS3_FX_Skills_Earth_Cast_Self_Earth_SteelSkin_Root_01:Dummy_R_Hand:Dummy_L_Hand" />
+        <field name="HitEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Earth_Impact_SteelSkin_Root_01" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Potion:Stats_SteelSkin:Armor" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_NowhereToHide" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="-1" />
+        <field name="AreaRadius" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="AddWeaponRange" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Self" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Autocast" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="RangerLore 5" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Nowhere to Hide" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="&lt;font color='#F7BA14'&gt;Passive effect&lt;/font&gt;: &lt;br&gt;At the start of combat, mark the furthest &lt;font color='#aa3938'&gt;enemy&lt;/font&gt; character from you as &lt;font color='#81AB00'&gt;Vulnerable&lt;/font&gt;, reducing their &lt;font color=&quot;#c80030&quot;&gt;Resistances by [1]%&lt;/font&gt;. &lt;font size='16'&gt;&lt;br&gt;---------------------------------------------------------------------&lt;/font&gt;&lt;br&gt;Using this skill will double the potency of &lt;font color='#81AB00'&gt;Vulnerable&lt;/font&gt;, instead reducing their &lt;font color=&quot;#c80030&quot;&gt;Resistances by [2]%&lt;/font&gt;." />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_earth_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_earth_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Earth_Prepare_Earth_SteelSkin_Foot_01,KeepRot,Detach:Dummy_Root:foot01;RS3_FX_Skills_Earth_Prepare_Earth_SteelSkin_Foot_02,KeepRot,Detach:Dummy_Root:foot02;RS3_FX_Skills_Earth_Prepare_Earth_SteelSkin_Root_01,KeepRot,Detach:Dummy_Root:root01" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_self_earth_01_cast" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Earth_Cast_Self_Earth_SteelSkin_Root_01:root;RS3_FX_Skills_Earth_Cast_Self_Earth_SteelSkin_Root_01:Dummy_R_Hand:Dummy_L_Hand" />
+        <field name="HitEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Earth_Impact_SteelSkin_Root_01" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Potion:Stats_OdinHUN_Vulnerable:PhysicalResistance;Potion:Stats_OdinHUN_Vulnerable_Double:PhysicalResistance;" />
+        <field name="Requirements" type="StringStatObjectFieldDefinition" value="Combat" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

@@ -1,0 +1,60 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+//REGION Damage/type calculation
+//Perform skill
+IF
+NRD_OnPrepareHit(_Target, _Dealer, _Damage, _HitHandle)
+AND
+HasActiveStatus(_Dealer, "OdinHUN_ARROWSPRAY", 1)
+AND
+GetDistanceTo(_Dealer, _Target, _Dist)
+AND
+RealProduct(_Dist, 0.10, _DistanceMultiplier)
+AND
+Real(_Damage, _RealDamage)
+AND
+RealProduct(_RealDamage, _DistanceMultiplier, _RealAddDamage)
+AND
+RealSum(_RealDamage, _RealAddDamage, _RealFinalDamage)
+AND
+Integer(_RealFinalDamage, _FinalDamage)
+AND
+NRD_HitGetString(_HitHandle, "DamageType", _PreDamageType)
+AND
+QRY_OBHUN_Determine_Type(_Dealer, _PreDamageType)
+AND
+DB_OBHUN_DeterminedType_Temp(_Dealer, _DamageType)
+THEN
+//OBHUN_ApplyEAHit(_HitHandle, _PreDamageType, _DamageType, _FinalDamage);
+NRD_HitClearAllDamage(_HitHandle);
+NRD_HitAddDamage(_HitHandle, _DamageType, _FinalDamage);
+NOT DB_OBHUN_DeterminedType_Temp(_Dealer, _DamageType);
+
+//IF the user is using EA, register the associated damage type
+QRY
+QRY_OBHUN_Determine_Type((GUIDSTRING)_Dealer, (STRING)_PreDamageType)
+AND
+DB_OBHUN_Elemental_Arrowhead_Users((CHARACTERGUID)_Dealer)
+AND
+DB_OBHUN_Elemental_Arrowhead((STRING)_Status, (STRING)_DamageType)
+AND
+HasActiveStatus(_Dealer, _Status, 1)
+THEN
+DB_OBHUN_DeterminedType_Temp(_Dealer, _DamageType);
+DB_NOOP(1);
+
+//IF the user is not using EA, return the original damage type
+QRY
+QRY_OBHUN_Determine_Type((GUIDSTRING)_Dealer, (STRING)_PreDamageType)
+AND
+NOT DB_OBHUN_Elemental_Arrowhead_Users((CHARACTERGUID)_Dealer)
+THEN
+DB_OBHUN_DeterminedType_Temp(_Dealer, _PreDamageType);
+DB_NOOP(1);
+//END_REGION
+EXITSECTION
+
+ENDEXITSECTION
