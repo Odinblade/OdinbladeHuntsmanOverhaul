@@ -23,10 +23,10 @@
                         </node>
                         <node id="ModuleShortDesc">
                             <attribute id="Folder" value="DivinityOrigins_1301db3d-1f54-4e98-9be5-5094030916e4" type="30" />
-                            <attribute id="MD5" value="89ad7dd17f2a0655a9c649f803eebfd0" type="23" />
+                            <attribute id="MD5" value="8c08a78e11b3c02215cdf0982d8c0981" type="23" />
                             <attribute id="Name" value="Divinity: Original Sin 2" type="22" />
                             <attribute id="UUID" value="1301db3d-1f54-4e98-9be5-5094030916e4" type="22" />
-                            <attribute id="Version" value="372251161" type="4" />
+                            <attribute id="Version" value="372645092" type="4" />
                         </node>
                         <node id="ModuleShortDesc">
                             <attribute id="Folder" value="OdinCore_4bcb0f56-d4dd-4241-9285-0f5710913edb" type="30" />
@@ -64,11 +64,39 @@
                             <attribute id="Version" value="268959744" type="4" />
                         </node>
                         <node id="ModuleShortDesc">
+                            <attribute id="Folder" value="OdinbladeShadowstepClass_465f4a48-941e-4bd9-8437-e120c1f32356" type="30" />
+                            <attribute id="MD5" value="" type="23" />
+                            <attribute id="Name" value="Odinblade&apos;s Umbra Class: Definitive Edition" type="22" />
+                            <attribute id="UUID" value="c22c52be-7a44-1f58-f058-3b359421db05" type="22" />
+                            <attribute id="Version" value="302055424" type="4" />
+                        </node>
+                        <node id="ModuleShortDesc">
+                            <attribute id="Folder" value="OdinbladeSpectreClass_a8aa3beb-796b-4dce-b661-755a55ed23a7" type="30" />
+                            <attribute id="MD5" value="" type="23" />
+                            <attribute id="Name" value="Odinblade&apos;s Spectre Class: Definitive Edition" type="22" />
+                            <attribute id="UUID" value="e4a5c8ca-7f04-23ab-8115-18161eb702bf" type="22" />
+                            <attribute id="Version" value="285409280" type="4" />
+                        </node>
+                        <node id="ModuleShortDesc">
                             <attribute id="Folder" value="OdinbladePyromancer_f39a389a-3c2c-4efc-80a0-7af829071c63" type="30" />
                             <attribute id="MD5" value="" type="23" />
                             <attribute id="Name" value="Odinblade&apos;s Pyrokinetic Class Overhaul" type="22" />
                             <attribute id="UUID" value="aab53301-4f38-1d49-91f7-28dfa468084b" type="22" />
                             <attribute id="Version" value="318832640" type="4" />
+                        </node>
+                        <node id="ModuleShortDesc">
+                            <attribute id="Folder" value="OdinbladePolymorphOverhaul_c3d4d18b-adf8-47ef-b715-63530ea85f43" type="30" />
+                            <attribute id="MD5" value="" type="23" />
+                            <attribute id="Name" value="OdinbladePolymorphOverhaul" type="22" />
+                            <attribute id="UUID" value="c3d4d18b-adf8-47ef-b715-63530ea85f43" type="22" />
+                            <attribute id="Version" value="268435456" type="4" />
+                        </node>
+                        <node id="ModuleShortDesc">
+                            <attribute id="Folder" value="OdinbladeDragoonClass_97a4bb05-f642-43e3-bdba-691f0d85c435" type="30" />
+                            <attribute id="MD5" value="" type="23" />
+                            <attribute id="Name" value="Odinblade&apos;s Dragoon Class: Definitive Edition" type="22" />
+                            <attribute id="UUID" value="97a4bb05-f642-43e3-bdba-691f0d85c435" type="22" />
+                            <attribute id="Version" value="16777217" type="4" />
                         </node>
                     </children>
                 </node>

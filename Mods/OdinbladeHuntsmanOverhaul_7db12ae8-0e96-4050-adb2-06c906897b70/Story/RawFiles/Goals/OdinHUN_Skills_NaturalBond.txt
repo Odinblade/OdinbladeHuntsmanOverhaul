@@ -1,0 +1,91 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+//REGION Natural Bond
+//Case: does not have status -> apply the status
+IF
+CharacterUsedSkill(_Owner, "Shout_OdinHUN_NaturalBond", _, _)
+AND
+DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon)
+AND
+HasActiveStatus(_Owner, "OdinHUN_NATURALBOND", 0)
+THEN
+ApplyStatus(_Owner, "OdinHUN_NATURALBOND", -1.0, 1, _Owner);
+ApplyStatus(_Summon, "OdinHUN_NATURALBOND", -1.0, 1, _Owner);
+
+//Case: has status -> remove it
+IF
+CharacterUsedSkill(_Owner, "Shout_OdinHUN_NaturalBond", _, _)
+AND
+DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon)
+AND
+HasActiveStatus(_Owner, "OdinHUN_NATURALBOND", 1)
+THEN
+RemoveStatus(_Owner, "OdinHUN_NATURALBOND");
+RemoveStatus(_Summon, "OdinHUN_NATURALBOND");
+
+//Owner is hit by damage which does not originate from the summon
+IF
+NRD_OnHit(_Owner, _Source, _, _HitHandle)
+AND
+DB_OBHUN_AnimalCompanion_Instance((CHARACTERGUID)_Owner, _Summon)
+AND
+HasActiveStatus(_Owner, "OdinHUN_NATURALBOND", 1)
+AND
+_Source != _Summon
+AND
+NRD_StatusGetInt(_Owner, _HitHandle, "Hit", 1)
+AND
+NRD_StatusGetInt(_Owner, _HitHandle, "Reflection", 0)
+THEN
+PROC_OBHUN_NaturalBond(_Owner, _Summon, _Source, _HitHandle);
+
+//Summon is hit by damage which does not originate from the owner
+IF
+NRD_OnHit(_Summon, _Source, _, _HitHandle)
+AND
+DB_OBHUN_AnimalCompanion_Instance(_Owner, (CHARACTERGUID)_Summon)
+AND
+HasActiveStatus(_Summon, "OdinHUN_NATURALBOND", 1)
+AND
+_Source != _Owner
+AND
+NRD_StatusGetInt(_Summon, _HitHandle, "Hit", 1)
+AND
+NRD_StatusGetInt(_Summon, _HitHandle, "Reflection", 0)
+THEN
+PROC_OBHUN_NaturalBond(_Summon, _Owner, _Source, _HitHandle);
+
+//Calculate how much damage to cut from the original target and move to the shared target
+PROC
+PROC_OBHUN_NaturalBond((CHARACTERGUID)_OriginalTarget, (GUIDSTRING)_SharedTarget, (GUIDSTRING)_Source, (INTEGER64)_HitHandle)
+AND
+DB_OBHUN_DamageType(_PreDamageType)
+AND
+NRD_HitStatusGetDamage(_OriginalTarget, _HitHandle, _PreDamageType, _Damage)
+AND
+_Damage > 0
+AND
+IntegerDivide(_Damage, 4, _SharedDamage)
+AND
+IntegerSubtract(_Damage, _SharedDamage, _OwnerDamage)
+THEN
+NRD_HitStatusClearDamage(_OriginalTarget, _HitHandle, _PreDamageType);
+NRD_HitStatusAddDamage(_OriginalTarget, _HitHandle, _PreDamageType, _OwnerDamage);
+PROC_OBHUN_SharedDamage(_OriginalTarget, _SharedTarget, _Source, _SharedDamage, _PreDamageType);
+
+//Apply the damage to the shared target
+PROC
+PROC_OBHUN_SharedDamage((GUIDSTRING)_OriginalTarget, (GUIDSTRING)_SharedTarget, (GUIDSTRING)_Source, (INTEGER)_SharedDamage, (STRING)_DamageType)
+AND
+NRD_HitPrepare(_SharedTarget, _OriginalTarget, _SharedHit)
+THEN
+NRD_HitAddDamage(_SharedHit, _DamageType, _SharedDamage);
+NRD_HitSetInt(_SharedHit, "Hit", 1);
+NRD_HitExecute(_SharedHit);
+//END_REGION
+EXITSECTION
+
+ENDEXITSECTION

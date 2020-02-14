@@ -8,7 +8,7 @@
         <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="SkillAbility" />
         <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="SkillTier" />
         <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="1" />
-        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="4" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="3" />
         <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="SELF:IF(Surface:Fire):ARROWHEAD_FIRE,100,2;SELF:IF(Surface:Water&amp;!Surface:Electrified):ARROWHEAD_WATER,100,2;SELF:IF(Surface:Blood&amp;!Surface:Electrified):ARROWHEAD_BLOOD,100,2;SELF:IF(Surface:Electrified):ARROWHEAD_ELECTRIC,100,2;SELF:IF(Surface:Poison):ARROWHEAD_POISON,100,2;SELF:IF(Surface:Oil):ARROWHEAD_OIL,100,2;SELF:IF(Surface:Lava):ARROWHEAD_FIRE,100,2;" />
         <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="3" />
         <field name="AddWeaponRange" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
@@ -24,8 +24,8 @@
         <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
         <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
         <field name="Icon" type="StringStatObjectFieldDefinition" value="Skill_Ranger_ElementalArrowheads" />
-        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Elemental Arrowheads" />
-        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Target a nearby &lt;font color='#dbdbdb'&gt;surface&lt;/font&gt; and coat your arrows, converting their damage into &lt;font color='#c80030'&gt;elemental&lt;/font&gt; damage. Your arrows also gain additional damage: &lt;br&gt;&lt;br&gt; - &lt;font color=&quot;#7D71D9&quot;&gt;Air&lt;/font&gt;: [1] &lt;br&gt; - &lt;font color=&quot;#c80030&quot;&gt;Blood&lt;/font&gt;: [2]  &lt;br&gt; - &lt;font color=&quot;#FE6E27&quot;&gt;Fire&lt;/font&gt;: [3]  &lt;br&gt; - &lt;font color=&quot;#7F3D00&quot;&gt;Oil&lt;/font&gt;: [4]  &lt;br&gt; - &lt;font color=&quot;#65C900&quot;&gt;Poison&lt;/font&gt;: [5]  &lt;br&gt; - &lt;font color=&quot;#4197E2&quot;&gt;Water&lt;/font&gt;: [6] " />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Elemental Adaptation" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Target a nearby &lt;font color='#dbdbdb'&gt;surface&lt;/font&gt; and become &lt;font color='#81AB00'&gt;Adapted&lt;/font&gt; to that &lt;font color='#c80030'&gt;surface element&lt;/font&gt;. Whilst &lt;font color='#81AB00'&gt;Adapted&lt;/font&gt;, your bow attacks and skills are converted into &lt;font color='#c80030'&gt;elemental&lt;/font&gt; damage. &lt;br&gt;&lt;br&gt;This skill also coats your arrows, causing them to deal additional &lt;font color='#c80030'&gt;elemental&lt;/font&gt; damage: &lt;br&gt;&lt;br&gt; - &lt;font color=&quot;#7D71D9&quot;&gt;Air&lt;/font&gt;: [1] &lt;br&gt; - &lt;font color=&quot;#c80030&quot;&gt;Blood&lt;/font&gt;: [2]  &lt;br&gt; - &lt;font color=&quot;#FE6E27&quot;&gt;Fire&lt;/font&gt;: [3]  &lt;br&gt; - &lt;font color=&quot;#7F3D00&quot;&gt;Oil&lt;/font&gt;: [4]  &lt;br&gt; - &lt;font color=&quot;#65C900&quot;&gt;Poison&lt;/font&gt;: [5]  &lt;br&gt; - &lt;font color=&quot;#4197E2&quot;&gt;Water&lt;/font&gt;: [6] " />
         <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
         <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_fire_01_start" />
         <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_fire_01_loop" />
@@ -153,6 +153,78 @@
         <field name="TargetEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Voodoo_Blood_Swarm_Target_01:root:cast" />
         <field name="TargetGroundEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Voodoo_Blood_Swarm_Target_01:root:cast" />
         <field name="CycleConditions" type="StringStatObjectFieldDefinition" value="Enemy;!Dead" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="ReactionShot" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="SkillTier" />
+        <field name="Requirement" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="SkillRequirement" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="2" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="4" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="REACTION_SHOT,100,1" />
+        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="13" />
+        <field name="AreaRadius" type="IntegerStatObjectFieldDefinition" value="4" />
+        <field name="Requirements" type="StringStatObjectFieldDefinition" value="Combat" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="RangerLore 3" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="CanTargetTerrain" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="Skill_Ranger_ReactionShot" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Reaction Shot" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Mark a circular area. &lt;font color='#aa3938'&gt;Enemies&lt;/font&gt; who enter the area become &lt;font color='#dbdbdb'&gt;Grounded&lt;/font&gt;, preventing them from jumping or being teleported. &lt;br&gt;&lt;br&gt;Until your next turn, you will reflexively shoot at the first three &lt;font color='#aa3938'&gt;enemies&lt;/font&gt; moving in the area. &lt;br&gt;&lt;br&gt;This effect only triggers if you have line of sight of the enemy." />
+        <field name="StatsDescription" type="TranslatedStringStatObjectFieldDefinition" value="Range: [1]" />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="TargetRadius" />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_weapon_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_weapon_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Air_Prepare_Divine_ReactionShot_Hand_01:Dummy_R_HandFX:hand01;RS3_FX_Skills_Air_Prepare_Divine_ReactionShot_Hand_03:Dummy_R_HandFX:hand02;RS3_FX_Skills_Air_Prepare_Divine_ReactionShot_Hand_02:Dummy_L_HandFX;RS3_FX_Skills_Air_Prepare_Divine_ReactionShot_Root_01,KeepRot:Dummy_Root" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_attack_aoe_01_cast" />
+        <field name="CastSelfAnimation" type="StringStatObjectFieldDefinition" value="skill_attack_aoe_01_cast" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="castsurface" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Fire_Cast_Self_Water_ReactionShot_Hand_01:Dummy_L_HandFX,Dummy_R_HandFX;RS3_FX_Skills_Fire_Cast_Self_Water_ReactionShot_Root_01,KeepRot:Dummy_Root:cast" />
+        <field name="TargetGroundEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Fire_Impact_ReactionShot_01:root:cast" />
+        <field name="CycleConditions" type="StringStatObjectFieldDefinition" value="Character;!Dead" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_Summon_AnimalCompanion" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="2" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="6" />
+        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="13" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="RangerLore 1; Summoning 1" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="CanTargetTerrain" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Animal Companion" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Call one of three &lt;font color='#9440B3'&gt;Animal Companions&lt;/font&gt; to your side:&lt;br&gt;&lt;br&gt; - &lt;font color='#2e719e'&gt;Noctis&lt;/font&gt;, the Night Owl &lt;br&gt; - &lt;font color='#40B606'&gt;Elkahoof&lt;/font&gt;, the Forest Deer &lt;br&gt; - &lt;font color='#B97A57'&gt;Grizzle&lt;/font&gt;, the Mountain Bear &lt;br&gt;&lt;br&gt;The &lt;font color='#9440B3'&gt;Animal Companion&lt;/font&gt; has infinite duration and can be empowered using &lt;font color='#9440B3'&gt;Companion skills&lt;/font&gt;." />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Voodoo_Prepare_Totem_BonePile_Root_01,KeepRot,Detach:Dummy_Root;RS3_FX_Skills_Voodoo_Prepare_Totem_Hand_01:Dummy_L_HandFX,Dummy_R_HandFX" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_target_voodoo_01_cast" />
+        <field name="CastSelfAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_target_voodoo_01_cast" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Voodoo_Cast_Summon_Totem_Root_01,KeepRot;RS3_FX_Skills_Voodoo_Cast_Summon_Totem_Decay_GraspStarved_Root_01,KeepRot:Dummy_Root:cast;RS3_FX_Skills_Voodoo_Cast_Summon_Totem_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="TargetEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Voodoo_Impact_Voodo_BloatedCorpse_01:root:cast" />
+        <field name="AreaRadius" type="IntegerStatObjectFieldDefinition" value="1" />
       </fields>
     </stat_object>
   </stat_objects>

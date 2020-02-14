@@ -1,0 +1,57 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+//REGION Power Shot damage
+IF
+CharacterUsedSkill(_Character, "Projectile_OdinHUN_PowerShot", _, _)
+THEN
+SetStoryEvent((GUIDSTRING)_Character, "OBHUN_RETRIEVE_AP");
+
+IF
+StoryEvent(_Character, "OBHUN_Found_AP")
+AND
+GetVarFloat(_Character, "OBHUN_AP", _CharAP)
+THEN
+DB_OBHUN_PowerShot(_Character, _CharAP);
+ApplyStatus(_Character, "OdinHUN_POWERSHOT", 1.0, 1);
+ProcObjectTimer((CHARACTERGUID)_Character, "OBHUN_END_POWERSHOT", 1000);
+
+PROC
+ProcObjectTimerFinished(_Character, "OBHUN_END_POWERSHOT")
+AND
+DB_OBHUN_PowerShot(_Character, _CharAP)
+THEN
+NOT DB_OBHUN_PowerShot(_Character, _CharAP);
+RemoveStatus((CHARACTERGUID)_Character, "OdinHUN_POWERSHOT");
+
+//Perform Power Shot skill
+IF
+NRD_OnPrepareHit(_Target, _Dealer, _, _HitHandle)
+AND
+HasActiveStatus(_Dealer, "OdinHUN_POWERSHOT", 1)
+AND
+DB_OBHUN_PowerShot(_Dealer, _UsedAP)
+AND
+DB_OBHUN_DamageType(_PreDamageType)
+AND
+NRD_HitGetDamage(_HitHandle, _PreDamageType, _Damage)
+AND
+Real(_Damage, _RealDamage)
+AND
+RealProduct(_RealDamage, _UsedAP, _RealAddDamage)
+AND
+Integer(_RealAddDamage, _FinalDamage)
+AND
+QRY_OBHUN_Determine_Type(_Dealer, _PreDamageType)
+AND
+DB_OBHUN_DeterminedType_Temp(_Dealer, _DamageType)
+THEN
+NRD_HitClearDamage(_HitHandle, _PreDamageType);
+NRD_HitAddDamage(_HitHandle, _DamageType, _FinalDamage);
+NOT DB_OBHUN_DeterminedType_Temp(_Dealer, _DamageType);
+//END_REGION
+EXITSECTION
+
+ENDEXITSECTION

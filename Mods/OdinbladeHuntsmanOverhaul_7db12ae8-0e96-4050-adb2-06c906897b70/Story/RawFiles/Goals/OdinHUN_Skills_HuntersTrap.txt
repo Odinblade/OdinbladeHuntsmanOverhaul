@@ -1,0 +1,110 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+//REGION Trap skills
+IF
+CharacterUsedSkillAtPosition(_Character, _X, _Y, _Z, "Projectile_OdinHUN_HuntersTrap", _, _)
+THEN
+DB_OBHUN_Trap_Spawn(_Character, _X, _Y, _Z);
+ProcObjectTimer(_Character, "OdinHUN_TRAP_SPAWN", 2000);
+
+PROC
+ProcObjectTimerFinished((CHARACTERGUID)_Character, "OdinHUN_TRAP_SPAWN")
+AND
+DB_OBHUN_Trap_Spawn(_Character, _X, _Y, _Z)
+AND
+CreateItemTemplateAtPosition("e805d0d2-a522-4189-85dc-7d45b724f77e", _X, _Y, _Z, _Trap)
+AND
+CharacterGetLevel(_Character, _Level)
+THEN
+NOT DB_OBHUN_Trap_Spawn(_Character, _X, _Y, _Z);
+ItemLevelUpTo(_Trap, _Level);
+ItemSetOwner(_Trap, _Character);
+OBHUN_Trap_PrepareDetonation(_Character, _Trap);
+
+PROC
+OBHUN_Trap_PrepareDetonation((CHARACTERGUID)_TrapOwner, (ITEMGUID)_Trap)
+AND
+DB_OBHUN_TrapType(_Status, _DamageStatus, _VFX, _OverlayStatus)
+AND
+QRY_OBHUN_Adaption(_TrapOwner, _Status)
+THEN
+DB_OBHUN_Trap_Active(_TrapOwner, _Trap, _DamageStatus, _VFX);
+ApplyStatus(_Trap, _OverlayStatus, -1.0);
+
+PROC
+OBHUN_Trap_PrepareDetonation((CHARACTERGUID)_TrapOwner, (ITEMGUID)_Trap)
+AND
+HasActiveStatus(_TrapOwner, "OdinHUN_EA_ADAPTION", 0)
+THEN
+DB_OBHUN_Trap_Active(_TrapOwner, _Trap, "OdinHUN_DMG_TRAP_PHYSICAL", "");
+
+IF
+CharacterStatusApplied(_Target, "OdinHUN_HIT_TRAP", _Trap)
+AND
+ItemGetOwner((ITEMGUID)_Trap, _TrapOwner)
+AND
+DB_OBHUN_Trap_Active(_TrapOwner, _Trap, _DamageStatus, _VFX)
+THEN
+ApplyStatus(_Target, _DamageStatus, 0.0, 1, _TrapOwner);
+ProcObjectTimer(_TrapOwner, "OdinHUN_HUNTERSTRAP_DMG", 200);
+
+PROC
+ProcObjectTimerFinished(_Character, "OdinHUN_HUNTERSTRAP_DMG")
+AND
+DB_OBHUN_Trap_Active(_TrapOwner, _Trap, _DamageStatus, _VFX)
+THEN
+NOT DB_OBHUN_Trap_Active(_TrapOwner, _Trap, _DamageStatus, _VFX);
+
+QRY
+QRY_OBHUN_Adaption((CHARACTERGUID)_Character, (STRING)_Status)
+AND
+DB_OBHUN_TrapType(_Status, _DamageStatus, _VFX, _StatusOverlay)
+AND
+HasActiveStatus(_Character, _Status, 1)
+THEN
+DB_NOOP(1);
+
+IF
+CharacterStatusApplied(_Character, _Status, _)
+AND
+DB_OBHUN_Elemental_Arrowhead(_Status, _)
+AND
+GetStatusTurns(_Character, _Status, _Turns)
+AND
+IntegerProduct(_Turns, 6, _IntDuration)
+AND
+Real(_IntDuration, _Duration)
+THEN
+ApplyStatus(_Character, "OdinHUN_EA_ADAPTION", _Duration);
+
+IF
+CharacterStatusRemoved(_Character, _Status, _)
+AND
+DB_OBHUN_Elemental_Arrowhead(_Status, _)
+THEN
+RemoveStatus(_Character, "OdinHUN_EA_ADAPTION");
+
+IF
+StoryEvent((ITEMGUID)_Trap, "OBHUN_Trap_Detonated")
+AND
+DB_OBHUN_Trap_Active(_TrapOwner, _Trap, _DamageStatus, _VFX)
+AND
+GetPosition(_Trap, _X, _Y, _Z)
+THEN
+PlayEffectAtPosition(_VFX, _X, _Y, _Z);
+
+IF
+StoryEvent((ITEMGUID)_Trap, "OBHUN_Trap_Armed")
+AND
+DB_OBHUN_Trap_Active(_TrapOwner, _Trap, _DamageStatus, _VFX)
+AND
+DB_OBHUN_TrapType(_Status, _DamageStatus, _VFX, _OverlayStatus)
+THEN
+ApplyStatus(_Trap, _OverlayStatus, -1.0);
+//END_REGION
+EXITSECTION
+
+ENDEXITSECTION

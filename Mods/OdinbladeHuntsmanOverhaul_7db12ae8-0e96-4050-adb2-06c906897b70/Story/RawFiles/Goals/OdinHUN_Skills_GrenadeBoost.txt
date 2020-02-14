@@ -31,8 +31,6 @@ Integer(_TotalDamage, _FinalDamage)
 AND
 NRD_HitGetString(_HitHandle, "DamageType", _DamageType)
 THEN
-// CharacterStatusText(_Dealer, _HitType);
-// RemoveStatus(_Dealer, "OdinHUN_GRENADE_USE");
 NRD_HitClearAllDamage(_HitHandle);
 NRD_HitAddDamage(_HitHandle, _DamageType, _FinalDamage);
 
@@ -41,14 +39,13 @@ CharacterUsedSkill(_Character, _Skill, _, _)
 AND
 DB_OBHUN_GrenadeSkill(_Skill)
 THEN
-CharacterStatusText(_Character, "Grenade amp applied");
+ProcObjectTimerCancel(_Character, "OdinHUN_GRENADE");
 ApplyStatus(_Character, "OdinHUN_GRENADE_USE", 6.0);
-ProcObjectTimer(_Character, "OdinHUN_GRENADE", 3500);
+ProcObjectTimer(_Character, "OdinHUN_GRENADE", 3300);
 
 PROC
 ProcObjectTimerFinished((CHARACTERGUID)_Character, "OdinHUN_GRENADE")
 THEN
-CharacterStatusText(_Character, "Grenade amp removed");
 RemoveStatus(_Character, "OdinHUN_GRENADE_USE");
 EXITSECTION
 

@@ -1,0 +1,86 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+DB_OBHUN_AnimalCompanion_Template("OdinHUN_AC_Owl", "065038d4-441e-44b7-9d59-e63cb25d24c4", "710ec76f-0716-48a5-9db2-cb2c93e686e8");
+DB_OBHUN_AnimalCompanion_Template("OdinHUN_AC_Bear", "4b40c81d-dd6b-4618-a4b3-fc709ceee764", "29e7d6fb-9f62-467e-b52b-1f6c28f718dd");
+DB_OBHUN_AnimalCompanion_Template("OdinHUN_AC_Deer", "fa245b33-29b5-4a50-b6f2-87d6c83717f0", "af658102-d2eb-4457-841b-89c3529d0408");
+
+KBSECTION
+IF
+CharacterUsedSkillAtPosition(_Owner, _X, _Y, _Z, "Target_OdinHUN_Summon_AnimalCompanion", _, _)
+AND
+StartDialog_Internal("OdinHUN_Dialog_AnimalCompanion", 1, _Owner, NULL_00000000-0000-0000-0000-000000000000, NULL_00000000-0000-0000-0000-000000000000, NULL_00000000-0000-0000-0000-000000000000, NULL_00000000-0000-0000-0000-000000000000, NULL_00000000-0000-0000-0000-000000000000, _)
+THEN
+DB_OBHUN_AnimalCompanion_Prepare(_Owner, _X, _Y, _Z);
+
+IF
+ObjectFlagSet(_Flag, _Owner, _)
+AND
+DB_OBHUN_AnimalCompanion_Template(_Flag, _SmallTemplate, _SwoleTemplate)
+AND
+DB_OBHUN_AnimalCompanion_Prepare((CHARACTERGUID)_Owner, _X, _Y, _Z)
+AND
+CharacterGetAbility(_Owner, "Summoning", _SumPoints)
+AND
+_SumPoints < 10
+THEN
+PROC_OBHUN_AnimalCompanion_Summon(_Owner, _SmallTemplate);
+ObjectClearFlag(_Owner, _Flag);
+
+IF
+ObjectFlagSet(_Flag, _Owner, _)
+AND
+DB_OBHUN_AnimalCompanion_Template(_Flag, _SmallTemplate, _SwoleTemplate)
+AND
+DB_OBHUN_AnimalCompanion_Prepare((CHARACTERGUID)_Owner, _X, _Y, _Z)
+AND
+CharacterGetAbility(_Owner, "Summoning", _SumPoints)
+AND
+_SumPoints > 9
+THEN
+PROC_OBHUN_AnimalCompanion_Summon(_Owner, _SwoleTemplate);
+ObjectClearFlag(_Owner, _Flag);
+
+PROC
+PROC_OBHUN_AnimalCompanion_Summon((GUIDSTRING)_Owner, (STRING)_SwoleTemplate)
+AND
+DB_OBHUN_AnimalCompanion_Prepare((CHARACTERGUID)_Owner, _X, _Y, _Z)
+AND
+CharacterGetLevel(_Owner, _Level)
+AND
+NRD_Summon(_Owner, _SwoleTemplate, _X, _Y, _Z, -1.0, _Level, 0, 1, _Summon)
+THEN
+PlayAnimation(_Owner, "Whistle_01");
+NOT DB_OBHUN_AnimalCompanion_Prepare(_Owner, _X, _Y, _Z);
+DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon);
+CharacterAddSkill(_Owner, "Shout_OdinHUN_Dismiss_AnimalCompanion", 0);
+// AND
+// NRD_Summon(_Owner, _SwoleTemplate, _X, _Y, _Z, -1.0, _Level, 0, 1, _Summon)
+// THEN
+// NOT DB_OBHUN_AnimalCompanion_Prepare(_Owner, _X, _Y, _Z);
+// ObjectClearFlag(_Owner, _Flag);
+// DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon);
+// CharacterAddSkill(_Owner, "Shout_OdinHUN_Dismiss_AnimalCompanion", 0);
+
+IF
+CharacterUsedSkill(_Owner, "Shout_OdinHUN_Dismiss_AnimalCompanion", _, _)
+AND
+DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon)
+THEN
+CharacterRemoveSkill(_Owner, "Shout_OdinHUN_Dismiss_AnimalCompanion");
+CharacterRemoveSummons(_Owner, 1);
+RemoveStatus(_Owner, "OdinHUN_NATURALBOND");
+NOT DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon);
+
+//When the companion dies, remove the status from the owner
+IF
+CharacterDied(_Summon)
+AND
+DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon)
+THEN
+CharacterStatusText(_Summon, "I ded");
+RemoveStatus(_Owner, "OdinHUN_NATURALBOND");
+NOT DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon);
+EXITSECTION
+
+ENDEXITSECTION

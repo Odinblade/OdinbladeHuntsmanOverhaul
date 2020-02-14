@@ -15,29 +15,41 @@ DB_OBHUN_EA_HitType(2);
 DB_OBHUN_EA_HitType(3);
 //END_REGION
 
+//REGION DamageTypes
+DB_OBHUN_DamageType("Physical");
+DB_OBHUN_DamageType("Poison");
+DB_OBHUN_DamageType("Fire");
+DB_OBHUN_DamageType("Water");
+DB_OBHUN_DamageType("Air");
+// DB_OBHUN_DamageType("Piercing");
+DB_OBHUN_DamageType("Earth");
+DB_OBHUN_DamageType("Chaos");
+//END_REGION
+
 //REGION Excluded EA Skills
 //Crafted arrow skills
-DB_OBHUN_EA_ExcludedSkill("Projectile_BleedingArrow");
-DB_OBHUN_EA_ExcludedSkill("Projectile_BlessedWaterArrow");
-DB_OBHUN_EA_ExcludedSkill("Projectile_CharmingArrow");
-DB_OBHUN_EA_ExcludedSkill("Projectile_CursedFireArrow");
-DB_OBHUN_EA_ExcludedSkill("Projectile_DebuffAllArrow");
-DB_OBHUN_EA_ExcludedSkill("Projectile_ExplosionArrow");
-DB_OBHUN_EA_ExcludedSkill("Projectile_FireArrow");
-DB_OBHUN_EA_ExcludedSkill("Projectile_FreezingArrow");
-DB_OBHUN_EA_ExcludedSkill("Projectile_KnockedOutArrow");
-DB_OBHUN_EA_ExcludedSkill("Projectile_PoisonArrow");
-DB_OBHUN_EA_ExcludedSkill("Projectile_PoisonedCloudArrow");
-DB_OBHUN_EA_ExcludedSkill("Projectile_SilverArrow");
-DB_OBHUN_EA_ExcludedSkill("Projectile_SlowDownArrow");
-DB_OBHUN_EA_ExcludedSkill("Projectile_SmokescreenArrow");
-DB_OBHUN_EA_ExcludedSkill("Projectile_StaticCloudArrow");
-DB_OBHUN_EA_ExcludedSkill("Projectile_SteamCloudArrow");
-DB_OBHUN_EA_ExcludedSkill("Projectile_StunningArrow");
-DB_OBHUN_EA_ExcludedSkill("Projectile_WaterArrow");
+DB_OBHUN_EA_ExcludedSkill("Projectile_BleedingArrow", 1000);
+DB_OBHUN_EA_ExcludedSkill("Projectile_BlessedWaterArrow", 1000);
+DB_OBHUN_EA_ExcludedSkill("Projectile_CharmingArrow", 1000);
+DB_OBHUN_EA_ExcludedSkill("Projectile_CursedFireArrow", 1000);
+DB_OBHUN_EA_ExcludedSkill("Projectile_DebuffAllArrow", 1000);
+DB_OBHUN_EA_ExcludedSkill("Projectile_ExplosionArrow", 1000);
+DB_OBHUN_EA_ExcludedSkill("Projectile_FireArrow", 1000);
+DB_OBHUN_EA_ExcludedSkill("Projectile_FreezingArrow", 1000);
+DB_OBHUN_EA_ExcludedSkill("Projectile_KnockedOutArrow", 1000);
+DB_OBHUN_EA_ExcludedSkill("Projectile_PoisonArrow", 1000);
+DB_OBHUN_EA_ExcludedSkill("Projectile_PoisonedCloudArrow", 1000);
+DB_OBHUN_EA_ExcludedSkill("Projectile_SilverArrow", 1000);
+DB_OBHUN_EA_ExcludedSkill("Projectile_SlowDownArrow", 1000);
+DB_OBHUN_EA_ExcludedSkill("Projectile_SmokescreenArrow", 1000);
+DB_OBHUN_EA_ExcludedSkill("Projectile_StaticCloudArrow", 1000);
+DB_OBHUN_EA_ExcludedSkill("Projectile_SteamCloudArrow", 1000);
+DB_OBHUN_EA_ExcludedSkill("Projectile_StunningArrow", 1000);
+DB_OBHUN_EA_ExcludedSkill("Projectile_WaterArrow", 1000);
 
-//Skills
-DB_OBHUN_EA_ExcludedSkill("Projectile_ArrowSpray"); //Has own damage number calcs
+//Skills which have unique damage calculation
+DB_OBHUN_EA_ExcludedSkill("Projectile_ArrowSpray", 3450);
+DB_OBHUN_EA_ExcludedSkill("Projectile_OdinHUN_PowerShot", 1000);
 //END_REGION
 
 //REGION Grenades
@@ -68,6 +80,16 @@ DB_OBHUN_GrenadeSkill("ProjectileStrike_Grenade_ClusterBomb");
 DB_OBHUN_GrenadeSkill("ProjectileStrike_Grenade_CursedClusterBomb");
 //END_REGION
 
+//REGION Traps
+//EA_STATUS, DAMAGESTATUS_TOAPPLY, VFX_TOPLAY, TRAPOVERLAY_TOAPPLY
+DB_OBHUN_TrapType("ARROWHEAD_WATER", "OdinHUN_DMG_TRAP_WATER", "RS3_FX_Skills_Water_Ice_Shout_Ground_02", "OdinHUN_OVERLAY_TRAP_WATER");
+DB_OBHUN_TrapType("ARROWHEAD_POISON", "OdinHUN_DMG_TRAP_POISON", "OdinHUN_TrapImpact_Poison", "OdinHUN_OVERLAY_TRAP_POISON");
+DB_OBHUN_TrapType("ARROWHEAD_FIRE", "OdinHUN_DMG_TRAP_FIRE", "RS3_FX_Skills_Fire_Impact_03", "OdinHUN_OVERLAY_TRAP_FIRE");
+DB_OBHUN_TrapType("ARROWHEAD_OIL", "OdinHUN_DMG_TRAP_EARTH", "OdinHUN_TrapImpact_Oil", "OdinHUN_OVERLAY_TRAP_OIL");
+DB_OBHUN_TrapType("ARROWHEAD_BLOOD", "OdinHUN_DMG_TRAP_PHYSICAL", "", "");
+DB_OBHUN_TrapType("ARROWHEAD_ELECTRIC", "OdinHUN_DMG_TRAP_AIR", "RS3_FX_Skills_Air_LightningBolt_Impact_01", "OdinHUN_OVERLAY_TRAP_AIR");
+//END_REGION
+
 KBSECTION
 //REGION Apply Elemental Arrowheads damage
 PROC
@@ -78,7 +100,20 @@ AND
 _PreDamageType != "Piercing"
 THEN
 NRD_HitClearAllDamage(_HitHandle);
+// NRD_HitClearDamage(_HitHandle, _PreDamageType);
 NRD_HitAddDamage(_HitHandle, _ConvertedDamageType, _Damage);
+
+//Crit roll, used for status hits, e.g. Barrage bonus. TODO MIGHT BE UNUSED!
+PROC
+OBHUN_ApplyEAHit((INTEGER64)_HitHandle, (STRING)_PreDamageType, (STRING)_ConvertedDamageType, (INTEGER)_Damage, (INTEGER)_IsStatus, (GUIDSTRING)_Target, (GUIDSTRING)_Dealer)
+AND
+_IsStatus == 1
+AND
+_PreDamageType != "Piercing"
+THEN
+NRD_HitClearAllDamage(_HitHandle);
+NRD_HitAddDamage(_HitHandle, _ConvertedDamageType, _Damage);
+// NRD_HitExecute(_HitHandle);
 //END_REGION
 
 //REGION Excluded skill status flag
@@ -86,15 +121,55 @@ NRD_HitAddDamage(_HitHandle, _ConvertedDamageType, _Damage);
 IF
 CharacterUsedSkill(_Character, _Skill, _, _)
 AND
-DB_OBHUN_EA_ExcludedSkill(_Skill)
+DB_OBHUN_EA_ExcludedSkill(_Skill, _Timeout)
 THEN
 ApplyStatus(_Character, "OdinHUN_EA_EXCLUDEDSKILL", 6.0, 1, _Character);
-ProcObjectTimer(_Character, "OdinHUN_EA_EXCLUDEDSKILL", 1000);
+CharacterStatusText(_Character, "Why is this not working");
+ProcObjectTimer(_Character, "OdinHUN_EA_EXCLUDEDSKILL", _Timeout);
 
 PROC
 ProcObjectTimerFinished(_Character, "OdinHUN_EA_EXCLUDEDSKILL")
 THEN
 RemoveStatus(_Character, "OdinHUN_EA_EXCLUDEDSKILL");
+CharacterStatusText((CHARACTERGUID)_Character, "Removie");
+
+//IF the user is using EA, register the associated damage type
+QRY
+QRY_OBHUN_Determine_Type((GUIDSTRING)_Dealer, (STRING)_PreDamageType)
+AND
+DB_OBHUN_Elemental_Arrowhead_Users((CHARACTERGUID)_Dealer)
+AND
+DB_OBHUN_Elemental_Arrowhead((STRING)_Status, (STRING)_DamageType)
+AND
+_PreDamageType != _DamageType
+AND
+HasActiveStatus(_Dealer, _Status, 1)
+THEN
+DB_OBHUN_DeterminedType_Temp(_Dealer, _DamageType);
+DB_NOOP(1);
+
+// QRY
+// QRY_OBHUN_Determine_Type((GUIDSTRING)_Dealer, (STRING)_PreDamageType)
+// AND
+// DB_OBHUN_Elemental_Arrowhead_Users((CHARACTERGUID)_Dealer)
+// AND
+// DB_OBHUN_Elemental_Arrowhead((STRING)_Status, (STRING)_DamageType)
+// AND
+// HasActiveStatus(_Dealer, _Status, 1)
+// AND
+// _PreDamageType != _DamageType
+// THEN
+// DB_OBHUN_DeterminedType_Temp(_Dealer, _DamageType);
+// DB_NOOP(1);
+
+//IF the user is not using EA, return the original damage type
+QRY
+QRY_OBHUN_Determine_Type((GUIDSTRING)_Dealer, (STRING)_PreDamageType)
+AND
+NOT DB_OBHUN_Elemental_Arrowhead_Users((CHARACTERGUID)_Dealer)
+THEN
+DB_OBHUN_DeterminedType_Temp(_Dealer, _PreDamageType);
+DB_NOOP(1);
 //END_REGION
 EXITSECTION
 

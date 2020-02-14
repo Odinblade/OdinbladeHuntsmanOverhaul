@@ -1,17 +1,32 @@
 //SKILL -> REANIMATOR_ADD_AP_SAFELY
 EVENTS
-EVENT OdinHUN_Set_Cone
+EVENT OdinHUN_Retrieve_AP
 VARS
-CHARACTER:_Dealer
-CHARACTER:_Target
+CHARACTER:_Character
 FLOAT:_CharAP
 FLOAT:_CharMaxAP
+INT:_CharAPInt
 
 ON
-	OnCharacterEvent(_Dealer, "OdinHUN_SHRAPNELSHOT_SET_CONE")
+	OnCharacterEvent(_Character, "OBHUN_RETRIEVE_AP")
 ACTIONS
-IF "c1"
-	GetVar(_Target, _Dealer, "OdinHUN_SHRAPNELSHOT_TARGET")
+IF "c1&c2"
+	CharacterGetStat(_CharAP, _Character, ActionPoints)
+	CharacterGetStat(_CharMaxAP, _Character, APMaximum)
 THEN
-	ShootLocalConeAt("Cone_EnemyCorrosiveSpray", _Dealer, {0.0;0.0;0.0}, _Target)
+	//SetVar(_Character, "OBHUN_AP", _CharAP)
+	SetVar(_Character, "OBNHUN_MaxAP", _CharMaxAP)
+	Cast(_CharAPInt, _CharAP)
+	IF "c1"
+		IsGreaterThen(_CharAPInt, 4)
+	THEN
+		CharacterUseActionPoints(_Character, 4)
+		Set(_CharAP, 4)
+		//SetVar(_Character, "OBHUN_AP", _CharAP)
+	ELSE
+		CharacterUseActionPoints(_Character, _CharAPInt)
+		//SetVar(_Character, "OBHUN_AP", _CharAP)
+	ENDIF
+	SetVar(_Character, "OBHUN_AP", _CharAP)
+	CharacterEvent(_Character, "OBHUN_Found_AP")
 ENDIF

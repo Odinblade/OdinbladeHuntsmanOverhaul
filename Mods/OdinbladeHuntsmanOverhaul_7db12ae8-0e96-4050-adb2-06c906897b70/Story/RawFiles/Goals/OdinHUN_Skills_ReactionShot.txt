@@ -1,0 +1,25 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+//REGION Reaction Shot hack-o-dome
+IF
+CharacterUsedSkillAtPosition(_Character, _X, _Y, _Z, "Target_ReactionShot", _, _)
+AND
+NRD_CreateDome(_Character, "Dome_OdinHUN_REACTIONSHOT", _X, _Y, _Z, _Handle)
+THEN
+DB_OBHUN_ReactionShot(_Character, _Handle);
+NRD_GameActionSetLifeTime(_Handle, 6.0);
+
+IF
+CharacterStatusRemoved(_Character, "REACTION_SHOT", _)
+AND
+DB_OBHUN_ReactionShot(_Character, _Handle)
+THEN
+NRD_GameActionDestroy(_Handle);
+NOT DB_OBHUN_ReactionShot(_Character, _Handle);
+//END_REGION
+EXITSECTION
+
+ENDEXITSECTION

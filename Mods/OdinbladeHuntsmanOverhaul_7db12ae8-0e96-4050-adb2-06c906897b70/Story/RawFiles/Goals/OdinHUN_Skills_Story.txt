@@ -16,9 +16,8 @@ GetPosition(_Dealer, _X, _Y, _Z)
 THEN
 DB_OBHUN_SA(_Dealer);
 NRD_ProjectilePrepareLaunch();
-NRD_ProjectileSetString("SkillId", "Projectile_IceFan");
+NRD_ProjectileSetString("SkillId", "Projectile_Fireball");
 NRD_ProjectileSetVector3("TargetPosition", _X, _Y, _Z);
-NRD_ProjectileSetGuidString("SourcePosition", _Target);
 NRD_ProjectileSetGuidString("Caster", _Dealer);
 NRD_ProjectileSetGuidString("Target", _Target);
 NRD_ProjectileLaunch();
@@ -28,9 +27,6 @@ PROC
 ProcObjectTimerFinished(_Character, "OBHUN_SA_Fire")
 THEN
 NOT DB_OBHUN_SA(_Character);
-
-
-
 
 //SKILL HUNTER'S MARK
 IF
@@ -121,50 +117,6 @@ IF
 CombatEnded(_CombatID)
 THEN
 SysClear("DB_OBHUN_NTH_TEMP_FARTHEST", 3);
-
-// IF
-// NRD_OnStatusAttempt(_Target, "OdinHUN_HIT_TRAP_ICE", _Handle, _Dealer)
-// THEN
-// NRD_StatusPreventApply(_Target, _Handle, 1);
-// ApplyStatus(_Target, "OdinHUN_DMG_TRAP_ICE", 0.0, 1, _Dealer);
-
-// IF
-// // ItemWentOnStage(_Trap, 1)
-// // ItemTemplateDestroyed("e805d0d2-a522-4189-85dc-7d45b724f77e", _Trap)
-// Object
-// AND
-// NRD_ItemGetStatsId((ITEMGUID)_Trap, _StatsId)
-// AND
-// GetClosestAlivePlayer(_Trap, _Character, _Dist)
-// THEN
-// CharacterStatusText(_Character, _StatsId);
-
-IF
-CharacterUsedSkillAtPosition(_Character, _X, _Y, _Z, "Projectile_OdinHUN_Trap_Ice", _, _)
-THEN
-DB_OBHUN_Trap_Spawn(_Character, _X, _Y, _Z);
-ProcObjectTimer(_Character, "OdinHUN_TRAP_SPAWN", 2000);
-
-PROC
-ProcObjectTimerFinished((CHARACTERGUID)_Character, "OdinHUN_TRAP_SPAWN")
-AND
-DB_OBHUN_Trap_Spawn(_Character, _X, _Y, _Z)
-AND
-CreateItemTemplateAtPosition("e805d0d2-a522-4189-85dc-7d45b724f77e", _X, _Y, _Z, _Trap)
-AND
-CharacterGetLevel(_Character, _Level)
-THEN
-ItemLevelUpTo(_Trap, _Level);
-NOT DB_OBHUN_Trap_Spawn(_Character, _X, _Y, _Z);
-ItemSetOwner(_Trap, _Character);
-
-IF
-CharacterStatusApplied(_Target, "OdinHUN_HIT_TRAP_ICE", _Trap)
-AND
-ItemGetOwner((ITEMGUID)_Trap, _TrapOwner)
-THEN
-ApplyStatus(_Target, "OdinHUN_DMG_TRAP_ICE", 1.0, 1, _TrapOwner);
-
 EXITSECTION
 
 ENDEXITSECTION

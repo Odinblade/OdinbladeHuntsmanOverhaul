@@ -32,9 +32,9 @@
         <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Nimble" />
         <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
         <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="28" enumeration_type_name="FormatStringColor" />
-        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinNECRO_Status_OathOfDesecration_01:Dummy_BodyFX" />
+        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Status_Nimble_01:Dummy_Root" />
         <field name="StatsId" type="StringStatObjectFieldDefinition" value="Stats_OdinHUN_Nimble" />
-        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_Hasted" />
+        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_Nimble" />
         <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Character is demonstrating excellent agility." />
         <field name="ImmuneFlag" type="EnumerationStatObjectFieldDefinition" value="34" enumeration_type_name="AttributeFlag" />
       </fields>
@@ -63,6 +63,209 @@
         <field name="StatsId" type="StringStatObjectFieldDefinition" value="Stats_OdinHUN_Vulnerable_Double" />
         <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_Vulnerable" />
         <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Character has been exposed by an expert marksman." />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="ARROWHEAD_BLOOD" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="InitiateCombat" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Blood Adaptation" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="statcons_Arrowhead_Blood" />
+        <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="FormatStringColor" />
+        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Items_Weapons_DamageType_Blood_Overlay_01;OdinHUN_Status_Adaption_Blood,KeepRot:Dummy_Root" />
+        <field name="StatsId" type="StringStatObjectFieldDefinition" value="Stats_Arrowhead_Blood" />
+        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_ElementalArrowhead" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Converts your bow attacks and skills to deal &lt;font color=&quot;#a8a8a8&quot;&gt;physical damage&lt;/font&gt;." />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="ARROWHEAD_ELECTRIC" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="InitiateCombat" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Electrical Adaptation" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="statcons_Arrowhead_Electric" />
+        <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="22" enumeration_type_name="FormatStringColor" />
+        <field name="StatsId" type="StringStatObjectFieldDefinition" value="Stats_Arrowhead_Electric" />
+        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_ElementalArrowhead" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Converts your bow attacks and skills to deal &lt;font color=&quot;#7D71D9&quot;&gt;air damage&lt;/font&gt;." />
+        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_WeaponOverlay_Air;OdinHUN_Status_Adaption_Air,KeepRot:Dummy_Root" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="ARROWHEAD_FIRE" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="InitiateCombat" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Flame Adaptation" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="statcons_Arrowhead_Fire" />
+        <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="24" enumeration_type_name="FormatStringColor" />
+        <field name="StatsId" type="StringStatObjectFieldDefinition" value="Stats_Arrowhead_Fire" />
+        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_ElementalArrowhead" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Converts your bow attacks and skills to deal &lt;font color=&quot;#FE6E27&quot;&gt;fire damage&lt;/font&gt;." />
+        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_WeaponOverlay_Fire;OdinHUN_Status_Adaption_Fire,KeepRot:Dummy_Root" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="ARROWHEAD_OIL" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="InitiateCombat" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Oil Adaptation" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="statcons_Arrowhead_Oil" />
+        <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="21" enumeration_type_name="FormatStringColor" />
+        <field name="StatsId" type="StringStatObjectFieldDefinition" value="Stats_Arrowhead_Oil" />
+        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_ElementalArrowhead" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Converts your bow attacks and skills to deal &lt;font color=&quot;#7F3D00&quot;&gt;oil damage&lt;/font&gt;." />
+        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_WeaponOverlay_Oil;OdinHUN_Status_Adaption_Oil,KeepRot:Dummy_Root" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="ARROWHEAD_POISON" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="InitiateCombat" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Poison Adaptation" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="statcons_Arrowhead_Poison" />
+        <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="FormatStringColor" />
+        <field name="StatsId" type="StringStatObjectFieldDefinition" value="Stats_Arrowhead_Poison" />
+        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_ElementalArrowhead" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Converts your bow attacks and skills to deal &lt;font color=&quot;#65C900&quot;&gt;poison damage&lt;/font&gt;." />
+        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_WeaponOverlay_Poison;OdinHUN_Status_Adaption_Poison,KeepRot:Dummy_Root" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="ARROWHEAD_WATER" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="InitiateCombat" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Water Adaptation" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="statcons_Arrowhead_Water" />
+        <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="23" enumeration_type_name="FormatStringColor" />
+        <field name="StatsId" type="StringStatObjectFieldDefinition" value="Stats_Arrowhead_Water" />
+        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_ElementalArrowhead" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Converts your bow attacks and skills to deal &lt;font color=&quot;#4197E2&quot;&gt;water damage&lt;/font&gt;." />
+        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_WeaponOverlay_Water;OdinHUN_Status_Adaption_Water,KeepRot:Dummy_Root" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_GROUNDED" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Nimble" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
+        <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="28" enumeration_type_name="FormatStringColor" />
+        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Status_Nimble_01:Dummy_Root" />
+        <field name="StatsId" type="StringStatObjectFieldDefinition" value="Stats_OdinHUN_Nimble" />
+        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_Nimble" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Character is demonstrating excellent agility." />
+        <field name="ImmuneFlag" type="EnumerationStatObjectFieldDefinition" value="34" enumeration_type_name="AttributeFlag" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_DEBUG_BYECRIT" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Bye Crit" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="|Character is crippled. Cured by Rested.|" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
+        <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="28" enumeration_type_name="FormatStringColor" />
+        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_GP_Status_Crippled_01:Dummy_BodyFX" />
+        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_Debug_ByeCrit" />
+        <field name="StatsId" type="StringStatObjectFieldDefinition" value="Stats_OdinHUN_Debug_ByeCrit" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_OVERLAY_TRAP_AIR" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="InitiateCombat" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="MaterialType" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="MaterialType" />
+        <field name="MaterialApplyBody" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="MaterialApplyArmor" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="MaterialApplyWeapon" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="MaterialApplyNormalMap" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="MaterialFadeAmount" type="IntegerStatObjectFieldDefinition" value="3000" />
+        <field name="StatusEffectOverrideForItems" type="StringStatObjectFieldDefinition" value="OdinHUN_TrapOverlay_Air" />
+        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_TrapOverlay" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Electrical Adaptation" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_OVERLAY_TRAP_FIRE" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="InitiateCombat" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="MaterialType" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="MaterialType" />
+        <field name="MaterialApplyBody" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="MaterialApplyArmor" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="MaterialApplyWeapon" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="MaterialApplyNormalMap" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="MaterialFadeAmount" type="IntegerStatObjectFieldDefinition" value="3000" />
+        <field name="StatusEffectOverrideForItems" type="StringStatObjectFieldDefinition" value="OdinHUN_TrapOverlay_Fire" />
+        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_TrapOverlay" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Flame Adaptation" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_OVERLAY_TRAP_OIL" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="InitiateCombat" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="MaterialType" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="MaterialType" />
+        <field name="MaterialApplyBody" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="MaterialApplyArmor" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="MaterialApplyWeapon" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="MaterialApplyNormalMap" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="MaterialFadeAmount" type="IntegerStatObjectFieldDefinition" value="3000" />
+        <field name="StatusEffectOverrideForItems" type="StringStatObjectFieldDefinition" value="OdinHUN_TrapOverlay_Oil" />
+        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_TrapOverlay" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Oil Adaptation" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_OVERLAY_TRAP_POISON" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="InitiateCombat" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="MaterialType" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="MaterialType" />
+        <field name="MaterialApplyBody" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="MaterialApplyArmor" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="MaterialApplyWeapon" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="MaterialApplyNormalMap" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="MaterialFadeAmount" type="IntegerStatObjectFieldDefinition" value="3000" />
+        <field name="StatusEffectOverrideForItems" type="StringStatObjectFieldDefinition" value="OdinHUN_TrapOverlay_Poison" />
+        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_TrapOverlay" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Poison Adaptation" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_OVERLAY_TRAP_WATER" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="InitiateCombat" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="MaterialType" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="MaterialType" />
+        <field name="MaterialApplyBody" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="MaterialApplyArmor" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="MaterialApplyWeapon" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="MaterialApplyNormalMap" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="MaterialFadeAmount" type="IntegerStatObjectFieldDefinition" value="3000" />
+        <field name="StatusEffectOverrideForItems" type="StringStatObjectFieldDefinition" value="OdinHUN_TrapOverlay_Water" />
+        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_TrapOverlay" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Water Adaptation" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_NATURALBOND" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Natural Bond" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
+        <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="28" enumeration_type_name="FormatStringColor" />
+        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Status_Nimble_01:Dummy_BodyFX" />
+        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_NaturalBond" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Character is &lt;font color='#40b606'&gt;splitting 25% of damage&lt;/font&gt; taken with their &lt;font color='#81AB00'&gt;Natural Bond&lt;/font&gt; &lt;font color='#88a25b'&gt;ally&lt;/font&gt;." />
       </fields>
     </stat_object>
   </stat_objects>
