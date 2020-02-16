@@ -50,5 +50,15 @@
         <field name="CriticalChance" type="IntegerStatObjectFieldDefinition" value="-100" />
       </fields>
     </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="Stats_Farsight" />
+        <field name="Act" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="Act" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ActPart" />
+        <field name="RangeBoost" type="IntegerStatObjectFieldDefinition" value="400" />
+        <field name="AccuracyBoost" type="IntegerStatObjectFieldDefinition" value="25" />
+        <field name="CriticalChance" type="IntegerStatObjectFieldDefinition" value="10" />
+      </fields>
+    </stat_object>
   </stat_objects>
 </stats>

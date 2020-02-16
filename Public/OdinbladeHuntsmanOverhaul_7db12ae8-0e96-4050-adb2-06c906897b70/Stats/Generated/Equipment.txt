@@ -1,0 +1,12 @@
+new equipment "Summon_OdinHUN_Owl_Equip"
+add equipmentgroup
+add equipment entry "_Summon_OdinHUN_Owl"
+
+new equipment "Summon_OdinHUN_Bear_Equip"
+add equipmentgroup
+add equipment entry "_Summon_OdinHUN_Bear"
+
+new equipment "Summon_OdinHUN_Deer_Equip"
+add equipmentgroup
+add equipment entry "_Summon_OdinHUN_Deer"
+

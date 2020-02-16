@@ -48,20 +48,20 @@ NOT DB_OBHUN_Elemental_Arrowhead_Users(_Character);
 OBHUN_ToggleScript_Disable("OdinHUN_ElementalArrowheads", "DB_OBHUN_Elemental_Arrowhead_Users");
 //END_REGION
 
-//REGION OBHUN_ARROWSPRAY_TOGGLESCRIPT
-IF
-CharacterUsedSkill(_Character, "Projectile_ArrowSpray", _, _)
-THEN
-OBHUN_ToggleScript_Enable("OdinHUN_Skills_ArrowSpray");
-ApplyStatus(_Character, "OdinHUN_ARROWSPRAY", 6.0, 1, _Character);
-ProcObjectTimer(_Character, "OdinHUN_ARROWSPRAY", 2650);
+// //REGION OBHUN_ARROWSPRAY_TOGGLESCRIPT
+// IF
+// CharacterUsedSkill(_Character, "Projectile_ArrowSpray", _, _)
+// THEN
+// OBHUN_ToggleScript_Enable("OdinHUN_Skills_ArrowSpray");
+// ApplyStatus(_Character, "OdinHUN_ARROWSPRAY", 6.0, 1, _Character);
+// ProcObjectTimer(_Character, "OdinHUN_ARROWSPRAY", 2650);
 
-PROC
-ProcObjectTimerFinished(_Character, "OdinHUN_ARROWSPRAY")
-THEN
-RemoveStatus(_Character, "OdinHUN_ARROWSPRAY");
-OBHUN_ToggleScript_Disable("OdinHUN_Skills_ArrowSpray");
-//END_REGION
+// PROC
+// ProcObjectTimerFinished(_Character, "OdinHUN_ARROWSPRAY")
+// THEN
+// RemoveStatus(_Character, "OdinHUN_ARROWSPRAY");
+// OBHUN_ToggleScript_Disable("OdinHUN_Skills_ArrowSpray");
+// //END_REGION
 
 //REGION OBHUN_NTH_TOGGLESCRIPT
 IF

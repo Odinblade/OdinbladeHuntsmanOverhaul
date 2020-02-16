@@ -16,6 +16,43 @@
         <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="SkillTier" />
         <field name="AuraEnemies" type="StringStatObjectFieldDefinition" value="GROUNDED" />
         <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="GROUNDED,100,1" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Spore Shrooms" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Shrooms cover target area, applying &lt;font color='#65C900'&gt;Spore&lt;/font&gt; to nearby characters. &lt;br&gt;&lt;br&gt;&lt;font color='#65C900'&gt;Spore&lt;/font&gt; reduces &lt;font color='#65C900'&gt;Poison Resistance by [1]%&lt;/font&gt; and &lt;font color='#7f3d00'&gt;Earth Resistance by [2]%&lt;/font&gt;. Also reduces &lt;font color=&quot;#c80030&quot;&gt;Movement Speed by [3]%&lt;/font&gt;." />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_SporeShrooms_Summon" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="IsEnemySkill" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="4" />
+        <field name="AIFlags" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="AIFlags" />
+        <field name="Lifetime" type="IntegerStatObjectFieldDefinition" value="2" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Character;!Dead" />
+        <field name="AuraSelf" type="StringStatObjectFieldDefinition" value="OdinGEO_Spored" />
+        <field name="AuraAllies" type="StringStatObjectFieldDefinition" value="OdinGEO_Spored" />
+        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="13" />
+        <field name="AreaRadius" type="IntegerStatObjectFieldDefinition" value="3" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBGEO_Skill_SporeShrooms" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Spore Shrooms" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Shrooms cover target area, applying &lt;font color='#65C900'&gt;Spore&lt;/font&gt; to nearby characters. &lt;br&gt;&lt;br&gt;&lt;font color='#65C900'&gt;Spore&lt;/font&gt; reduces &lt;font color='#65C900'&gt;Poison Resistance by [1]%&lt;/font&gt; and &lt;font color='#7f3d00'&gt;Earth Resistance by [2]%&lt;/font&gt;. Also reduces &lt;font color=&quot;#c80030&quot;&gt;Movement Speed by [3]%&lt;/font&gt;." />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_water_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_water_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Earth_Prepare_Voodoo_Root_01_Poison:Dummy_Root;RS3_FX_Skills_Earth_Prepare_Voodoo_Hand_01:Dummy_L_HandFX,Dummy_R_HandFX" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_beam_air_01_cast" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Earth_Cast_Aoe_Voodoo_Root_01_Poison;RS3_FX_Skills_Earth_Cast_Aoe_Voodoo_Hand_01:Dummy_L_HandFX,Dummy_R_HandFX" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="DomeEffect" type="StringStatObjectFieldDefinition" value="OdinGEO_Dome_01" />
+        <field name="CycleConditions" type="StringStatObjectFieldDefinition" value="Ally;!Dead" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="8" enumeration_type_name="SkillAbility" />
+        <field name="AuraEnemies" type="StringStatObjectFieldDefinition" value="OdinGEO_Spored" />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Potion:Stats_OdinGEO_Spored:PoisonResistance;Potion:Stats_OdinGEO_Spored:EarthResistance;Potion:Stats_OdinGEO_Spored:MovementSpeedBoost;" />
+        <field name="AuraNeutrals" type="StringStatObjectFieldDefinition" value="OdinGEO_Spored" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="OdinGEO_Spored,100,2;" />
       </fields>
     </stat_object>
   </stat_objects>

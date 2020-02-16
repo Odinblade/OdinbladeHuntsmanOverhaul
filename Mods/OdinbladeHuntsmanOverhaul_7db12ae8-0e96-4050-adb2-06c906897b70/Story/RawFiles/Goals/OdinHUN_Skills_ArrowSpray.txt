@@ -3,16 +3,54 @@ SubGoalCombiner SGC_AND
 INITSECTION
 
 KBSECTION
-//REGION Damage/type calculation
-//Perform skill
+// //REGION Damage/type calculation
+// //Perform skill
+// IF
+// NRD_OnPrepareHit(_Target, _Dealer, _, _HitHandle)
+// AND
+// HasActiveStatus(_Dealer, "OdinHUN_ARROWSPRAY", 1)
+// AND
+// DB_OBHUN_DamageType(_PreDamageType)
+// AND
+// NRD_HitGetDamage(_HitHandle, _PreDamageType, _Damage)
+// AND
+// _Damage > 0
+// AND
+// GetDistanceTo(_Dealer, _Target, _Dist)
+// AND
+// RealProduct(_Dist, 0.10, _DistanceMultiplier)
+// AND
+// Real(_Damage, _RealDamage)
+// AND
+// RealProduct(_RealDamage, _DistanceMultiplier, _RealAddDamage)
+// AND
+// RealSum(_RealDamage, _RealAddDamage, _RealFinalDamage)
+// AND
+// Integer(_RealFinalDamage, _FinalDamage)
+// AND
+// QRY_OBHUN_Determine_Type(_Dealer, _PreDamageType)
+// AND
+// DB_OBHUN_DeterminedType_Temp(_Dealer, _DamageType)
+// THEN
+// NRD_HitClearDamage(_HitHandle, _PreDamageType);
+// NRD_HitAddDamage(_HitHandle, _DamageType, _FinalDamage);
+// NOT DB_OBHUN_DeterminedType_Temp(_Dealer, _DamageType);
+// //END_REGION
+
 IF
-NRD_OnPrepareHit(_Target, _Dealer, _, _HitHandle)
+NRD_OnHit(_Target, _Dealer, _, _HitHandle)
 AND
-HasActiveStatus(_Dealer, "OdinHUN_ARROWSPRAY", 1)
+NRD_StatusGetString(_Target, _HitHandle, "SkillId", _SkillID)
+AND
+_SkillID == "Projectile_ArrowSpray_-1"
+// AND
+// NRD_StatGetString(_SkillId, "DamageType", _Testing)
 AND
 DB_OBHUN_DamageType(_PreDamageType)
 AND
-NRD_HitGetDamage(_HitHandle, _PreDamageType, _Damage)
+NRD_HitStatusGetDamage(_Target, _HitHandle, _PreDamageType, _Damage)
+AND
+_Damage > 0
 AND
 GetDistanceTo(_Dealer, _Target, _Dist)
 AND
@@ -25,15 +63,11 @@ AND
 RealSum(_RealDamage, _RealAddDamage, _RealFinalDamage)
 AND
 Integer(_RealFinalDamage, _FinalDamage)
-AND
-QRY_OBHUN_Determine_Type(_Dealer, _PreDamageType)
-AND
-DB_OBHUN_DeterminedType_Temp(_Dealer, _DamageType)
 THEN
-NRD_HitClearDamage(_HitHandle, _PreDamageType);
-NRD_HitAddDamage(_HitHandle, _DamageType, _FinalDamage);
-NOT DB_OBHUN_DeterminedType_Temp(_Dealer, _DamageType);
-//END_REGION
+NRD_HitStatusClearDamage(_Target, _HitHandle, _PreDamageType);
+NRD_HitStatusAddDamage(_Target, _HitHandle, _PreDamageType, _FinalDamage);
+NRD_DebugLog("[OdinHUN:Story] Arrow Spray hit");
+// NRD_DebugLog(_Testing);
 EXITSECTION
 
 ENDEXITSECTION

@@ -21,7 +21,7 @@ DB_OBHUN_DamageType("Poison");
 DB_OBHUN_DamageType("Fire");
 DB_OBHUN_DamageType("Water");
 DB_OBHUN_DamageType("Air");
-// DB_OBHUN_DamageType("Piercing");
+DB_OBHUN_DamageType("Piercing");
 DB_OBHUN_DamageType("Earth");
 DB_OBHUN_DamageType("Chaos");
 //END_REGION
@@ -48,36 +48,98 @@ DB_OBHUN_EA_ExcludedSkill("Projectile_StunningArrow", 1000);
 DB_OBHUN_EA_ExcludedSkill("Projectile_WaterArrow", 1000);
 
 //Skills which have unique damage calculation
-DB_OBHUN_EA_ExcludedSkill("Projectile_ArrowSpray", 3450);
+// DB_OBHUN_EA_ExcludedSkill("Projectile_ArrowSpray", 3450);
 DB_OBHUN_EA_ExcludedSkill("Projectile_OdinHUN_PowerShot", 1000);
 //END_REGION
 
-//REGION Grenades
+//REGION Crafted Arrows & Grenades
+//Crafted Arrow skills
+DB_OBHUN_CraftedArrowsSkill("Projectile_BleedingArrow");
+DB_OBHUN_CraftedArrowsSkill("Projectile_BleedingArrow_-1");
+DB_OBHUN_CraftedArrowsSkill("Projectile_BlessedWaterArrow");
+DB_OBHUN_CraftedArrowsSkill("Projectile_BlessedWaterArrow_-1");
+DB_OBHUN_CraftedArrowsSkill("Projectile_CharmingArrow");
+DB_OBHUN_CraftedArrowsSkill("Projectile_CharmingArrow_-1");
+DB_OBHUN_CraftedArrowsSkill("Projectile_CursedFireArrow");
+DB_OBHUN_CraftedArrowsSkill("Projectile_CursedFireArrow_-1");
+DB_OBHUN_CraftedArrowsSkill("Projectile_DebuffAllArrow");
+DB_OBHUN_CraftedArrowsSkill("Projectile_DebuffAllArrow_-1");
+DB_OBHUN_CraftedArrowsSkill("Projectile_ExplosionArrow");
+DB_OBHUN_CraftedArrowsSkill("Projectile_ExplosionArrow_-1");
+DB_OBHUN_CraftedArrowsSkill("Projectile_FireArrow");
+DB_OBHUN_CraftedArrowsSkill("Projectile_FireArrow_-1");
+DB_OBHUN_CraftedArrowsSkill("Projectile_FreezingArrow");
+DB_OBHUN_CraftedArrowsSkill("Projectile_FreezingArrow_-1");
+DB_OBHUN_CraftedArrowsSkill("Projectile_KnockedOutArrow");
+DB_OBHUN_CraftedArrowsSkill("Projectile_KnockedOutArrow_-1");
+DB_OBHUN_CraftedArrowsSkill("Projectile_PoisonArrow");
+DB_OBHUN_CraftedArrowsSkill("Projectile_PoisonArrow_-1");
+DB_OBHUN_CraftedArrowsSkill("Projectile_PoisonedCloudArrow");
+DB_OBHUN_CraftedArrowsSkill("Projectile_PoisonedCloudArrow_-1");
+DB_OBHUN_CraftedArrowsSkill("Projectile_SilverArrow");
+DB_OBHUN_CraftedArrowsSkill("Projectile_SilverArrow_-1");
+DB_OBHUN_CraftedArrowsSkill("Projectile_SlowDownArrow");
+DB_OBHUN_CraftedArrowsSkill("Projectile_SlowDownArrow_-1");
+DB_OBHUN_CraftedArrowsSkill("Projectile_SmokescreenArrow");
+DB_OBHUN_CraftedArrowsSkill("Projectile_SmokescreenArrow_-1");
+DB_OBHUN_CraftedArrowsSkill("Projectile_StaticCloudArrow");
+DB_OBHUN_CraftedArrowsSkill("Projectile_StaticCloudArrow_-1");
+DB_OBHUN_CraftedArrowsSkill("Projectile_SteamCloudArrow");
+DB_OBHUN_CraftedArrowsSkill("Projectile_SteamCloudArrow_-1");
+DB_OBHUN_CraftedArrowsSkill("Projectile_StunningArrow");
+DB_OBHUN_CraftedArrowsSkill("Projectile_StunningArrow_-1");
+DB_OBHUN_CraftedArrowsSkill("Projectile_WaterArrow");
+DB_OBHUN_CraftedArrowsSkill("Projectile_WaterArrow_-1");
+
 //Grenade skills
-DB_OBHUN_GrenadeSkill("Projectile_Grenade_ArmorPiercing");
-DB_OBHUN_GrenadeSkill("Projectile_Grenade_BlessedIce");
-DB_OBHUN_GrenadeSkill("Projectile_Grenade_BlessedOilFlask");
-DB_OBHUN_GrenadeSkill("Projectile_Grenade_ChemicalWarfare");
-DB_OBHUN_GrenadeSkill("Projectile_Grenade_CursedMolotov");
-DB_OBHUN_GrenadeSkill("Projectile_Grenade_CursedPoisonFlask");
-DB_OBHUN_GrenadeSkill("Projectile_Grenade_Flashbang");
-DB_OBHUN_GrenadeSkill("Projectile_Grenade_Holy");
-DB_OBHUN_GrenadeSkill("Projectile_Grenade_Ice");
-DB_OBHUN_GrenadeSkill("Projectile_Grenade_Love");
-DB_OBHUN_GrenadeSkill("Projectile_Grenade_MindMaggot");
-DB_OBHUN_GrenadeSkill("Projectile_Grenade_Molotov");
-DB_OBHUN_GrenadeSkill("Projectile_Grenade_MustardGas");
-DB_OBHUN_GrenadeSkill("Projectile_Grenade_Nailbomb");
-DB_OBHUN_GrenadeSkill("Projectile_Grenade_OilFlask");
-DB_OBHUN_GrenadeSkill("Projectile_Grenade_PoisonFlask");
-DB_OBHUN_GrenadeSkill("Projectile_Grenade_SmokeBomb");
-DB_OBHUN_GrenadeSkill("Projectile_Grenade_Taser");
-DB_OBHUN_GrenadeSkill("Projectile_Grenade_Terror");
-DB_OBHUN_GrenadeSkill("Projectile_Grenade_Tremor");
-DB_OBHUN_GrenadeSkill("Projectile_Grenade_WaterBalloon");
-DB_OBHUN_GrenadeSkill("Projectile_Grenade_WaterBlessedBalloon");
-DB_OBHUN_GrenadeSkill("ProjectileStrike_Grenade_ClusterBomb");
-DB_OBHUN_GrenadeSkill("ProjectileStrike_Grenade_CursedClusterBomb");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_ArmorPiercing", "e057dc4a-3921-4740-a5ac-a4ca6a7a32f7");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_ArmorPiercing_-1", "e057dc4a-3921-4740-a5ac-a4ca6a7a32f7");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_BlessedIce", "4b70b9dc-ac99-415c-bfc8-15cd6dc9aa7d");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_BlessedIce_-1", "4b70b9dc-ac99-415c-bfc8-15cd6dc9aa7d");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_BlessedOilFlask", "d44fa069-7708-4c0f-a924-f66a75802113");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_BlessedOilFlask_-1", "d44fa069-7708-4c0f-a924-f66a75802113");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_ChemicalWarfare", "bdff5d65-29ef-425c-9096-a119e4de228f");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_ChemicalWarfare_-1", "bdff5d65-29ef-425c-9096-a119e4de228f");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_CursedMolotov", "4f63b088-f686-4e09-8c0f-16df6504f0ea");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_CursedMolotov_-1", "4f63b088-f686-4e09-8c0f-16df6504f0ea");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_CursedPoisonFlask", "f216b8d2-4158-4ce6-b8c9-15e920a6add4");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_CursedPoisonFlask_-1", "f216b8d2-4158-4ce6-b8c9-15e920a6add4");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Flashbang", "a71888d9-9d3f-4004-96c3-bbc1a158c3f6");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Flashbang_-1", "a71888d9-9d3f-4004-96c3-bbc1a158c3f6");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Holy", "f7ecad76-b074-4164-a99f-9262d3cd66db");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Holy_-1", "f7ecad76-b074-4164-a99f-9262d3cd66db");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Ice", "a16947e3-5f2f-42c7-b05b-7cdaeb204d28");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Ice_-1", "a16947e3-5f2f-42c7-b05b-7cdaeb204d28");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Love", "22cd2247-45d7-432c-93bd-782777af3b33");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Love_-1", "22cd2247-45d7-432c-93bd-782777af3b33");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_MindMaggot", "2b8f5417-b1f4-4978-983b-a59dc67d903f");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_MindMaggot_-1", "2b8f5417-b1f4-4978-983b-a59dc67d903f");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Molotov", "5208b121-64fa-4704-8924-c61c576e1ac5");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Molotov_-1", "5208b121-64fa-4704-8924-c61c576e1ac5");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_MustardGas", "2cba3327-1650-4749-89ce-daeb6139aa17");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_MustardGas_-1", "2cba3327-1650-4749-89ce-daeb6139aa17");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Nailbomb", "c2dac4cd-724b-4179-b72b-84e0d9ffa7a1");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Nailbomb_-1", "c2dac4cd-724b-4179-b72b-84e0d9ffa7a1");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_OilFlask", "54b64fbb-86bf-4f8d-a5c3-a25eac3f8d9d");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_OilFlask_-1", "54b64fbb-86bf-4f8d-a5c3-a25eac3f8d9d");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_PoisonFlask", "6409a204-1ad0-4082-89b9-1edca837da2a");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_PoisonFlask_-1", "6409a204-1ad0-4082-89b9-1edca837da2a");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_SmokeBomb", "0c16cc46-26f9-4c07-b334-7905a10591ea");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_SmokeBomb_-1", "0c16cc46-26f9-4c07-b334-7905a10591ea");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Taser", "29373e1d-5f91-490e-89dd-747042a1d6c7");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Taser_-1", "29373e1d-5f91-490e-89dd-747042a1d6c7");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Terror", "cbdc1f53-1acf-4288-bdb2-3ab085d27f29");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Terror_-1", "cbdc1f53-1acf-4288-bdb2-3ab085d27f29");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Tremor", "220f7257-faa9-4bc4-903b-ae52765948ea");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Tremor_-1", "220f7257-faa9-4bc4-903b-ae52765948ea");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_WaterBalloon", "ee4b83e0-b2dc-4880-a974-af7742e6e960");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_WaterBalloon_-1", "ee4b83e0-b2dc-4880-a974-af7742e6e960");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_WaterBlessedBalloon", "40ce7ae0-d0a9-4d76-b638-4bbd2814075f");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_WaterBlessedBalloon_-1", "40ce7ae0-d0a9-4d76-b638-4bbd2814075f");
+DB_OBHUN_GrenadeSkill("ProjectileStrike_Grenade_ClusterBomb", "f70ee2c6-9dda-4eed-b59b-75e4256c9059");
+DB_OBHUN_GrenadeSkill("ProjectileStrike_Grenade_ClusterBomb_-1", "f70ee2c6-9dda-4eed-b59b-75e4256c9059");
+DB_OBHUN_GrenadeSkill("ProjectileStrike_Grenade_CursedClusterBomb", "d9e9a62c-0266-440d-9501-a6c2c43a22f6");
+DB_OBHUN_GrenadeSkill("ProjectileStrike_Grenade_CursedClusterBomb_-1", "d9e9a62c-0266-440d-9501-a6c2c43a22f6");
 //END_REGION
 
 //REGION Traps

@@ -39,3 +39,11 @@ data "Act part" "0"
 data "CriticalChance" "-100"
 data "Duration" "2"
 
+new entry "Stats_Farsight"
+type "Potion"
+data "Act" "1"
+data "Act part" "0"
+data "AccuracyBoost" "25"
+data "RangeBoost" "400"
+data "CriticalChance" "10"
+

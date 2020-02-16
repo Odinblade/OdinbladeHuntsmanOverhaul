@@ -1,0 +1,10 @@
+new entry "OdinHUN_CAMOUFLAGE_HEAL"
+type "StatusData"
+data "StatusType" "HEAL"
+using "HEAL"
+data "ForGameMaster" "No"
+data "InitiateCombat" "No"
+data "HealStat" "Vitality"
+data "HealType" "Qualifier"
+data "HealValue" "80"
+

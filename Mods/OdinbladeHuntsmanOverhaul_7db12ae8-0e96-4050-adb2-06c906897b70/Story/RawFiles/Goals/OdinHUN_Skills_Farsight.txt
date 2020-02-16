@@ -1,0 +1,25 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+IF
+CharacterUsedSkillOnTarget(_Caster, _Owner, "Target_Farsight", _, _)
+AND
+DB_OBHUN_AnimalCompanion_Instance((CHARACTERGUID)_Owner, _Summon)
+AND
+_Caster == _Owner
+THEN
+ApplyStatus(_Summon, "FARSIGHT", 18.0, 1, _Caster);
+
+IF
+CharacterUsedSkillOnTarget(_Caster, _Summon, "Target_Farsight", _, _)
+AND
+DB_OBHUN_AnimalCompanion_Instance(_Owner, (CHARACTERGUID)_Summon)
+AND
+_Caster == _Owner
+THEN
+ApplyStatus(_Owner, "FARSIGHT", 18.0, 1, _Caster);
+EXITSECTION
+
+ENDEXITSECTION

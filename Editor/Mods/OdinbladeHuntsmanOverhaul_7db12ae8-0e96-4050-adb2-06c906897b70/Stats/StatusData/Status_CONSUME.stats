@@ -3,14 +3,14 @@
   <stat_objects>
     <stat_object is_substat="false">
       <fields>
-        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_LETHALFOCUS" />
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_SEEKINGARROWS" />
         <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
-        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Lethal Focus" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Seeking Arrows" />
         <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="|Character is crippled. Cured by Rested.|" />
         <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
         <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="28" enumeration_type_name="FormatStringColor" />
         <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_GP_Status_Crippled_01:Dummy_BodyFX" />
-        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_LethalFocus" />
+        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_SeekingArrows" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -266,6 +266,18 @@
         <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Status_Nimble_01:Dummy_BodyFX" />
         <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_NaturalBond" />
         <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Character is &lt;font color='#40b606'&gt;splitting 25% of damage&lt;/font&gt; taken with their &lt;font color='#81AB00'&gt;Natural Bond&lt;/font&gt; &lt;font color='#88a25b'&gt;ally&lt;/font&gt;." />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_EXPERTHUNTER" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Expert Hunter" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="|Character is crippled. Cured by Rested.|" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
+        <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="28" enumeration_type_name="FormatStringColor" />
+        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_GP_Status_Crippled_01:Dummy_BodyFX" />
+        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_ExpertHunter" />
       </fields>
     </stat_object>
   </stat_objects>

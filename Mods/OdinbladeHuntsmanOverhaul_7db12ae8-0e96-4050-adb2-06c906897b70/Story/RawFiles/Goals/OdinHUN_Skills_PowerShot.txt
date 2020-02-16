@@ -38,6 +38,8 @@ DB_OBHUN_DamageType(_PreDamageType)
 AND
 NRD_HitGetDamage(_HitHandle, _PreDamageType, _Damage)
 AND
+_Damage > 0
+AND
 Real(_Damage, _RealDamage)
 AND
 RealProduct(_RealDamage, _UsedAP, _RealAddDamage)

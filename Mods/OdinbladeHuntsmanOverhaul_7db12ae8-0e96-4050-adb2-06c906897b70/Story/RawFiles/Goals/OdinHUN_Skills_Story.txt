@@ -5,28 +5,7 @@ DB_OBHUN_NTH_STATUS("OdinHUN_VULNERABLE");
 DB_OBHUN_NTH_STATUS("OdinHUN_VULNERABLE_DOUBLE");
 
 KBSECTION
-IF
-NRD_OnPrepareHit(_Target, _Dealer, _Damage, _HitHandle)
-AND
-NOT DB_OBHUN_SA(_Dealer)
-AND
-HasActiveStatus(_Dealer, "OdinHUN_LETHALFOCUS", 1)
-AND
-GetPosition(_Dealer, _X, _Y, _Z)
-THEN
-DB_OBHUN_SA(_Dealer);
-NRD_ProjectilePrepareLaunch();
-NRD_ProjectileSetString("SkillId", "Projectile_Fireball");
-NRD_ProjectileSetVector3("TargetPosition", _X, _Y, _Z);
-NRD_ProjectileSetGuidString("Caster", _Dealer);
-NRD_ProjectileSetGuidString("Target", _Target);
-NRD_ProjectileLaunch();
-ProcObjectTimer(_Dealer, "OBHUN_SA_Fire", 500);
 
-PROC
-ProcObjectTimerFinished(_Character, "OBHUN_SA_Fire")
-THEN
-NOT DB_OBHUN_SA(_Character);
 
 //SKILL HUNTER'S MARK
 IF
@@ -117,6 +96,21 @@ IF
 CombatEnded(_CombatID)
 THEN
 SysClear("DB_OBHUN_NTH_TEMP_FARTHEST", 3);
+
+// IF
+// CharacterUsedItem(_Char, _Item)
+// AND
+// IsTagged(_Item, "GRENADES", 1)
+// IF
+// CharacterUsedItem(_Character,_Item)
+// IF
+// CharacterUsedSkill(_Character, _, _, _)
+// IF
+// CharacterUsedItem(_Character, _Item)
+// AND
+// IsTagged(_Item, "GRENADES", 1)
+// THEN
+// NRD_DebugLog("[OdinHUN:Story] Character has used an item");
 EXITSECTION
 
 ENDEXITSECTION

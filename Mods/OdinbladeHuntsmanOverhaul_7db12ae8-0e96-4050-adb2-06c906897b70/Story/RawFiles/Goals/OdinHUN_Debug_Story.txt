@@ -26,6 +26,11 @@ CharacterAddSkill(_Char, "Projectile_OdinHUN_HeavyShot");
 
 CharacterAddSkill(_Char, "Target_ElementalArrowheads");
 CharacterAddSkill(_Char, "Target_FirstAid");
+
+IF
+TextEventSet("odinblade_luareset")
+THEN
+NRD_LuaReset(1);
 EXITSECTION
 
 ENDEXITSECTION

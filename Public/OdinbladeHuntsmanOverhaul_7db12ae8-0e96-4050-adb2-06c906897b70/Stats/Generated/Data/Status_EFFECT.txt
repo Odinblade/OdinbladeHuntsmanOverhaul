@@ -48,3 +48,9 @@ data "StatusType" "EFFECT"
 data "ForGameMaster" "No"
 data "InitiateCombat" "No"
 
+new entry "OdinHUN_PROC_CAMOUFLAGE"
+type "StatusData"
+data "StatusType" "EFFECT"
+data "ForGameMaster" "No"
+data "InitiateCombat" "No"
+

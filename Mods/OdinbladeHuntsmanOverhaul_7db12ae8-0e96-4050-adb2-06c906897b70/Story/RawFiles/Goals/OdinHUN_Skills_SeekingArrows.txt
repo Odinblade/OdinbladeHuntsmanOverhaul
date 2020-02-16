@@ -1,0 +1,75 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+IF
+NRD_OnPrepareHit(_Target, _Dealer, _Damage, _HitHandle)
+AND
+HasActiveStatus(_Dealer, "OdinHUN_SEEKINGARROWS", 1)
+AND
+NOT DB_OBHUN_SeekingArrows(_Target, _Dealer)
+AND
+DB_OBHUN_EA_HitType((INTEGER)_CompatibleHitType)
+AND
+NRD_HitGetInt(_HitHandle, "HitType", _CompatibleHitType)
+AND
+GetDistanceTo(_Dealer, _Target, _Distance)
+AND
+_Distance >= 6
+THEN
+NRD_DebugLog("[OdinHUN:Story] Preparing a Seeking Arrow...");
+DB_OBHUN_SeekingArrows(_Target, _Dealer);
+
+IF
+NRD_OnHit(_Target, _Dealer, _Damage, _HitHandle)
+AND
+HasActiveStatus(_Dealer, "OdinHUN_SEEKINGARROWS", 1)
+AND
+DB_OBHUN_SeekingArrows(_Target, _Dealer)
+AND
+NRD_StatusGetString(_Target, _HitHandle, "SkillId", _SkillID)
+AND
+NRD_StatusGetString(_Target, _HitHandle, "DamageType", _DamageType)
+AND
+_SkillID != "Projectile_OdinHUN_SeekingArrows_Shot"
+AND
+GetPosition(_Dealer, _dX, _dY, _dZ)
+AND
+GetPosition(_Target, _tX, _tY, _tZ)
+AND
+RealSum(_dY, 2.0, _Y)
+AND
+Real(_Damage, _RealDamage)
+AND
+RealProduct(_RealDamage, 0.25, _RealSADamage)
+AND
+Integer(_RealSADamage, _SADamage)
+THEN
+NRD_ProjectilePrepareLaunch();
+NRD_ProjectileSetString("SkillId", "Projectile_OdinHUN_SeekingArrows_Shot");
+NRD_ProjectileSetVector3("SourcePosition", _dX, _Y, _dZ);
+NRD_ProjectileSetVector3("TargetPosition", _tX, _tY, _tZ);
+NRD_ProjectileSetGuidString("Caster", _Dealer);
+NRD_ProjectileSetGuidString("Target", _Target);
+// NRD_ProjectileAddDamage(_DamageType, _SADamage);
+NRD_ProjectileLaunch();
+ProcObjectTimer(_Dealer, "OdinHUN_SA_GRACEPERIOD", 1750);
+// NOT DB_OBHUN_SeekingArrows(_Target, _Dealer);
+NRD_DebugLog("[OdinHUN:Story] Seeking Arrow launched");
+
+PROC
+ProcObjectTimerFinished(_Dealer, "OdinHUN_SA_GRACEPERIOD")
+AND
+DB_OBHUN_SeekingArrows(_Target, _Dealer)
+THEN
+NOT DB_OBHUN_SeekingArrows(_Target, _Dealer);
+NRD_DebugLog("[OdinHUN:Story] Grace period ended");
+
+IF
+CharacterUsedSkill(_Character, "ProjectileStrike_RainOfArrows", _, _)
+THEN
+NRD_DebugLog("[OdinHUN:Story] Used Rain of Arrows skill");
+EXITSECTION
+
+ENDEXITSECTION
