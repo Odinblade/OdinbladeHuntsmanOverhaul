@@ -19,8 +19,7 @@ local function OverrideStats()
 end
 
 local ModuleLoading = function ()
-    Ext.Print("OdinHUN:Bootstrap.lua] Module is loading.")
-    Ext.Print("Laughing Leader is the very best, like no-one ever was")
+    Ext.Print("[OdinHUN:Bootstrap.lua] Module is loading.")
     -- OverrideStats()
 end
 

@@ -2,7 +2,7 @@
 <effect version="0.0" effectversion="1.0.0" id="d3634816-fe92-4d58-bf39-7fd783fab95d">
   <phases>
     <object class="" classid="00000000-0000-0000-0000-000000000000" assembly="">
-      <data id="65684753-bfbc-45d5-a3af-bb4693d9a1ba" duration="1.9" playcount="1" definitionid="fc34bad5-e4a8-4855-bdd1-ece88d327719" />
+      <data id="65684753-bfbc-45d5-a3af-bb4693d9a1ba" duration="1.25" playcount="1" definitionid="fc34bad5-e4a8-4855-bdd1-ece88d327719" />
     </object>
     <object class="" classid="00000000-0000-0000-0000-000000000000" assembly="">
       <data id="6bbd92f0-24eb-4ea4-a7d3-5bdea462889e" duration="0.71" playcount="-1" definitionid="2d6a16c1-4632-4f7f-8097-4717dc65d7bd" />
@@ -2808,7 +2808,7 @@
         <id value="13" />
       </ids>
       <track name="Track" muted="True" locked="False" mutestateoverride="None">
-        <component class="ParticleSystem" start="1.901951" end="2.61" instancename="91cfdcef-8d72-4fc6-aa1b-1d193b7e9368">
+        <component class="ParticleSystem" start="1.254999" end="1.961838" instancename="91cfdcef-8d72-4fc6-aa1b-1d193b7e9368">
           <properties>
             <property id="ef1d7d1e-02b6-4548-80d9-5ef2fbcda237">
               <data>
@@ -2817,7 +2817,7 @@
             </property>
             <property id="035b5248-d0ca-44b7-853f-3acb84110e67">
               <data>
-                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="1.901951,2.61" />
+                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="1.254999,1.961838" />
               </data>
             </property>
             <property id="93b34a52-eef2-4f88-80f6-19e3126188ca">
@@ -3766,7 +3766,7 @@
         </component>
       </track>
       <track name="Track" muted="True" locked="False" mutestateoverride="None">
-        <component class="ParticleSystem" start="1.9" end="2.61" instancename="760d91fb-cb6a-4db1-b08b-94fae08d7521">
+        <component class="ParticleSystem" start="1.250191" end="1.961838" instancename="760d91fb-cb6a-4db1-b08b-94fae08d7521">
           <properties>
             <property id="ef1d7d1e-02b6-4548-80d9-5ef2fbcda237">
               <data>
@@ -3775,7 +3775,7 @@
             </property>
             <property id="035b5248-d0ca-44b7-853f-3acb84110e67">
               <data>
-                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="1.9,2.61" />
+                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="1.250191,1.961838" />
               </data>
             </property>
             <property id="93b34a52-eef2-4f88-80f6-19e3126188ca">
@@ -4723,7 +4723,7 @@
         </component>
       </track>
       <track name="Track" muted="False" locked="False" mutestateoverride="None">
-        <component class="ParticleSystem" start="1.899328" end="2.609328" instancename="22a1f04d-231e-40a4-81df-05ef22aeb837">
+        <component class="ParticleSystem" start="1.250191" end="1.961838" instancename="22a1f04d-231e-40a4-81df-05ef22aeb837">
           <properties>
             <property id="ef1d7d1e-02b6-4548-80d9-5ef2fbcda237">
               <data>
@@ -4732,7 +4732,7 @@
             </property>
             <property id="035b5248-d0ca-44b7-853f-3acb84110e67">
               <data>
-                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="1.899328,2.609328" />
+                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="1.250191,1.961838" />
               </data>
             </property>
             <property id="93b34a52-eef2-4f88-80f6-19e3126188ca">
@@ -6741,7 +6741,7 @@
         <id value="10" />
       </ids>
       <track name="Track" muted="True" locked="False" mutestateoverride="None">
-        <component class="TurbulenceForce" start="1.7" end="3" instancename="83456434-5c95-4ff7-8e15-c879b83cdc1b">
+        <component class="TurbulenceForce" start="1.029003" end="2.327278" instancename="83456434-5c95-4ff7-8e15-c879b83cdc1b">
           <properties>
             <property id="ef1d7d1e-02b6-4548-80d9-5ef2fbcda237">
               <data>
@@ -6750,7 +6750,7 @@
             </property>
             <property id="035b5248-d0ca-44b7-853f-3acb84110e67">
               <data>
-                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="1.7,3" />
+                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="1.029003,2.327278" />
               </data>
             </property>
             <property id="12722684-fa38-4a52-b851-958300ac67aa">
@@ -6827,7 +6827,7 @@
         </component>
       </track>
       <track name="Track" muted="False" locked="False" mutestateoverride="None">
-        <component class="ParticleSystem" start="1.802285" end="2.699174" instancename="2b38ed67-6544-44e9-bca9-494e6c374461">
+        <component class="ParticleSystem" start="1.12998" end="2.024347" instancename="2b38ed67-6544-44e9-bca9-494e6c374461">
           <properties>
             <property id="ef1d7d1e-02b6-4548-80d9-5ef2fbcda237">
               <data>
@@ -6836,7 +6836,7 @@
             </property>
             <property id="035b5248-d0ca-44b7-853f-3acb84110e67">
               <data>
-                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="1.802285,2.699174" />
+                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="1.12998,2.024347" />
               </data>
             </property>
             <property id="7b01f163-d329-4cd0-97f0-31115055b9c8">
@@ -7178,8 +7178,8 @@
                   <rampchanneldata>
                     <rampchannel type="Linear" id="66c1ee74-05bd-4d7a-93f4-8eabf167c27f" selected="True">
                       <keyframes>
-                        <keyframe time="0" value="1.25" />
-                        <keyframe time="1" value="1.25" />
+                        <keyframe time="0" value="2" />
+                        <keyframe time="1" value="2" />
                       </keyframes>
                     </rampchannel>
                   </rampchanneldata>
@@ -7203,7 +7203,7 @@
             </property>
             <property id="c8162139-f350-4cf0-aa23-c8f4a2bdbd03">
               <data>
-                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="10" />
+                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="5" />
               </data>
             </property>
             <property id="b0a263d3-3d10-466d-8028-91be42b846e9">
@@ -7808,44 +7808,7 @@
             </module>
             <module id="b369fad0-cc26-42f3-bdc2-0b8f120c6081" muted="False" index="7" />
             <module id="a422ed8c-1310-461e-8362-c85018b918c5" muted="False" index="8" />
-            <module id="a9069163-3f1e-425e-aa9d-e99ae3c56153" muted="True" index="9">
-              <properties>
-                <property id="d1fe8ba8-a5d8-4feb-853a-e0ead4913148">
-                  <data>
-                    <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="6" />
-                  </data>
-                </property>
-                <property id="40a5b37b-f093-4bbe-8ca7-f4d4cc844312">
-                  <data>
-                    <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="1" />
-                  </data>
-                </property>
-                <property id="38f395e7-9a5d-42d6-941b-a1a1994c7d94">
-                  <data>
-                    <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="0,1,0" />
-                  </data>
-                </property>
-                <property id="c6bd606f-0ef4-4b4a-9f33-a2f6d9122c32">
-                  <data>
-                    <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000">
-                      <rampchanneldata>
-                        <rampchannel type="Linear" id="66c1ee74-05bd-4d7a-93f4-8eabf167c27f" selected="True">
-                          <keyframes>
-                            <keyframe time="0" value="2" />
-                            <keyframe time="1" value="2" />
-                          </keyframes>
-                        </rampchannel>
-                      </rampchanneldata>
-                    </datum>
-                  </data>
-                </property>
-                <property id="c8162139-f350-4cf0-aa23-c8f4a2bdbd03">
-                  <data>
-                    <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="5" />
-                  </data>
-                </property>
-              </properties>
-            </module>
+            <module id="a9069163-3f1e-425e-aa9d-e99ae3c56153" muted="False" index="9" />
             <module id="13ab8875-378d-4b19-acd0-ee86f1752a67" muted="True" index="10">
               <properties>
                 <property id="d1fe8ba8-a5d8-4feb-853a-e0ead4913148">
@@ -8027,7 +7990,7 @@
         </component>
       </track>
       <track name="Track" muted="False" locked="False" mutestateoverride="None">
-        <component class="VortexForce" start="1.7" end="3" instancename="aec93687-6b3a-4cfb-9028-a5ea0f922047">
+        <component class="VortexForce" start="1.029003" end="2.327278" instancename="aec93687-6b3a-4cfb-9028-a5ea0f922047">
           <properties>
             <property id="ef1d7d1e-02b6-4548-80d9-5ef2fbcda237">
               <data>
@@ -8036,7 +7999,7 @@
             </property>
             <property id="035b5248-d0ca-44b7-853f-3acb84110e67">
               <data>
-                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="1.7,3" />
+                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="1.029003,2.327278" />
               </data>
             </property>
             <property id="6446ffbf-d9af-458b-bafa-cfb01b311d36">
@@ -8118,7 +8081,7 @@
         </component>
       </track>
       <track name="Track" muted="True" locked="False" mutestateoverride="None">
-        <component class="RadialForce" start="1.7" end="3" instancename="5cafec65-7df6-48b6-a300-3448666fa52b">
+        <component class="RadialForce" start="1.029003" end="2.327278" instancename="5cafec65-7df6-48b6-a300-3448666fa52b">
           <properties>
             <property id="ef1d7d1e-02b6-4548-80d9-5ef2fbcda237">
               <data>
@@ -8127,7 +8090,7 @@
             </property>
             <property id="035b5248-d0ca-44b7-853f-3acb84110e67">
               <data>
-                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="1.7,3" />
+                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="1.029003,2.327278" />
               </data>
             </property>
             <property id="23c87db2-a7b6-4a5a-b67b-025c4d13cc93">
@@ -8224,7 +8187,7 @@
         </component>
       </track>
       <track name="Track" muted="True" locked="False" mutestateoverride="None">
-        <component class="GravityForce" start="2.018227" end="2.541471" instancename="2e645869-1e4a-4cf3-a713-088bff43961c">
+        <component class="GravityForce" start="1.346359" end="1.870477" instancename="2e645869-1e4a-4cf3-a713-088bff43961c">
           <properties>
             <property id="ef1d7d1e-02b6-4548-80d9-5ef2fbcda237">
               <data>
@@ -8233,7 +8196,7 @@
             </property>
             <property id="035b5248-d0ca-44b7-853f-3acb84110e67">
               <data>
-                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="2.018227,2.541471" />
+                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="1.346359,1.870477" />
               </data>
             </property>
             <property id="5b80f982-c9f9-426c-8d35-cdcad8250e4b">
@@ -8320,7 +8283,7 @@
         <id value="9" />
       </ids>
       <track name="Track" muted="True" locked="False" mutestateoverride="None">
-        <component class="ParticleSystem" start="1.755075" end="2.735994" instancename="7b5388db-1c3a-4fd8-a8fb-d915edd78741">
+        <component class="ParticleSystem" start="0.9087924" end="1.889711" instancename="7b5388db-1c3a-4fd8-a8fb-d915edd78741">
           <properties>
             <property id="ef1d7d1e-02b6-4548-80d9-5ef2fbcda237">
               <data>
@@ -8329,7 +8292,7 @@
             </property>
             <property id="035b5248-d0ca-44b7-853f-3acb84110e67">
               <data>
-                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="1.755075,2.735994" />
+                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="0.9087924,1.889711" />
               </data>
             </property>
             <property id="93b34a52-eef2-4f88-80f6-19e3126188ca">
@@ -9277,7 +9240,7 @@
         </component>
       </track>
       <track name="Track" muted="False" locked="False" mutestateoverride="None">
-        <component class="ParticleSystem" start="1.428102" end="2.971607" instancename="0f9a808e-f925-42be-9381-5cabc4859fbb">
+        <component class="ParticleSystem" start="0.5818195" end="2.125324" instancename="0f9a808e-f925-42be-9381-5cabc4859fbb">
           <properties>
             <property id="ef1d7d1e-02b6-4548-80d9-5ef2fbcda237">
               <data>
@@ -9286,7 +9249,7 @@
             </property>
             <property id="035b5248-d0ca-44b7-853f-3acb84110e67">
               <data>
-                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="1.428102,2.971607" />
+                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="0.5818195,2.125324" />
               </data>
             </property>
             <property id="93b34a52-eef2-4f88-80f6-19e3126188ca">
@@ -10239,7 +10202,7 @@
         </component>
       </track>
       <track name="Track" muted="False" locked="False" mutestateoverride="None">
-        <component class="Decal" start="1.601206" end="3.452449" instancename="3518f026-b46e-467c-a7e6-3f8f4778ff21">
+        <component class="Decal" start="0.7549228" end="2.606167" instancename="3518f026-b46e-467c-a7e6-3f8f4778ff21">
           <properties>
             <property id="ef1d7d1e-02b6-4548-80d9-5ef2fbcda237">
               <data>
@@ -10248,7 +10211,7 @@
             </property>
             <property id="035b5248-d0ca-44b7-853f-3acb84110e67">
               <data>
-                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="1.601206,3.452449" />
+                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="0.7549228,2.606167" />
               </data>
             </property>
             <property id="d17bfe9f-c87a-4bc7-bd33-9a49197d6d6f">

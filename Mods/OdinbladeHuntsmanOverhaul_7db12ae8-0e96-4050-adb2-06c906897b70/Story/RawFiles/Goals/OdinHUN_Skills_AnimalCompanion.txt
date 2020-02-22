@@ -10,6 +10,10 @@ KBSECTION
 // Gives the player the Dismiss Animal Companion innate skill
 IF
 SkillActivated(_Owner, "Target_OdinHUN_Summon_AnimalCompanion")
+AND
+DB_CurrentLevel(_Level)
+AND
+IsCharacterCreationLevel(_Level, 0)
 THEN
 CharacterAddSkill((CHARACTERGUID)_Owner, "Shout_OdinHUN_Dismiss_AnimalCompanion", 0);
 
@@ -19,6 +23,18 @@ SkillDeactivated(_Owner, "Target_OdinHUN_Summon_AnimalCompanion")
 THEN
 CharacterRemoveSkill((CHARACTERGUID)_Owner, "Shout_OdinHUN_Dismiss_AnimalCompanion");
 PROC_OBHUN_ClearAnimalCompanion(_Owner);
+
+//Adds the Dismiss Animal Companion skill when they begin the game after Character Creation
+IF
+GameStarted(_, _)
+AND
+DB_IsPlayer(_Player)
+AND
+CharacterHasSkill(_Player, "Target_OdinHUN_Summon_AnimalCompanion", 1)
+AND
+CharacterHasSkill(_Player, "Shout_OdinHUN_Dismiss_AnimalCompanion", 0)
+THEN
+CharacterAddSkill((CHARACTERGUID)_Player, "Shout_OdinHUN_Dismiss_AnimalCompanion", 0);
 //END_REGION
 
 //REGION Summoning logic
@@ -89,7 +105,7 @@ CharacterSetAnimationOverride(_Owner, "");
 PlayAnimation(_Owner, "Whistle_01");
 NOT DB_OBHUN_AnimalCompanion_Prepare(_Owner, _X, _Y, _Z, _FxHandle);
 DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon);
-NRD_DebugLog("[OdinHUN:Story] Animal Companion successfully summoned");
+// NRD_DebugLog("[OdinHUN:Story] Animal Companion successfully summoned");
 //END_REGION
 
 //REGION Animal Companion dismissal logic
@@ -110,7 +126,7 @@ AND
 GetPosition((GUIDSTRING)_Summon, _X, _Y, _Z)
 THEN
 ClearTag(_Owner, "ODINHUN_ANIMALCOMPANION");
-NRD_DebugLog("[OdinHUN:Story] PROC_OBHUN_ClearAnimalCompanion Tag removed");
+// NRD_DebugLog("[OdinHUN:Story] PROC_OBHUN_ClearAnimalCompanion Tag removed");
 NOT DB_OBHUN_AnimalCompanion_Instance(_Owner, (CHARACTERGUID)_Summon);
 PlayEffectAtPosition("RS3_FX_Skills_Totem_Impact_Summon_Poison_01", _X, _Y, _Z);
 SetVisible(_Summon, 0);
@@ -136,39 +152,10 @@ IsTagged(_Summon, "ODINHUN_IS_ANIMALCOMPANION", 1)
 AND
 GetPosition(_Summon, _X, _Y, _Z)
 THEN
-// ClearTag(_Owner, "ODINHUN_ANIMALCOMPANION");
 PlayEffectAtPosition("RS3_FX_Skills_Totem_Impact_Summon_Poison_01", _X, _Y, _Z);
 SetVisible(_Summon, 0);
 ClearTag(_Owner, "ODINHUN_ANIMALCOMPANION");
 NRD_DebugLog("[OdinHUN:Story] PROC_OBHUN_ClearFlag_AnimalCompanion Tag removed");
-// IterateParty(_Owner, "OdinHUN_Iterate_Summons");
-// PROC_OBHUN_ClearFlag_AnimalCompanion(_Owner, _NewSummon);
-
-// IF
-// StoryEvent(_PartyMember, "OdinHUN_Iterate_Summons")
-// AND
-// QRY_IsSummonOrPartyFollower((CHARACTERGUID)_PartyMember)
-// AND
-// IsTagged(_PartyMember, "ODINHUN_IS_ANIMALCOMPANION", 1)
-// THEN
-
-
-// //NEED TO REWRITE - WON'T WORK WITH MAX SUMMON COUNT MODS
-// PROC
-// PROC_OBHUN_ClearFlag_AnimalCompanion((CHARACTERGUID)_Owner, (CHARACTERGUID)_NewSummon)
-// // AND
-// // NOT DB_OBHUN_AnimalCompanion_Instance(_Owner, _)
-// // AND
-// // IsTagged(_NewSummon, "ODINHUN_IS_ANIMALCOMPANION", 0)
-// THEN
-// ClearTag(_Owner, "ODINHUN_ANIMALCOMPANION");
-// NRD_DebugLog("[OdinHUN:Story] PROC_OBHUN_ClearFlag_AnimalCompanion Tag removed");
-
-// IF
-// CharacterDied(_Summon)
-// AND
-// DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon)
-// THEN
 //END_REGION
 
 //REGION Other interactions
@@ -178,6 +165,7 @@ CharacterUsedSkill(_Summon, "Shout_OdinHUN_Summon_SongOfTheDryads", _, _)
 THEN
 ApplyStatus(_Summon, "OdinGEO_Ironbark", 12.0, 1, _Summon);
 
+// Logic for the Camouflage companion skill
 IF
 CharacterStatusApplied(_Owner, "OdinHUN_PROC_CAMOUFLAGE", _)
 AND
@@ -187,6 +175,7 @@ ApplyStatus(_Owner, "INVISIBLE", 6.0, 1, _Owner);
 ApplyStatus(_Owner, "OdinHUN_CAMOUFLAGE_HEAL", 0.0, 1, _Owner);
 ApplyStatus(_Summon, "INVISIBLE", 6.0, 1, _Owner);
 ApplyStatus(_Summon, "OdinHUN_CAMOUFLAGE_HEAL", 0.0, 1, _Owner);
+PlayEffect(_Summon, "OdinHUN_Impact_02");
 //END_REGION
 EXITSECTION
 

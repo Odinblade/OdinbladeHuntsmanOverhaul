@@ -140,6 +140,67 @@ DB_OBHUN_GrenadeSkill("ProjectileStrike_Grenade_ClusterBomb", "f70ee2c6-9dda-4ee
 DB_OBHUN_GrenadeSkill("ProjectileStrike_Grenade_ClusterBomb_-1", "f70ee2c6-9dda-4eed-b59b-75e4256c9059");
 DB_OBHUN_GrenadeSkill("ProjectileStrike_Grenade_CursedClusterBomb", "d9e9a62c-0266-440d-9501-a6c2c43a22f6");
 DB_OBHUN_GrenadeSkill("ProjectileStrike_Grenade_CursedClusterBomb_-1", "d9e9a62c-0266-440d-9501-a6c2c43a22f6");
+
+//Gift Bag - Crafting Overhaul
+//Smokebombs
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_SmokeBomb_Ice", "b8c3acfa-5193-4f43-832b-ccb96ada0c23");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_SmokeBomb_Ice_1", "b8c3acfa-5193-4f43-832b-ccb96ada0c23");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_SmokeBomb_Molotov", "779cba2f-a031-4d23-a16a-14a98c1ca7d9");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_SmokeBomb_Molotov_1", "779cba2f-a031-4d23-a16a-14a98c1ca7d9");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_SmokeBomb_OilFlask", "0d2e2b90-9954-4ab9-845c-4c7d16fd92c6");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_SmokeBomb_OilFlask_1", "0d2e2b90-9954-4ab9-845c-4c7d16fd92c6");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_SmokeBomb_PoisonFlask", "a14edc4e-4c31-4b9d-bf4c-e6fc6c5972c5");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_SmokeBomb_PoisonFlask_1", "a14edc4e-4c31-4b9d-bf4c-e6fc6c5972c5");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_SmokeBomb_WaterBalloon", "f90b762d-3fdc-4c3e-95bc-594eb7cdfc25");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_SmokeBomb_WaterBalloon_1", "f90b762d-3fdc-4c3e-95bc-594eb7cdfc25");
+
+//Nailbombs
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Nailbomb_Ice", "c1b579e8-09ba-4e4a-9e32-ba3a08f242e9");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Nailbomb_Ice_1", "c1b579e8-09ba-4e4a-9e32-ba3a08f242e9");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Nailbomb_Molotov", "67f9927b-50af-487f-a03a-285193f68d65");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Nailbomb_Molotov_1", "67f9927b-50af-487f-a03a-285193f68d65");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Nailbomb_OilFlask", "84512488-35c9-4bb4-92d3-ca8962332b1c");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Nailbomb_OilFlask_1", "84512488-35c9-4bb4-92d3-ca8962332b1c");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Nailbomb_PoisonFlask", "3f5db754-1aa9-47a6-8e8a-66211e5a66d0");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Nailbomb_PoisonFlask_1", "3f5db754-1aa9-47a6-8e8a-66211e5a66d0");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Nailbomb_WaterBalloon", "acead653-68a2-4376-81c6-a3d6d6aa5f92");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Nailbomb_WaterBalloon_1", "acead653-68a2-4376-81c6-a3d6d6aa5f92");
+
+//Mustard Gas
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_MustardGas_Ice", "2f3031e0-8107-479a-976d-ecbe90c64321");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_MustardGas_Ice_1", "2f3031e0-8107-479a-976d-ecbe90c64321");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_MustardGas_Molotov", "cce5ea0e-62fe-428c-b733-b854feab9e80");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_MustardGas_Molotov_1", "cce5ea0e-62fe-428c-b733-b854feab9e80");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_MustardGas_OilFlask", "90281362-5f79-4361-a39d-963a4adda70b");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_MustardGas_OilFlask_1", "90281362-5f79-4361-a39d-963a4adda70b");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_MustardGas_PoisonFlask", "b955f95b-c1ee-4c57-a4c0-330b8eaafcf5");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_MustardGas_PoisonFlask_1", "b955f95b-c1ee-4c57-a4c0-330b8eaafcf5");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_MustardGas_WaterBalloon", "5c91071d-51ce-43fc-9e51-f1932e0ba824");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_MustardGas_WaterBalloon_1", "5c91071d-51ce-43fc-9e51-f1932e0ba824");
+
+//Taser
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Taser_Ice", "6872d00a-f5ba-493a-a62a-17145134e5b3");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Taser_Ice_1", "6872d00a-f5ba-493a-a62a-17145134e5b3");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Taser_Molotov", "66a22cd0-cd79-4540-9fd5-83e998a91451");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Taser_Molotov_1", "66a22cd0-cd79-4540-9fd5-83e998a91451");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Taser_OilFlask", "0c08d718-686f-4c55-ac49-caa56cd2718a");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Taser_OilFlask_1", "0c08d718-686f-4c55-ac49-caa56cd2718a");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Taser_PoisonFlask", "6d98efb3-9d69-49ef-bf9c-5f54b037aab2");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Taser_PoisonFlask_1", "6d98efb3-9d69-49ef-bf9c-5f54b037aab2");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Taser_WaterBalloon", "03f0b168-cde0-46d9-9135-cc5a0407b1ac");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Taser_WaterBalloon_1", "03f0b168-cde0-46d9-9135-cc5a0407b1ac");
+
+//Flashbang
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Flashbang_Ice", "55288b53-0b48-4d5a-8875-abe10ee68e1d");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Flashbang_Ice_1", "55288b53-0b48-4d5a-8875-abe10ee68e1d");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Flashbang_Molotov", "1bf1d9ae-dafd-4101-ae47-cda4de84bb92");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Flashbang_Molotov_1", "1bf1d9ae-dafd-4101-ae47-cda4de84bb92");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Flashbang_OilFlask", "d13a02a4-86c2-4045-850c-4bfa8dd46dd6");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Flashbang_OilFlask_1", "d13a02a4-86c2-4045-850c-4bfa8dd46dd6");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Flashbang_PoisonFlask", "cc32cd14-5e2a-4242-9c59-e3c50c87afac");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Flashbang_PoisonFlask_1", "cc32cd14-5e2a-4242-9c59-e3c50c87afac");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Flashbang_WaterBalloon", "76aaeb66-74bf-4059-a036-d33429ee4bff");
+DB_OBHUN_GrenadeSkill("Projectile_Grenade_Flashbang_WaterBalloon", "76aaeb66-74bf-4059-a036-d33429ee4bff");
 //END_REGION
 
 //REGION Traps
@@ -162,20 +223,18 @@ AND
 _PreDamageType != "Piercing"
 THEN
 NRD_HitClearAllDamage(_HitHandle);
-// NRD_HitClearDamage(_HitHandle, _PreDamageType);
 NRD_HitAddDamage(_HitHandle, _ConvertedDamageType, _Damage);
 
-//Crit roll, used for status hits, e.g. Barrage bonus. TODO MIGHT BE UNUSED!
-PROC
-OBHUN_ApplyEAHit((INTEGER64)_HitHandle, (STRING)_PreDamageType, (STRING)_ConvertedDamageType, (INTEGER)_Damage, (INTEGER)_IsStatus, (GUIDSTRING)_Target, (GUIDSTRING)_Dealer)
-AND
-_IsStatus == 1
-AND
-_PreDamageType != "Piercing"
-THEN
-NRD_HitClearAllDamage(_HitHandle);
-NRD_HitAddDamage(_HitHandle, _ConvertedDamageType, _Damage);
-// NRD_HitExecute(_HitHandle);
+// //Crit roll, used for status hits, e.g. Barrage bonus. TODO MIGHT BE UNUSED!
+// PROC
+// OBHUN_ApplyEAHit((INTEGER64)_HitHandle, (STRING)_PreDamageType, (STRING)_ConvertedDamageType, (INTEGER)_Damage, (INTEGER)_IsStatus, (GUIDSTRING)_Target, (GUIDSTRING)_Dealer)
+// AND
+// _IsStatus == 1
+// AND
+// _PreDamageType != "Piercing"
+// THEN
+// NRD_HitClearAllDamage(_HitHandle);
+// NRD_HitAddDamage(_HitHandle, _ConvertedDamageType, _Damage);
 //END_REGION
 
 //REGION Excluded skill status flag
@@ -186,14 +245,13 @@ AND
 DB_OBHUN_EA_ExcludedSkill(_Skill, _Timeout)
 THEN
 ApplyStatus(_Character, "OdinHUN_EA_EXCLUDEDSKILL", 6.0, 1, _Character);
-CharacterStatusText(_Character, "Why is this not working");
 ProcObjectTimer(_Character, "OdinHUN_EA_EXCLUDEDSKILL", _Timeout);
 
 PROC
 ProcObjectTimerFinished(_Character, "OdinHUN_EA_EXCLUDEDSKILL")
 THEN
 RemoveStatus(_Character, "OdinHUN_EA_EXCLUDEDSKILL");
-CharacterStatusText((CHARACTERGUID)_Character, "Removie");
+//END_REGION
 
 //IF the user is using EA, register the associated damage type
 QRY
@@ -209,20 +267,6 @@ HasActiveStatus(_Dealer, _Status, 1)
 THEN
 DB_OBHUN_DeterminedType_Temp(_Dealer, _DamageType);
 DB_NOOP(1);
-
-// QRY
-// QRY_OBHUN_Determine_Type((GUIDSTRING)_Dealer, (STRING)_PreDamageType)
-// AND
-// DB_OBHUN_Elemental_Arrowhead_Users((CHARACTERGUID)_Dealer)
-// AND
-// DB_OBHUN_Elemental_Arrowhead((STRING)_Status, (STRING)_DamageType)
-// AND
-// HasActiveStatus(_Dealer, _Status, 1)
-// AND
-// _PreDamageType != _DamageType
-// THEN
-// DB_OBHUN_DeterminedType_Temp(_Dealer, _DamageType);
-// DB_NOOP(1);
 
 //IF the user is not using EA, return the original damage type
 QRY

@@ -3,7 +3,7 @@ SubGoalCombiner SGC_AND
 INITSECTION
 
 KBSECTION
-//REGION Damage/Type check
+// Performs initial checks before applying an EA hit
 IF
 NRD_OnPrepareHit(_Target, _Dealer, _Damage, _HitHandle)
 AND
@@ -20,8 +20,6 @@ AND
 NRD_HitGetString(_HitHandle, "DamageType", _PreDamageType)
 THEN
 OBHUN_ApplyEAHit(_HitHandle, _PreDamageType, _DamageType, _Damage);
-//END_REGION
-
 EXITSECTION
 
 ENDEXITSECTION

@@ -10,12 +10,12 @@
         <field name="Requirement" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="SkillRequirement" />
         <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="3" />
         <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="4" />
-        <field name="Damage Multiplier" type="IntegerStatObjectFieldDefinition" value="40" />
+        <field name="Damage Multiplier" type="IntegerStatObjectFieldDefinition" value="45" />
         <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="13" />
-        <field name="AreaRadius" type="IntegerStatObjectFieldDefinition" value="3" />
+        <field name="AreaRadius" type="IntegerStatObjectFieldDefinition" value="5" />
         <field name="DeathType" type="EnumerationStatObjectFieldDefinition" value="3" enumeration_type_name="Death Type" />
-        <field name="StrikeCount" type="IntegerStatObjectFieldDefinition" value="10" />
-        <field name="StrikeDelay" type="IntegerStatObjectFieldDefinition" value="50" />
+        <field name="StrikeCount" type="IntegerStatObjectFieldDefinition" value="12" />
+        <field name="StrikeDelay" type="IntegerStatObjectFieldDefinition" value="150" />
         <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
         <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
         <field name="CanTargetTerrain" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
@@ -49,7 +49,7 @@
         <field name="Distribution" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="ProjectileDistribution" />
         <field name="Shuffle" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
         <field name="CycleConditions" type="StringStatObjectFieldDefinition" value="Enemy;!Dead" />
-        <field name="ExplodeRadius" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="ExplodeRadius" type="IntegerStatObjectFieldDefinition" value="2" />
       </fields>
     </stat_object>
   </stat_objects>

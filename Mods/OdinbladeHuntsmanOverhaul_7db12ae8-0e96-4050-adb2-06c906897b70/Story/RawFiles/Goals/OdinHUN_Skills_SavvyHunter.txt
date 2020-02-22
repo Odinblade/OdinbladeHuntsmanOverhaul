@@ -6,9 +6,13 @@ KBSECTION
 IF
 CharacterUsedSkill(_Character, _SkillId, _, _)
 AND
-HasActiveStatus(_Character, "OdinHUN_EXPERTHUNTER", 1)
+HasActiveStatus(_Character, "OdinHUN_SAVVYHUNTER", 1)
 AND
 DB_OBHUN_GrenadeSkill(_SkillId, _ItemTemplate)
+AND
+Random(100, _Random)
+AND
+_Random >= 50
 AND
 StringConcatenate("[OdinHUN:Story] Expert Hunter grenade proc: ", _SkillId, _DebugMsg)
 THEN
@@ -16,27 +20,20 @@ CharacterStatusText(_Character, "Grenade refunded!");
 ItemTemplateAddTo(_ItemTemplate, _Character, 1);
 NRD_DebugLog(_DebugMsg);
 
-// IF
-// CharacterUsedSkill(_Character, _SkillId, _, _)
-// AND
-// HasActiveStatus(_Character, "OdinHUN_EXPERTHUNTER", 1)
-// AND
-// DB_OBHUN_GrenadeSkill(_SkillId, _ItemTemplate)
-// AND
-// StringConcatenate("[OdinHUN:Story] Expert Hunter arrow proc: ", _SkillId, _DebugMsg)
-// THEN
-// CharacterStatusText(_Character, "Grenade refunded!");
-// ItemTemplateAddTo(_ItemTemplate, _Character, 1);
-// NRD_DebugLog(_DebugMsg);
+IF
+CharacterUsedSkill(_Character, "Shout_OdinHUN_SavvyHunter", _, _)
+AND
+IsSkillActive(_Character, "Projectile_OdinHUN_HuntersTrap", 1)
+THEN
+CharacterRemoveSkill(_Character, "Projectile_OdinHUN_HuntersTrap");
+CharacterAddSkill(_Character, "Projectile_OdinHUN_HuntersTrap", 0);
 
 IF
 NRD_OnHit(_Target, _Dealer, _, _HitHandle)
 AND
-HasActiveStatus(_Dealer, "OdinHUN_EXPERTHUNTER", 1)
+HasActiveStatus(_Dealer, "OdinHUN_SAVVYHUNTER", 1)
 AND
 NRD_StatusGetString(_Target, _HitHandle, "SkillId", _SkillId)
-// AND
-// _SkillID == "Projectile_ArrowSpray_-1"
 AND
 DB_OBHUN_CraftedArrowsSkill(_SkillId)
 AND

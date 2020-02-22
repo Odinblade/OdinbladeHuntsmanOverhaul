@@ -63,22 +63,12 @@
     </stat_object>
     <stat_object is_substat="false">
       <fields>
-        <field name="Name" type="NameStatObjectFieldDefinition" value="Damage_OdinHUN_BARRAGE" />
-        <field name="ModifierType" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ModifierType" />
-        <field name="Damage Type" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="Damage Type" />
-        <field name="Damage" type="IntegerStatObjectFieldDefinition" value="1" />
-        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="10" />
-        <field name="DamageFromBase" type="IntegerStatObjectFieldDefinition" value="20" />
-      </fields>
-    </stat_object>
-    <stat_object is_substat="false">
-      <fields>
         <field name="Name" type="NameStatObjectFieldDefinition" value="Damage_OdinHUN_TRAP_WATER" />
         <field name="ModifierType" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ModifierType" />
         <field name="Damage Type" type="EnumerationStatObjectFieldDefinition" value="8" enumeration_type_name="Damage Type" />
         <field name="Damage" type="IntegerStatObjectFieldDefinition" value="1" />
-        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="10" />
-        <field name="DamageFromBase" type="IntegerStatObjectFieldDefinition" value="80" />
+        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="15" />
+        <field name="DamageFromBase" type="IntegerStatObjectFieldDefinition" value="115" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -87,8 +77,8 @@
         <field name="ModifierType" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ModifierType" />
         <field name="Damage Type" type="EnumerationStatObjectFieldDefinition" value="10" enumeration_type_name="Damage Type" />
         <field name="Damage" type="IntegerStatObjectFieldDefinition" value="1" />
-        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="10" />
-        <field name="DamageFromBase" type="IntegerStatObjectFieldDefinition" value="80" />
+        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="15" />
+        <field name="DamageFromBase" type="IntegerStatObjectFieldDefinition" value="115" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -97,8 +87,8 @@
         <field name="ModifierType" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ModifierType" />
         <field name="Damage Type" type="EnumerationStatObjectFieldDefinition" value="6" enumeration_type_name="Damage Type" />
         <field name="Damage" type="IntegerStatObjectFieldDefinition" value="1" />
-        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="10" />
-        <field name="DamageFromBase" type="IntegerStatObjectFieldDefinition" value="80" />
+        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="15" />
+        <field name="DamageFromBase" type="IntegerStatObjectFieldDefinition" value="115" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -107,8 +97,8 @@
         <field name="ModifierType" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ModifierType" />
         <field name="Damage Type" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="Damage Type" />
         <field name="Damage" type="IntegerStatObjectFieldDefinition" value="1" />
-        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="10" />
-        <field name="DamageFromBase" type="IntegerStatObjectFieldDefinition" value="80" />
+        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="15" />
+        <field name="DamageFromBase" type="IntegerStatObjectFieldDefinition" value="115" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -117,8 +107,8 @@
         <field name="ModifierType" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ModifierType" />
         <field name="Damage Type" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="Damage Type" />
         <field name="Damage" type="IntegerStatObjectFieldDefinition" value="1" />
-        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="10" />
-        <field name="DamageFromBase" type="IntegerStatObjectFieldDefinition" value="80" />
+        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="15" />
+        <field name="DamageFromBase" type="IntegerStatObjectFieldDefinition" value="115" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -127,8 +117,8 @@
         <field name="ModifierType" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ModifierType" />
         <field name="Damage Type" type="EnumerationStatObjectFieldDefinition" value="7" enumeration_type_name="Damage Type" />
         <field name="Damage" type="IntegerStatObjectFieldDefinition" value="1" />
-        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="10" />
-        <field name="DamageFromBase" type="IntegerStatObjectFieldDefinition" value="80" />
+        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="15" />
+        <field name="DamageFromBase" type="IntegerStatObjectFieldDefinition" value="115" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">

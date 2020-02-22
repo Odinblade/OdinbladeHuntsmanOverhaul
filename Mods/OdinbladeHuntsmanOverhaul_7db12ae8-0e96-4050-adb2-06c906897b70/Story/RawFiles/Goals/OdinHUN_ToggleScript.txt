@@ -3,7 +3,7 @@ SubGoalCombiner SGC_AND
 INITSECTION
 
 KBSECTION
-//REGION Generic Script Toggle - credit to LL. Move to OdinCore pls!
+//REGION Generic Script Toggle - credit to LL.
 PROC
 OBHUN_ToggleScript_Enable((STRING)_Script)
 AND
@@ -52,7 +52,7 @@ OBHUN_ToggleScript_Disable("OdinHUN_ElementalArrowheads", "DB_OBHUN_Elemental_Ar
 // IF
 // CharacterUsedSkill(_Character, "Projectile_ArrowSpray", _, _)
 // THEN
-// OBHUN_ToggleScript_Enable("OdinHUN_Skills_ArrowSpray");
+// // OBHUN_ToggleScript_Enable("OdinHUN_Skills_ArrowSpray");
 // ApplyStatus(_Character, "OdinHUN_ARROWSPRAY", 6.0, 1, _Character);
 // ProcObjectTimer(_Character, "OdinHUN_ARROWSPRAY", 2650);
 
@@ -60,7 +60,7 @@ OBHUN_ToggleScript_Disable("OdinHUN_ElementalArrowheads", "DB_OBHUN_Elemental_Ar
 // ProcObjectTimerFinished(_Character, "OdinHUN_ARROWSPRAY")
 // THEN
 // RemoveStatus(_Character, "OdinHUN_ARROWSPRAY");
-// OBHUN_ToggleScript_Disable("OdinHUN_Skills_ArrowSpray");
+// // OBHUN_ToggleScript_Disable("OdinHUN_Skills_ArrowSpray");
 // //END_REGION
 
 //REGION OBHUN_NTH_TOGGLESCRIPT
@@ -71,7 +71,6 @@ NOT DB_OBHUN_NTH_Users(_Character)
 THEN
 OBHUN_ToggleScript_Enable("OdinHUN_NowhereToHide");
 DB_OBHUN_NTH_Users(_Character);
-CharacterStatusText(_Character, "NTH_Start");
 
 IF
 SkillDeactivated(_Character, "Shout_OdinHUN_NowhereToHide")
@@ -80,7 +79,6 @@ DB_OBHUN_NTH_Users(_Character)
 THEN
 OBHUN_ToggleScript_Disable("OdinHUN_NowhereToHide", "DB_OBHUN_NTH_Users");
 NOT DB_OBHUN_NTH_Users(_Character);
-CharacterStatusText(_Character, "NTH_End");
 //END_REGION
 EXITSECTION
 

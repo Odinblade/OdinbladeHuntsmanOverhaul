@@ -3,6 +3,7 @@ SubGoalCombiner SGC_AND
 INITSECTION
 
 KBSECTION
+// Increases Grenade damage dealt by 5% per point in Huntsman
 IF
 NRD_OnHit(_Target, _Dealer, _Damage, _HitHandle)
 AND
@@ -35,51 +36,6 @@ THEN
 NRD_HitStatusClearDamage(_Target, _HitHandle, _DamageType);
 NRD_HitStatusAddDamage(_Target, _HitHandle, _DamageType, _FinalDamage);
 NRD_DebugLog("[OdinHUN:Story] Grenade amp success!");
-
-// IF
-// NRD_OnPrepareHit(_Target, _Dealer, _Damage, _HitHandle)
-// AND
-// NRD_HitGetInt(_HitHandle, "HitType", 1)
-// AND
-// HasActiveStatus(_Dealer, "OdinHUN_GRENADE_USE", 1)
-// AND
-// CharacterGetAbility((CHARACTERGUID)_Dealer, "RangerLore", _HuntsmanPointsInt)
-// AND
-// Real(_HuntsmanPointsInt, _HuntsmanPoints)
-// AND
-// Real(_Damage, _RealDamage)
-// THEN
-// PROC_OBHUN_Calculate_Grenade_Damage(_HuntsmanPoints, _RealDamage, _HitHandle);
-
-// PROC
-// PROC_OBHUN_Calculate_Grenade_Damage((REAL)_HuntsmanPoints, (REAL)_RealDamage, (INTEGER64)_HitHandle)
-// AND
-// RealProduct(_HuntsmanPoints, 0.05, _GrenadeMultiplier)
-// AND
-// RealProduct(_GrenadeMultiplier, _RealDamage, _ExtraDamage)
-// AND
-// RealSum(_ExtraDamage, _RealDamage, _TotalDamage)
-// AND
-// Integer(_TotalDamage, _FinalDamage)
-// AND
-// NRD_HitGetString(_HitHandle, "DamageType", _DamageType)
-// THEN
-// NRD_HitClearAllDamage(_HitHandle);
-// NRD_HitAddDamage(_HitHandle, _DamageType, _FinalDamage);
-
-// IF
-// CharacterUsedSkill(_Character, _Skill, _, _)
-// AND
-// DB_OBHUN_GrenadeSkill(_Skill)
-// THEN
-// ProcObjectTimerCancel(_Character, "OdinHUN_GRENADE");
-// ApplyStatus(_Character, "OdinHUN_GRENADE_USE", 6.0);
-// ProcObjectTimer(_Character, "OdinHUN_GRENADE", 3300);
-
-// PROC
-// ProcObjectTimerFinished((CHARACTERGUID)_Character, "OdinHUN_GRENADE")
-// THEN
-// RemoveStatus(_Character, "OdinHUN_GRENADE_USE");
 EXITSECTION
 
 ENDEXITSECTION

@@ -30,12 +30,6 @@ data "StatusType" "EFFECT"
 data "ForGameMaster" "No"
 data "InitiateCombat" "No"
 
-new entry "OdinHUN_HIT_BARRAGE"
-type "StatusData"
-data "StatusType" "EFFECT"
-data "ForGameMaster" "No"
-data "InitiateCombat" "No"
-
 new entry "OdinHUN_EA_ADAPTION"
 type "StatusData"
 data "StatusType" "EFFECT"

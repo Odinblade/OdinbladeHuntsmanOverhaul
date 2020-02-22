@@ -3,6 +3,7 @@ SubGoalCombiner SGC_AND
 INITSECTION
 
 KBSECTION
+// Copies Farsight to an Animal Companion if its owner has received the status
 IF
 CharacterUsedSkillOnTarget(_Caster, _Owner, "Target_Farsight", _, _)
 AND
@@ -12,6 +13,7 @@ _Caster == _Owner
 THEN
 ApplyStatus(_Summon, "FARSIGHT", 18.0, 1, _Caster);
 
+// Copies Farsight to an owner of an Animal Companion if they received the status
 IF
 CharacterUsedSkillOnTarget(_Caster, _Summon, "Target_Farsight", _, _)
 AND

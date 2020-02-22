@@ -6,10 +6,10 @@
         <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_SEEKINGARROWS" />
         <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
         <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Seeking Arrows" />
-        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="|Character is crippled. Cured by Rested.|" />
-        <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Your bow attacks and skills create an additional &lt;font color='#FCD203'&gt;homing arrow&lt;/font&gt;." />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBHUN_Skill_SeekingArrows" />
         <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="28" enumeration_type_name="FormatStringColor" />
-        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_GP_Status_Crippled_01:Dummy_BodyFX" />
+        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Status_SeekingArrows:Dummy_BodyFX" />
         <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_SeekingArrows" />
       </fields>
     </stat_object>
@@ -30,7 +30,7 @@
         <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_NIMBLE" />
         <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
         <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Nimble" />
-        <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBHUN_Status_Nimble" />
         <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="28" enumeration_type_name="FormatStringColor" />
         <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Status_Nimble_01:Dummy_Root" />
         <field name="StatsId" type="StringStatObjectFieldDefinition" value="Stats_OdinHUN_Nimble" />
@@ -44,7 +44,7 @@
         <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_VULNERABLE" />
         <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
         <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Vulnerable" />
-        <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBHUN_Skill_NowhereToHide" />
         <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="28" enumeration_type_name="FormatStringColor" />
         <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinNECRO_Status_OathOfDesecration_01:Dummy_BodyFX" />
         <field name="StatsId" type="StringStatObjectFieldDefinition" value="Stats_OdinHUN_Vulnerable" />
@@ -57,7 +57,7 @@
         <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_VULNERABLE_DOUBLE" />
         <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
         <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Vulnerable" />
-        <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBHUN_Skill_NowhereToHide" />
         <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="28" enumeration_type_name="FormatStringColor" />
         <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinNECRO_Status_OathOfDesecration_01:Dummy_BodyFX" />
         <field name="StatsId" type="StringStatObjectFieldDefinition" value="Stats_OdinHUN_Vulnerable_Double" />
@@ -147,20 +147,6 @@
         <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_ElementalArrowhead" />
         <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Converts your bow attacks and skills to deal &lt;font color=&quot;#4197E2&quot;&gt;water damage&lt;/font&gt;." />
         <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_WeaponOverlay_Water;OdinHUN_Status_Adaption_Water,KeepRot:Dummy_Root" />
-      </fields>
-    </stat_object>
-    <stat_object is_substat="false">
-      <fields>
-        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_GROUNDED" />
-        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
-        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Nimble" />
-        <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
-        <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="28" enumeration_type_name="FormatStringColor" />
-        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Status_Nimble_01:Dummy_Root" />
-        <field name="StatsId" type="StringStatObjectFieldDefinition" value="Stats_OdinHUN_Nimble" />
-        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_Nimble" />
-        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Character is demonstrating excellent agility." />
-        <field name="ImmuneFlag" type="EnumerationStatObjectFieldDefinition" value="34" enumeration_type_name="AttributeFlag" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -261,23 +247,23 @@
         <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_NATURALBOND" />
         <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
         <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Natural Bond" />
-        <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBHUN_Skill_NaturalBond" />
         <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="28" enumeration_type_name="FormatStringColor" />
-        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Status_Nimble_01:Dummy_BodyFX" />
+        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Status_NaturalBond:Dummy_BodyFX" />
         <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_NaturalBond" />
         <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Character is &lt;font color='#40b606'&gt;splitting 25% of damage&lt;/font&gt; taken with their &lt;font color='#81AB00'&gt;Natural Bond&lt;/font&gt; &lt;font color='#88a25b'&gt;ally&lt;/font&gt;." />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
       <fields>
-        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_EXPERTHUNTER" />
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_SAVVYHUNTER" />
         <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
-        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Expert Hunter" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Savvy Hunter" />
         <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="|Character is crippled. Cured by Rested.|" />
-        <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBHUN_Skill_SavvyHunter" />
         <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="28" enumeration_type_name="FormatStringColor" />
         <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_GP_Status_Crippled_01:Dummy_BodyFX" />
-        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_ExpertHunter" />
+        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_SavvyHunter" />
       </fields>
     </stat_object>
   </stat_objects>

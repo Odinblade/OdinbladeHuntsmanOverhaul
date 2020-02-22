@@ -9,6 +9,7 @@ CharacterUsedSkillAtPosition(_Character, _X, _Y, _Z, "Projectile_OdinHUN_Hunters
 THEN
 DB_OBHUN_Trap_Spawn(_Character, _X, _Y, _Z);
 ProcObjectTimer(_Character, "OdinHUN_TRAP_SPAWN", 2000);
+// NRD_DebugLog("[OdinHUN:Story] Trap thrown");
 
 PROC
 ProcObjectTimerFinished((CHARACTERGUID)_Character, "OdinHUN_TRAP_SPAWN")
@@ -19,6 +20,7 @@ CreateItemTemplateAtPosition("e805d0d2-a522-4189-85dc-7d45b724f77e", _X, _Y, _Z,
 AND
 CharacterGetLevel(_Character, _Level)
 THEN
+// NRD_DebugLog("[OdinHUN:Story] Trap spawned");
 NOT DB_OBHUN_Trap_Spawn(_Character, _X, _Y, _Z);
 ItemLevelUpTo(_Trap, _Level);
 ItemSetOwner(_Trap, _Character);
@@ -33,6 +35,7 @@ QRY_OBHUN_Adaption(_TrapOwner, _Status)
 THEN
 DB_OBHUN_Trap_Active(_TrapOwner, _Trap, _DamageStatus, _VFX);
 ApplyStatus(_Trap, _OverlayStatus, -1.0);
+NRD_DebugLog(_DamageStatus);
 
 PROC
 OBHUN_Trap_PrepareDetonation((CHARACTERGUID)_TrapOwner, (ITEMGUID)_Trap)
@@ -40,6 +43,7 @@ AND
 HasActiveStatus(_TrapOwner, "OdinHUN_EA_ADAPTION", 0)
 THEN
 DB_OBHUN_Trap_Active(_TrapOwner, _Trap, "OdinHUN_DMG_TRAP_PHYSICAL", "");
+// NRD_DebugLog("[OdinHUN:Story] Trap type: Physical");
 
 IF
 CharacterStatusApplied(_Target, "OdinHUN_HIT_TRAP", _Trap)
@@ -48,15 +52,8 @@ ItemGetOwner((ITEMGUID)_Trap, _TrapOwner)
 AND
 DB_OBHUN_Trap_Active(_TrapOwner, _Trap, _DamageStatus, _VFX)
 THEN
+// NRD_DebugLog("[OdinHUN:Story] Trap damage status applied");
 ApplyStatus(_Target, _DamageStatus, 0.0, 1, _TrapOwner);
-ProcObjectTimer(_TrapOwner, "OdinHUN_HUNTERSTRAP_DMG", 200);
-
-PROC
-ProcObjectTimerFinished(_Character, "OdinHUN_HUNTERSTRAP_DMG")
-AND
-DB_OBHUN_Trap_Active(_TrapOwner, _Trap, _DamageStatus, _VFX)
-THEN
-NOT DB_OBHUN_Trap_Active(_TrapOwner, _Trap, _DamageStatus, _VFX);
 
 QRY
 QRY_OBHUN_Adaption((CHARACTERGUID)_Character, (STRING)_Status)
@@ -94,6 +91,7 @@ DB_OBHUN_Trap_Active(_TrapOwner, _Trap, _DamageStatus, _VFX)
 AND
 GetPosition(_Trap, _X, _Y, _Z)
 THEN
+// NRD_DebugLog("[OdinHUN:Story] Trap exploded");
 PlayEffectAtPosition(_VFX, _X, _Y, _Z);
 
 IF

@@ -1,0 +1,21 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+DB_OBHUN_AnimalCompanion_PrimalRoar("ODINHUN_AC_OWL", "Shout_OdinHUN_PrimalRoar_Owl");
+DB_OBHUN_AnimalCompanion_PrimalRoar("ODINHUN_AC_DEER", "Shout_OdinHUN_PrimalRoar_Deer");
+DB_OBHUN_AnimalCompanion_PrimalRoar("ODINHUN_AC_BEAR", "Shout_OdinHUN_PrimalRoar_Bear");
+
+KBSECTION
+IF
+CharacterUsedSkill(_Owner, "Shout_OdinHUN_PrimalRoar", _, _)
+AND
+DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon)
+AND
+DB_OBHUN_AnimalCompanion_PrimalRoar(_Tag, _Skill)
+AND
+IsTagged(_Summon, _Tag, 1)
+THEN
+CharacterUseSkill(_Summon, _Skill, _Summon, 1, 1, 1);
+EXITSECTION
+
+ENDEXITSECTION

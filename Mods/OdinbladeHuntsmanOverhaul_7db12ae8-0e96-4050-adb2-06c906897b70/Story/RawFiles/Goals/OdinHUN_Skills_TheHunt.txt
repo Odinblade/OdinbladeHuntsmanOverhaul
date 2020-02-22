@@ -1,0 +1,15 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+IF
+CharacterUsedSkillOnTarget(_Character, _Target, "Projectile_OdinHUN_TheHunt", _, _)
+AND
+GetPosition(_Target, _X, _Y, _Z)
+THEN
+DB_OBHUN_Trap_Spawn(_Character, _X, _Y, _Z);
+ProcObjectTimer(_Character, "OdinHUN_TRAP_SPAWN", 2000);
+EXITSECTION
+
+ENDEXITSECTION

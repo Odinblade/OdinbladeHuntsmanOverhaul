@@ -98,12 +98,19 @@
                             <attribute id="UUID" value="97a4bb05-f642-43e3-bdba-691f0d85c435" type="22" />
                             <attribute id="Version" value="16777217" type="4" />
                         </node>
+                        <node id="ModuleShortDesc">
+                            <attribute id="Folder" value="CMP_CraftingOverhaul" type="30" />
+                            <attribute id="MD5" value="" type="23" />
+                            <attribute id="Name" value="Crafter&apos;s Kit" type="22" />
+                            <attribute id="UUID" value="68a99fef-d125-4ed0-893f-bb6751e52c5e" type="22" />
+                            <attribute id="Version" value="268435456" type="4" />
+                        </node>
                     </children>
                 </node>
                 <node id="ModuleInfo">
-                    <attribute id="Author" value="" type="30" />
+                    <attribute id="Author" value="Odinblade" type="30" />
                     <attribute id="CharacterCreationLevelName" value="" type="22" />
-                    <attribute id="Description" value="" type="30" />
+                    <attribute id="Description" value="&lt;font color=&apos;#fbd478&apos;&gt;REQUIRES: OdinCore - Mod Services&lt;/font&gt;. &lt;br&gt;&lt;br&gt;This mod overhauls all existing &lt;font color=&apos;#5A9646&apos;&gt;Huntsman&lt;/font&gt; skills, as well as adding plenty of new ones into the mix, in order to deliver a lethal &lt;font color=&apos;#5A9646&apos;&gt;Huntsman&lt;/font&gt; skill tree." type="30" />
                     <attribute id="DescriptionName" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
                     <attribute id="DisplayName" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
                     <attribute id="Folder" value="OdinbladeHuntsmanOverhaul_7db12ae8-0e96-4050-adb2-06c906897b70" type="30" />
@@ -111,14 +118,14 @@
                     <attribute id="LobbyLevelName" value="" type="22" />
                     <attribute id="MD5" value="" type="23" />
                     <attribute id="MenuLevelName" value="" type="22" />
-                    <attribute id="Name" value="OdinbladeHuntsmanOverhaul" type="22" />
+                    <attribute id="Name" value="Odinblade&apos;s Huntsman Class Overhaul" type="22" />
                     <attribute id="NumPlayers" value="2" type="1" />
                     <attribute id="PhotoBooth" value="" type="22" />
                     <attribute id="StartupLevelName" value="" type="22" />
                     <attribute id="Tags" value="" type="30" />
                     <attribute id="Type" value="Add-on" type="22" />
                     <attribute id="UUID" value="7db12ae8-0e96-4050-adb2-06c906897b70" type="22" />
-                    <attribute id="Version" value="17235968" type="4" />
+                    <attribute id="Version" value="33554436" type="4" />
                     <children>
                         <node id="PublishVersion">
                             <attribute id="Version" value="909321303" type="4" />

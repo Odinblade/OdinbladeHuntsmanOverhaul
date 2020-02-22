@@ -10,7 +10,7 @@ INIT
 	USING SHARED DisplayTextOnCharacter
 	EXTERN STRING:%DialogKey="GEN_AD_DisarmTrap"
 	ITEM:__Me
-	EXTERN FLOAT:%Radius=5.0
+	EXTERN FLOAT:%Radius=2.0
 	EXTERN FLOAT:%DeploymentTime=6.0
 	EXTERN FLOAT:%ExplosionDelayTime=1.0
 	EXTERN FLOAT:%LifeTime=60.0
@@ -66,7 +66,7 @@ ACTIONS
 		Set(%Exploded,1)
 	ELSE
 		RETURN()
-	ENDIF	
+	ENDIF
 	
 	IF "!c1"
 		GetLevelOverrideCurrent(__Me, _TrapLevel)
@@ -81,9 +81,9 @@ ACTIONS
 	ELSE
 		ExplodeAt(__Me,%MineProjectile,_TrapLevel,_Character)
 	ENDIF
+	ItemEvent(__Me, "OBHUN_Trap_Detonated")
 	StopLoopEffect(%EffectHandle)
 	ItemDie(__Me)
-	ItemEvent(__Me, "OBHUN_Trap_Detonated")
 
 EVENT FetchSkillOnDamage
 ON
@@ -115,9 +115,9 @@ ACTIONS
 	Set(%Deployed, 1)
 	Transform(__Me, ITEMTEMPLATE:ITEMGUID_OdinHUB_Trap_01_bc1b1aac-7c86-4927-815c-4b14de160dc8, "RS3_FX_Skills_Rogue_TrapActivate_01", 0)
 	SetCanFight(__Me,0)
-	ItemEvent(__Me, "OBHUN_Trap_Armed")
 	StartTimer("TimeoutProximityMine",%LifeTime,0)
 	StartTimer("UpdateProximityMine",0.1,-1)
+	ItemEvent(__Me, "OBHUN_Trap_Armed")
 	
 BEHAVIOUR
 REACTION ProximityMine_CombatDeployment,101
@@ -132,9 +132,9 @@ ACTIONS
 		Sleep(0.1)
 		SetCanFight(__Me,0)
 	ENDIF
-	ItemEvent(__Me, "OBHUN_Trap_Armed")
 	StopTimer("TimeoutProximityMine")
 	EndTurn(__Me)
+	ItemEvent(__Me, "OBHUN_Trap_Armed")
 	
 BEHAVIOUR
 REACTION ProximityMine_Warning,100

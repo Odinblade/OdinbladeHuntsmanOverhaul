@@ -94,6 +94,11 @@ THEN
 RemoveStatus(_Enemy, "OdinHUN_VULNERABLE");
 RemoveStatus(_Enemy, "OdinHUN_VULNERABLE_DOUBLE");
 NOT DB_OBHUN_NTH_Furthest(_Enemy, _Hunter);
+
+IF
+CombatEnded(_CombatID)
+THEN
+SysClear("DB_OBHUN_NTH_TEMP_FARTHEST", 3);
 //END_REGION
 EXITSECTION
 

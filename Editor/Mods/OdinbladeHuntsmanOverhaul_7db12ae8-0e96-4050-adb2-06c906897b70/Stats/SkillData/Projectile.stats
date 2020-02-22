@@ -166,90 +166,13 @@
     </stat_object>
     <stat_object is_substat="false">
       <fields>
-        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_HeavyShot" />
-        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
-        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="SkillAbility" />
-        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="SkillTier" />
-        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="2" />
-        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="4" />
-        <field name="Damage Multiplier" type="IntegerStatObjectFieldDefinition" value="120" />
-        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="13" />
-        <field name="ExplodeRadius" type="IntegerStatObjectFieldDefinition" value="0" />
-        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
-        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
-        <field name="CanTargetTerrain" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
-        <field name="ForceTarget" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
-        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="NonSelf" />
-        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
-        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
-        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
-        <field name="ProjectileCount" type="IntegerStatObjectFieldDefinition" value="1" />
-        <field name="ProjectileDelay" type="IntegerStatObjectFieldDefinition" value="0" />
-        <field name="Template" type="StringStatObjectFieldDefinition" value="0239a45c-2988-4da4-a539-b9f1e20c3397" />
-        <field name="IgnoreVisionBlock" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
-        <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
-        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Heavy Shot" />
-        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Deal [1] and &lt;font color='#c80030'&gt;Cripple&lt;/font&gt; target character, preventing movement." />
-        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Damage" />
-        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_throw_line_01_start" />
-        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_throw_line_01_loop" />
-        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Ranger_Prepare_Hand_02:Dummy_L_Hand;" />
-        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_throw_line_01_cast" />
-        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="RangerLore 2" />
-        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
-        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
-        <field name="CycleConditions" type="StringStatObjectFieldDefinition" value="Enemy;!Dead" />
-        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="Force,5;CRIPPLED,100,1" />
-      </fields>
-    </stat_object>
-    <stat_object is_substat="false">
-      <fields>
-        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_ShrapnelShot" />
-        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
-        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="SkillAbility" />
-        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="SkillTier" />
-        <field name="Requirement" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="SkillRequirement" />
-        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="2" />
-        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="4" />
-        <field name="Damage Multiplier" type="IntegerStatObjectFieldDefinition" value="120" />
-        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="13" />
-        <field name="ExplodeRadius" type="IntegerStatObjectFieldDefinition" value="0" />
-        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
-        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
-        <field name="CanTargetTerrain" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
-        <field name="ForceTarget" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
-        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="NonSelf" />
-        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
-        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
-        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
-        <field name="ProjectileCount" type="IntegerStatObjectFieldDefinition" value="10" />
-        <field name="ProjectileDelay" type="IntegerStatObjectFieldDefinition" value="200" />
-        <field name="Template" type="StringStatObjectFieldDefinition" value="94fffa55-51bf-482d-9b57-a5d116ef831b" />
-        <field name="IgnoreVisionBlock" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
-        <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
-        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Shrapnel Shot" />
-        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Deal [1] and &lt;font color='#c80030'&gt;Cripple&lt;/font&gt; target character, preventing movement." />
-        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Damage" />
-        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_weapon_01_start" />
-        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_weapon_01_loop" />
-        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Earth_Prepare_Weapon_ArrowFx_01:Dummy_ProjectileFX" />
-        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_attack_flurry_01_cast" />
-        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="RangerLore 2" />
-        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
-        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
-        <field name="CycleConditions" type="StringStatObjectFieldDefinition" value="Enemy;!Dead" />
-        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="Force,5" />
-      </fields>
-    </stat_object>
-    <stat_object is_substat="false">
-      <fields>
         <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_HuntersTrap" />
         <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
         <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="SkillAbility" />
-        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="2" />
         <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="2" />
         <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="13" />
-        <field name="ExplodeRadius" type="IntegerStatObjectFieldDefinition" value="3" />
+        <field name="ExplodeRadius" type="IntegerStatObjectFieldDefinition" value="2" />
         <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
         <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
         <field name="CanTargetTerrain" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
@@ -264,10 +187,10 @@
         <field name="IgnoreVisionBlock" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
         <field name="Icon" type="StringStatObjectFieldDefinition" value="OBHUN_Skill_HuntersTrap" />
         <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Hunter's Trap" />
-        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Deploy a &lt;font color='#dbdbdb'&gt;trap&lt;/font&gt;, which arms at the end of the round. When detonated, the &lt;font color='#dbdbdb'&gt;trap&lt;/font&gt; deals [1]. &lt;br&gt;&lt;br&gt;This damage type is modified by &lt;font color='#81AB00'&gt;Adaptation&lt;/font&gt;." />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Deploy a &lt;font color='#dbdbdb'&gt;trap&lt;/font&gt;, which arms at the end of the round. When detonated, the &lt;font color='#dbdbdb'&gt;trap&lt;/font&gt; deals [2]. &lt;br&gt;&lt;br&gt;This damage type is modified by &lt;font color='#81AB00'&gt;Adaptation&lt;/font&gt;: &lt;br&gt;&lt;br&gt; - &lt;font color=&quot;#7D71D9&quot;&gt;Air&lt;/font&gt;: [1] &lt;br&gt; - &lt;font color=&quot;#c80030&quot;&gt;Blood&lt;/font&gt;: [2]  &lt;br&gt; - &lt;font color=&quot;#FE6E27&quot;&gt;Fire&lt;/font&gt;: [3]  &lt;br&gt; - &lt;font color=&quot;#7F3D00&quot;&gt;Oil&lt;/font&gt;: [4]  &lt;br&gt; - &lt;font color=&quot;#65C900&quot;&gt;Poison&lt;/font&gt;: [5]  &lt;br&gt; - &lt;font color=&quot;#4197E2&quot;&gt;Water&lt;/font&gt;: [6] " />
         <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_throw_arc_01_start" />
         <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_throw_arc_01_loop" />
-        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Rogue_Prepare_Throw_Arc_Root_01,KeepRot,Detach;RS3_FX_Skills_Rogue_Prepare_Throw_Arc_Hand_Trap_01:Dummy_R_Hand" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Prepare_05;RS3_FX_Skills_Rogue_Prepare_Throw_Arc_Hand_Trap_01:Dummy_R_Hand" />
         <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="0;skill_cast_throw_arc_03_cast;5;skill_cast_throw_arc_02_cast;9;skill_cast_throw_arc_01_cast" />
         <field name="CastAnimationCheck" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="CastCheckType" />
         <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
@@ -279,7 +202,7 @@
         <field name="ProjectileTerrainOffset" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
         <field name="OverrideMinAP" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
         <field name="AiCalculationSkillOverride" type="StringStatObjectFieldDefinition" value="Target_DummyTargetSkill" />
-        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Weapon:Damage_OdinHUN_TRAP_PHYSICAL:Damage;" />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Weapon:Damage_OdinHUN_TRAP_AIR:Damage;Weapon:Damage_OdinHUN_TRAP_PHYSICAL:Damage;Weapon:Damage_OdinHUN_TRAP_FIRE:Damage;Weapon:Damage_OdinHUN_TRAP_EARTH:Damage;Weapon:Damage_OdinHUN_TRAP_POISON:Damage;Weapon:Damage_OdinHUN_TRAP_WATER:Damage;" />
         <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="SkillTier" />
       </fields>
     </stat_object>
@@ -292,8 +215,7 @@
         <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="0" />
         <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="OdinHUN_HIT_TRAP,100,0;" />
         <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="13" />
-        <field name="AreaRadius" type="IntegerStatObjectFieldDefinition" value="3" />
-        <field name="DeathType" type="EnumerationStatObjectFieldDefinition" value="8" enumeration_type_name="Death Type" />
+        <field name="AreaRadius" type="IntegerStatObjectFieldDefinition" value="2" />
         <field name="ExplodeRadius" type="IntegerStatObjectFieldDefinition" value="3" />
         <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
         <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
@@ -313,47 +235,6 @@
         <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
         <field name="ProjectileTerrainOffset" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
         <field name="OverrideMinAP" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
-      </fields>
-    </stat_object>
-    <stat_object is_substat="false">
-      <fields>
-        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_HeavyBola" />
-        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
-        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="SkillAbility" />
-        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="SkillTier" />
-        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="2" />
-        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="5" />
-        <field name="Damage Multiplier" type="IntegerStatObjectFieldDefinition" value="100" />
-        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="8" />
-        <field name="ExplodeRadius" type="IntegerStatObjectFieldDefinition" value="0" />
-        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
-        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
-        <field name="CanTargetTerrain" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
-        <field name="ForceTarget" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
-        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="NonSelf" />
-        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
-        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
-        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
-        <field name="ProjectileCount" type="IntegerStatObjectFieldDefinition" value="1" />
-        <field name="ProjectileDelay" type="IntegerStatObjectFieldDefinition" value="0" />
-        <field name="Template" type="StringStatObjectFieldDefinition" value="0239a45c-2988-4da4-a539-b9f1e20c3397" />
-        <field name="IgnoreVisionBlock" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
-        <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
-        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Heavy Bola" />
-        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Throw a bola which deals [1] and knocks back the target by 5m. &lt;br&gt;&lt;br&gt;The bola can also &lt;font color='#c80030'&gt;Cripple&lt;/font&gt; the target, preventing movement." />
-        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Damage" />
-        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_throw_arc_01_start" />
-        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_throw_arc_01_loop" />
-        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Prepare_01,KeepRot:Dummy_Root;OdinHUN_Prepare_Hand_01:Dummy_R_Hand;" />
-        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_throw_line_01_cast" />
-        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="RangerLore 2" />
-        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
-        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
-        <field name="CycleConditions" type="StringStatObjectFieldDefinition" value="Enemy;!Dead" />
-        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="10" />
-        <field name="DamageType" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="Damage Type" />
-        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="OdinHUN_ENSNARED,100,1" />
-        <field name="DeathType" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="Death Type" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -410,7 +291,7 @@
         <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="2" />
         <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="5" />
         <field name="Damage Multiplier" type="IntegerStatObjectFieldDefinition" value="120" />
-        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="18" />
+        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="15" />
         <field name="DeathType" type="EnumerationStatObjectFieldDefinition" value="3" enumeration_type_name="Death Type" />
         <field name="ExplodeRadius" type="IntegerStatObjectFieldDefinition" value="0" />
         <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
@@ -454,7 +335,7 @@
         <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="2" />
         <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="5" />
         <field name="Damage Multiplier" type="IntegerStatObjectFieldDefinition" value="180" />
-        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="18" />
+        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="15" />
         <field name="DeathType" type="EnumerationStatObjectFieldDefinition" value="3" enumeration_type_name="Death Type" />
         <field name="ExplodeRadius" type="IntegerStatObjectFieldDefinition" value="0" />
         <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
@@ -605,7 +486,7 @@
         <field name="ProjectileDelay" type="IntegerStatObjectFieldDefinition" value="0" />
         <field name="Template" type="StringStatObjectFieldDefinition" value="977a4e5d-d009-4c85-aff0-34edb3ea4628" />
         <field name="IgnoreVisionBlock" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
-        <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBHUN_Skill_PowerShot" />
         <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Power Shot" />
         <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Consume up to &lt;font color='#40b606'&gt;4AP&lt;/font&gt; to cast this skill. &lt;br&gt;&lt;br&gt;Use your full strength to fire an arrow, dealing [1] per &lt;font color='#40b606'&gt;AP&lt;/font&gt; expended." />
         <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Damage" />
@@ -633,7 +514,7 @@
         <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="2" />
         <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="5" />
         <field name="AIFlags" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="AIFlags" />
-        <field name="Damage Multiplier" type="IntegerStatObjectFieldDefinition" value="30" />
+        <field name="Damage Multiplier" type="IntegerStatObjectFieldDefinition" value="25" />
         <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="99" />
         <field name="DeathType" type="EnumerationStatObjectFieldDefinition" value="3" enumeration_type_name="Death Type" />
         <field name="ExplodeRadius" type="IntegerStatObjectFieldDefinition" value="0" />
@@ -656,6 +537,48 @@
         <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
         <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
         <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="ProjectileTerrainOffset" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="OverrideMinAP" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="CycleConditions" type="StringStatObjectFieldDefinition" value="Enemy;!Dead" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_TheHunt" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="3" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="5" />
+        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="13" />
+        <field name="ExplodeRadius" type="IntegerStatObjectFieldDefinition" value="2" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="CanTargetTerrain" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="ForceTarget" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="AmountOfTargets" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="AutoAim" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Character;NonSelf;Enemy;!Tagged:BLOCK_AOE_PROJECTILES" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="ProjectileCount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="ProjectileDelay" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="Template" type="StringStatObjectFieldDefinition" value="a6add828-d6fa-47d1-a61b-a02360173c7f" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBHUN_Skill_TheHunt" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="The Hunt" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Throw an unarmed &lt;font color='#dbdbdb'&gt;Hunter's Trap&lt;/font&gt; underneath each nearby &lt;font color='#aa3938'&gt;enemy&lt;/font&gt;. &lt;br&gt;&lt;br&gt;The &lt;font color='#dbdbdb'&gt;traps&lt;/font&gt; arm at the end of the round and, when detonated, they each deal [2]. &lt;br&gt;&lt;br&gt;This damage type is modified by &lt;font color='#81AB00'&gt;Adaptation&lt;/font&gt;: &lt;br&gt;&lt;br&gt; - &lt;font color=&quot;#7D71D9&quot;&gt;Air&lt;/font&gt;: [1] &lt;br&gt; - &lt;font color=&quot;#c80030&quot;&gt;Blood&lt;/font&gt;: [2]  &lt;br&gt; - &lt;font color=&quot;#FE6E27&quot;&gt;Fire&lt;/font&gt;: [3]  &lt;br&gt; - &lt;font color=&quot;#7F3D00&quot;&gt;Oil&lt;/font&gt;: [4]  &lt;br&gt; - &lt;font color=&quot;#65C900&quot;&gt;Poison&lt;/font&gt;: [5]  &lt;br&gt; - &lt;font color=&quot;#4197E2&quot;&gt;Water&lt;/font&gt;: [6] " />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Weapon:Damage_OdinHUN_TRAP_AIR:Damage;Weapon:Damage_OdinHUN_TRAP_PHYSICAL:Damage;Weapon:Damage_OdinHUN_TRAP_FIRE:Damage;Weapon:Damage_OdinHUN_TRAP_EARTH:Damage;Weapon:Damage_OdinHUN_TRAP_POISON:Damage;Weapon:Damage_OdinHUN_TRAP_WATER:Damage;" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_throw_arc_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_throw_arc_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Prepare_06;RS3_FX_Skills_Rogue_Prepare_Throw_Arc_Hand_Trap_01:Dummy_R_Hand" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="0;skill_cast_throw_arc_03_cast;5;skill_cast_throw_arc_02_cast;9;skill_cast_throw_arc_01_cast" />
+        <field name="CastAnimationCheck" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="CastCheckType" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Rogue_Cast_Throw_Arc_Hand_Trap_01:Dummy_R_HandFX" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="RangerLore 4" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="2" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="2" />
         <field name="ProjectileTerrainOffset" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
         <field name="OverrideMinAP" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
         <field name="CycleConditions" type="StringStatObjectFieldDefinition" value="Enemy;!Dead" />

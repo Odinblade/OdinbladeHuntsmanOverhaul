@@ -2,7 +2,7 @@ new entry "Stats_OdinHUN_Nimble"
 type "Potion"
 data "Act" "1"
 data "Act part" "0"
-data "MovementSpeedBoost" "50"
+data "Movement" "300"
 data "AccuracyBoost" "25"
 data "Duration" "2"
 

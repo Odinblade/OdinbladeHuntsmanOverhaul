@@ -1,101 +1,99 @@
 Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
-DB_OBHUN_NTH_STATUS("OdinHUN_VULNERABLE");
-DB_OBHUN_NTH_STATUS("OdinHUN_VULNERABLE_DOUBLE");
+// DB_OBHUN_NTH_STATUS("OdinHUN_VULNERABLE");
+// DB_OBHUN_NTH_STATUS("OdinHUN_VULNERABLE_DOUBLE");
 
 KBSECTION
+// //SKILL HUNTER'S MARK
+// IF
+// SkillActivated(_Character, "Shout_OdinHUN_NowhereToHide")
+// THEN
+// DB_OBHUN_NTH(_Character);
 
+// IF
+// SkillDeactivated(_Character, "Shout_OdinHUN_NowhereToHide")
+// AND
+// DB_OBHUN_NTH(_Character)
+// THEN
+// NOT DB_OBHUN_NTH(_Character);
 
-//SKILL HUNTER'S MARK
-IF
-SkillActivated(_Character, "Shout_OdinHUN_NowhereToHide")
-THEN
-DB_OBHUN_NTH(_Character);
+// IF
+// ObjectEnteredCombat((CHARACTERGUID)_Hunter, _Combat)
+// AND
+// DB_OBHUN_NTH(_Hunter)
+// THEN
+// DB_OBHUN_NTH_TEMP_FARTHEST(_Hunter, _Hunter, 0.0);
+// SetStoryEvent(_Hunter, "OBHUN_NTH_START");
 
-IF
-SkillDeactivated(_Character, "Shout_OdinHUN_NowhereToHide")
-AND
-DB_OBHUN_NTH(_Character)
-THEN
-NOT DB_OBHUN_NTH(_Character);
+// IF
+// StoryEvent((CHARACTERGUID)_Hunter, "OBHUN_NTH_START")
+// AND
+// DB_CombatCharacters(_Enemy, _CombatID)
+// AND
+// CharacterIsDead(_Enemy, 0)
+// AND
+// HasActiveStatus(_Enemy, "OdinHUN_VULNERABLE", 0)
+// AND
+// HasActiveStatus(_Enemy, "OdinHUN_VULNERABLE_DOUBLE", 0)
+// AND
+// CharacterIsEnemy(_Hunter, _Enemy, 1)
+// AND
+// GetDistanceTo(_Hunter, _Enemy, _Distance)
+// THEN
+// OBHUN_Enemies_Found(_Enemy, _Hunter, _Distance);
 
-IF
-ObjectEnteredCombat((CHARACTERGUID)_Hunter, _Combat)
-AND
-DB_OBHUN_NTH(_Hunter)
-THEN
-DB_OBHUN_NTH_TEMP_FARTHEST(_Hunter, _Hunter, 0.0);
-SetStoryEvent(_Hunter, "OBHUN_NTH_START");
+// PROC
+// OBHUN_Enemies_Found((CHARACTERGUID)_Enemy, (CHARACTERGUID)_Hunter, (REAL)_Distance)
+// AND
+// DB_OBHUN_NTH_TEMP_FARTHEST(_LastEnemy, _Hunter, _LastDistance)
+// AND
+// _LastDistance <= _Distance
+// THEN
+// NOT DB_OBHUN_NTH_TEMP_FARTHEST(_LastEnemy, _Hunter, _LastDistance);
+// DB_OBHUN_NTH_TEMP_FARTHEST(_Enemy, _Hunter, _Distance);
 
-IF
-StoryEvent((CHARACTERGUID)_Hunter, "OBHUN_NTH_START")
-AND
-DB_CombatCharacters(_Enemy, _CombatID)
-AND
-CharacterIsDead(_Enemy, 0)
-AND
-HasActiveStatus(_Enemy, "OdinHUN_VULNERABLE", 0)
-AND
-HasActiveStatus(_Enemy, "OdinHUN_VULNERABLE_DOUBLE", 0)
-AND
-CharacterIsEnemy(_Hunter, _Enemy, 1)
-AND
-GetDistanceTo(_Hunter, _Enemy, _Distance)
-THEN
-OBHUN_Enemies_Found(_Enemy, _Hunter, _Distance);
+// IF
+// StoryEvent((CHARACTERGUID)_Hunter, "OBHUN_NTH_START")
+// AND
+// DB_OBHUN_NTH(_Hunter)
+// AND
+// DB_OBHUN_NTH_TEMP_FARTHEST(_Enemy, _Hunter, _Distance)
+// THEN
+// ApplyStatus(_Enemy, "OdinHUN_VULNERABLE", 12.0, 1, _Hunter);
 
-PROC
-OBHUN_Enemies_Found((CHARACTERGUID)_Enemy, (CHARACTERGUID)_Hunter, (REAL)_Distance)
-AND
-DB_OBHUN_NTH_TEMP_FARTHEST(_LastEnemy, _Hunter, _LastDistance)
-AND
-_LastDistance <= _Distance
-THEN
-NOT DB_OBHUN_NTH_TEMP_FARTHEST(_LastEnemy, _Hunter, _LastDistance);
-DB_OBHUN_NTH_TEMP_FARTHEST(_Enemy, _Hunter, _Distance);
+// IF
+// CharacterUsedSkill(_Hunter, "Shout_OdinHUN_NowhereToHide", _, _)
+// AND
+// DB_OBHUN_NTH(_Hunter)
+// AND
+// DB_OBHUN_NTH_TEMP_FARTHEST(_Enemy, _Hunter, _Distance)
+// THEN
+// RemoveStatus(_Enemy, "OdinHUN_VULNERABLE");
+// ApplyStatus(_Enemy, "OdinHUN_VULNERABLE_DOUBLE", 12.0, 1, _Hunter);
 
-IF
-StoryEvent((CHARACTERGUID)_Hunter, "OBHUN_NTH_START")
-AND
-DB_OBHUN_NTH(_Hunter)
-AND
-DB_OBHUN_NTH_TEMP_FARTHEST(_Enemy, _Hunter, _Distance)
-THEN
-ApplyStatus(_Enemy, "OdinHUN_VULNERABLE", 12.0, 1, _Hunter);
+// IF
+// ObjectLeftCombat((CHARACTERGUID)_Hunter, _Combat)
+// AND
+// DB_OBHUN_NTH_TEMP_FARTHEST(_Enemy, _Hunter, _Distance)
+// THEN
+// NOT DB_OBHUN_NTH_TEMP_FARTHEST(_Enemy, _Hunter, _Distance);
+// RemoveStatus(_Enemy, "OdinHUN_VULNERABLE");
+// RemoveStatus(_Enemy, "OdinHUN_VULNERABLE_DOUBLE");
 
-IF
-CharacterUsedSkill(_Hunter, "Shout_OdinHUN_NowhereToHide", _, _)
-AND
-DB_OBHUN_NTH(_Hunter)
-AND
-DB_OBHUN_NTH_TEMP_FARTHEST(_Enemy, _Hunter, _Distance)
-THEN
-RemoveStatus(_Enemy, "OdinHUN_VULNERABLE");
-ApplyStatus(_Enemy, "OdinHUN_VULNERABLE_DOUBLE", 12.0, 1, _Hunter);
+// IF
+// CharacterStatusRemoved(_Enemy, _Status, _)
+// AND
+// DB_OBHUN_NTH_STATUS(_Status)
+// AND
+// DB_OBHUN_NTH_TEMP_FARTHEST(_Enemy, _Hunter, _Distance)
+// THEN
+// NOT DB_OBHUN_NTH_TEMP_FARTHEST(_Enemy, _Hunter, _Distance);
 
-IF
-ObjectLeftCombat((CHARACTERGUID)_Hunter, _Combat)
-AND
-DB_OBHUN_NTH_TEMP_FARTHEST(_Enemy, _Hunter, _Distance)
-THEN
-NOT DB_OBHUN_NTH_TEMP_FARTHEST(_Enemy, _Hunter, _Distance);
-RemoveStatus(_Enemy, "OdinHUN_VULNERABLE");
-RemoveStatus(_Enemy, "OdinHUN_VULNERABLE_DOUBLE");
-
-IF
-CharacterStatusRemoved(_Enemy, _Status, _)
-AND
-DB_OBHUN_NTH_STATUS(_Status)
-AND
-DB_OBHUN_NTH_TEMP_FARTHEST(_Enemy, _Hunter, _Distance)
-THEN
-NOT DB_OBHUN_NTH_TEMP_FARTHEST(_Enemy, _Hunter, _Distance);
-
-IF
-CombatEnded(_CombatID)
-THEN
-SysClear("DB_OBHUN_NTH_TEMP_FARTHEST", 3);
+// IF
+// CombatEnded(_CombatID)
+// THEN
+// SysClear("DB_OBHUN_NTH_TEMP_FARTHEST", 3);
 
 // IF
 // CharacterUsedItem(_Char, _Item)
