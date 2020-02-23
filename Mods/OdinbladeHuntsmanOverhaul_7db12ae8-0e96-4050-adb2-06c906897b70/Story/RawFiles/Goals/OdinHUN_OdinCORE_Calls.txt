@@ -1,0 +1,25 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+//DB_OBCORE_EnemySkill_Pair("","");
+
+// DB_OBCORE_CustomVendor((GUIDSTRING)_Vendor, (STRING)_Dialog);
+//Fort Joy
+DB_OBCORE_CustomVendor(OdinHUN_Trader_000_37da6d1b-e548-4792-8e1e-b91604be55f4, "OdinHUN_Vendor"); //Fort Joy - Square
+DB_OBCORE_CustomVendor(OdinHUN_Trader_001_5086a903-3049-4331-b667-900d4a70b6f1, "OdinHUN_Vendor"); //Fort Joy - Armadia
+
+//Reaper's Coast
+DB_OBCORE_CustomVendor(OdinHUN_Trader_000_c9c13f5a-2dba-444b-ae49-490831a6fa58, "OdinHUN_Vendor"); //Lady Vengeance
+DB_OBCORE_CustomVendor(OdinHUN_Trader_001_620430f4-f2c5-4131-ae23-94f5ca974c2f, "OdinHUN_Vendor"); //Driftwood Square
+
+//Nameless Isle
+DB_OBCORE_CustomVendor(OdinHUN_Trader_000_c9c13f5a-2dba-444b-ae49-490831a6fa58, "OdinHUN_Vendor"); //Lady Vengeance (carried over)
+DB_OBCORE_CustomVendor(OdinHUN_Trader_000_a29391e5-59c0-4be0-b42a-810995dcd5f1, "OdinHUN_Vendor"); //Landing beach
+
+//Arx
+DB_OBCORE_CustomVendor(OdinHUN_Trader_000_fcd2e068-756f-4975-9fa9-b1d27d00159b, "OdinHUN_Vendor"); //Arx Square
+KBSECTION
+
+EXITSECTION
+
+ENDEXITSECTION

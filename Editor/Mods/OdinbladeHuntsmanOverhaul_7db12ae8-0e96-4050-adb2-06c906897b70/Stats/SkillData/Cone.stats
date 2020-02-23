@@ -23,8 +23,8 @@
         <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
         <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
         <field name="Icon" type="StringStatObjectFieldDefinition" value="OBAERO_Skill_TurbulentWind" />
-        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Turbulent Wind" />
-        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Blast wind in a cone, &lt;font color='#797980'&gt;Suffocating&lt;/font&gt; and dealing [1] to enemies. Also applies &lt;font color='#dbdbdb'&gt;Lost Footing&lt;/font&gt; to &lt;font color='#aa3938'&gt;enemies&lt;/font&gt;. &lt;br&gt;&lt;br&gt;Setting &lt;font color='#dbdbdb'&gt;Lost Footing&lt;/font&gt; on an &lt;font color='#aa3938'&gt;enemy&lt;/font&gt; who already has &lt;font color='#dbdbdb'&gt;Lost Footing&lt;/font&gt; will set &lt;font color='#dbdbdb'&gt;Knocked Down&lt;/font&gt; if either Armour type is depleted." />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Voilent Gust" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Blast wind in a cone, &lt;font color='#797980'&gt;Suffocating&lt;/font&gt; and dealing [1] to enemies. &lt;br&gt;&lt;br&gt;The gust clears all &lt;font color='#dbdbdb'&gt;Surfaces&lt;/font&gt;." />
         <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Damage" />
         <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
         <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_air_01_start" />
@@ -36,7 +36,7 @@
         <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
         <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
         <field name="CycleConditions" type="StringStatObjectFieldDefinition" value="Enemy" />
-        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="SUFFOCATING,100,1;IF(Enemy):OdinCORE_PROC_LOSTFOOTING,100,0;" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="SUFFOCATING,100,1;" />
         <field name="BackStart" type="IntegerStatObjectFieldDefinition" value="10" />
       </fields>
     </stat_object>

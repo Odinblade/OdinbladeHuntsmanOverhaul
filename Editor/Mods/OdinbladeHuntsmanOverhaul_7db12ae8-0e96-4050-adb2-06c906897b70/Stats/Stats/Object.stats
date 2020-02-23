@@ -17,5 +17,197 @@
         <field name="MinLevel" type="IntegerStatObjectFieldDefinition" value="9" />
       </fields>
     </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="SKILLBOOK_Ranger_OdinHUN_AnimalCompanion" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="_Skillbooks" />
+        <field name="RootTemplate" type="RootTemplateStatObjectFieldDefinition" value="de0f2dc5-5cf9-4932-84d7-97b0f46604d2" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="ActPart" />
+        <field name="Value" type="IntegerStatObjectFieldDefinition" value="120" />
+        <field name="ComboCategory" type="StringStatObjectFieldDefinition" value="SkillbookRanger" />
+        <field name="Requirements" type="StringStatObjectFieldDefinition" value="RangerLore 1; Summoning 1" />
+        <field name="ObjectCategory" type="StringStatObjectFieldDefinition" value="SkillbookRangerStarter" />
+        <field name="MinAmount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="MaxAmount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Priority" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="MinLevel" type="IntegerStatObjectFieldDefinition" value="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="SKILLBOOK_Ranger_OdinHUN_HuntersTrap" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="_Skillbooks" />
+        <field name="RootTemplate" type="RootTemplateStatObjectFieldDefinition" value="4aaed023-ba9c-4606-b8f5-716dad11940d" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="ActPart" />
+        <field name="Value" type="IntegerStatObjectFieldDefinition" value="120" />
+        <field name="ComboCategory" type="StringStatObjectFieldDefinition" value="SkillbookRanger" />
+        <field name="Requirements" type="StringStatObjectFieldDefinition" value="RangerLore 1" />
+        <field name="ObjectCategory" type="StringStatObjectFieldDefinition" value="SkillbookRangerStarter" />
+        <field name="MinAmount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="MaxAmount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Priority" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="MinLevel" type="IntegerStatObjectFieldDefinition" value="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="SKILLBOOK_Ranger_Farsight" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="_Skillbooks" />
+        <field name="RootTemplate" type="RootTemplateStatObjectFieldDefinition" value="682663f1-f19f-47e6-be8e-df344533d949" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="13" enumeration_type_name="ActPart" />
+        <field name="Value" type="IntegerStatObjectFieldDefinition" value="1400" />
+        <field name="ComboCategory" type="StringStatObjectFieldDefinition" value="SkillbookRanger" />
+        <field name="Requirements" type="StringStatObjectFieldDefinition" value="RangerLore 4" />
+        <field name="ObjectCategory" type="StringStatObjectFieldDefinition" value="SkillbookRangerLate" />
+        <field name="MinAmount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="MaxAmount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Priority" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="MinLevel" type="IntegerStatObjectFieldDefinition" value="13" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="SKILLBOOK_Ranger_Snipe" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="_Skillbooks" />
+        <field name="RootTemplate" type="RootTemplateStatObjectFieldDefinition" value="02dab1ba-14a8-462d-bdfd-d68317f8b4e0" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="16" enumeration_type_name="ActPart" />
+        <field name="Value" type="IntegerStatObjectFieldDefinition" value="1600" />
+        <field name="ComboCategory" type="StringStatObjectFieldDefinition" value="SkillbookRanger" />
+        <field name="Requirements" type="StringStatObjectFieldDefinition" value="RangerLore 5" />
+        <field name="ObjectCategory" type="StringStatObjectFieldDefinition" value="SkillbookRangerLate" />
+        <field name="MinAmount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="MaxAmount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Priority" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="MinLevel" type="IntegerStatObjectFieldDefinition" value="16" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="SKILLBOOK_Ranger_OdinHUN_SavvyHunter" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="_Skillbooks" />
+        <field name="RootTemplate" type="RootTemplateStatObjectFieldDefinition" value="11a2d123-543f-437b-b6ab-df43f337a6a2" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="5" enumeration_type_name="ActPart" />
+        <field name="Value" type="IntegerStatObjectFieldDefinition" value="190" />
+        <field name="Requirements" type="StringStatObjectFieldDefinition" value="RangerLore 2" />
+        <field name="ComboCategory" type="StringStatObjectFieldDefinition" value="SkillbookRanger" />
+        <field name="ObjectCategory" type="StringStatObjectFieldDefinition" value="SkillbookRangerEarly" />
+        <field name="MinAmount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="MaxAmount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Priority" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="MinLevel" type="IntegerStatObjectFieldDefinition" value="4" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="SKILLBOOK_Ranger_OdinHUN_PrimalRoar" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="_Skillbooks" />
+        <field name="RootTemplate" type="RootTemplateStatObjectFieldDefinition" value="d7c0cc88-ca2f-4ea8-97c2-462b01eb52cf" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="5" enumeration_type_name="ActPart" />
+        <field name="Value" type="IntegerStatObjectFieldDefinition" value="190" />
+        <field name="Requirements" type="StringStatObjectFieldDefinition" value="RangerLore 1; Summoning 1" />
+        <field name="ComboCategory" type="StringStatObjectFieldDefinition" value="SkillbookRanger" />
+        <field name="ObjectCategory" type="StringStatObjectFieldDefinition" value="SkillbookRangerEarly" />
+        <field name="MinAmount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="MaxAmount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Priority" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="MinLevel" type="IntegerStatObjectFieldDefinition" value="4" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="SKILLBOOK_Ranger_OdinHUN_NaturalBond" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="_Skillbooks" />
+        <field name="RootTemplate" type="RootTemplateStatObjectFieldDefinition" value="6f3c1d12-c263-466a-9691-a48b8d8d7ad3" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="5" enumeration_type_name="ActPart" />
+        <field name="Value" type="IntegerStatObjectFieldDefinition" value="190" />
+        <field name="Requirements" type="StringStatObjectFieldDefinition" value="RangerLore 1; Summoning 1" />
+        <field name="ComboCategory" type="StringStatObjectFieldDefinition" value="SkillbookRanger" />
+        <field name="ObjectCategory" type="StringStatObjectFieldDefinition" value="SkillbookRangerEarly" />
+        <field name="MinAmount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="MaxAmount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Priority" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="MinLevel" type="IntegerStatObjectFieldDefinition" value="4" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="SKILLBOOK_Ranger_OdinHUN_Camouflage" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="_Skillbooks" />
+        <field name="RootTemplate" type="RootTemplateStatObjectFieldDefinition" value="6fab7b23-3bf2-440e-8bca-65bb0d9cd35c" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="ActPart" />
+        <field name="Value" type="IntegerStatObjectFieldDefinition" value="500" />
+        <field name="ComboCategory" type="StringStatObjectFieldDefinition" value="SkillbookRanger" />
+        <field name="Requirements" type="StringStatObjectFieldDefinition" value="RangerLore 3" />
+        <field name="ObjectCategory" type="StringStatObjectFieldDefinition" value="SkillbookRangerMid" />
+        <field name="MinAmount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="MaxAmount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Priority" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="MinLevel" type="IntegerStatObjectFieldDefinition" value="9" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="SKILLBOOK_Ranger_OdinHUN_PowerShot" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="_Skillbooks" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="13" enumeration_type_name="ActPart" />
+        <field name="Value" type="IntegerStatObjectFieldDefinition" value="1400" />
+        <field name="ComboCategory" type="StringStatObjectFieldDefinition" value="SkillbookRanger" />
+        <field name="Requirements" type="StringStatObjectFieldDefinition" value="RangerLore 4" />
+        <field name="ObjectCategory" type="StringStatObjectFieldDefinition" value="SkillbookRangerLate" />
+        <field name="MinAmount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="MaxAmount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Priority" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="MinLevel" type="IntegerStatObjectFieldDefinition" value="13" />
+        <field name="RootTemplate" type="RootTemplateStatObjectFieldDefinition" value="e0e806e7-3213-4cf9-b52b-59c7b12bd03b" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="SKILLBOOK_Ranger_OdinHUN_NowhereToHide" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="_Skillbooks" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="13" enumeration_type_name="ActPart" />
+        <field name="Value" type="IntegerStatObjectFieldDefinition" value="1400" />
+        <field name="ComboCategory" type="StringStatObjectFieldDefinition" value="SkillbookRanger" />
+        <field name="Requirements" type="StringStatObjectFieldDefinition" value="RangerLore 4" />
+        <field name="ObjectCategory" type="StringStatObjectFieldDefinition" value="SkillbookRangerLate" />
+        <field name="MinAmount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="MaxAmount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Priority" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="MinLevel" type="IntegerStatObjectFieldDefinition" value="13" />
+        <field name="RootTemplate" type="RootTemplateStatObjectFieldDefinition" value="cddca5be-6b11-4ca8-94db-9d50970cf3fd" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="SKILLBOOK_Ranger_OdinHUN_TheHunt" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="_Skillbooks" />
+        <field name="RootTemplate" type="RootTemplateStatObjectFieldDefinition" value="1f56b280-cad6-4d51-8a8e-dd3be4b00990" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="13" enumeration_type_name="ActPart" />
+        <field name="Value" type="IntegerStatObjectFieldDefinition" value="1900" />
+        <field name="ComboCategory" type="StringStatObjectFieldDefinition" value="SkillbookRangerSource" />
+        <field name="Requirements" type="StringStatObjectFieldDefinition" value="RangerLore 4" />
+        <field name="ObjectCategory" type="StringStatObjectFieldDefinition" value="SkillbookRangerLate" />
+        <field name="MinAmount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="MaxAmount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Priority" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="MinLevel" type="IntegerStatObjectFieldDefinition" value="13" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="SKILLBOOK_Ranger_OdinHUN_SeekingArrows" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="_Skillbooks" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="16" enumeration_type_name="ActPart" />
+        <field name="Value" type="IntegerStatObjectFieldDefinition" value="1600" />
+        <field name="ComboCategory" type="StringStatObjectFieldDefinition" value="SkillbookRanger" />
+        <field name="Requirements" type="StringStatObjectFieldDefinition" value="RangerLore 5" />
+        <field name="ObjectCategory" type="StringStatObjectFieldDefinition" value="SkillbookRangerLate" />
+        <field name="MinAmount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="MaxAmount" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Priority" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="MinLevel" type="IntegerStatObjectFieldDefinition" value="16" />
+        <field name="RootTemplate" type="RootTemplateStatObjectFieldDefinition" value="81a07f9b-b15f-40cd-8fc5-cc519020e462" />
+      </fields>
+    </stat_object>
   </stat_objects>
 </stats>

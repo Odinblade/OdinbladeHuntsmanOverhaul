@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="239de60a-29b5-4010-bf7d-f6169d4ddd8a">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="ARM_OdinHUN_Tracker_UpperBody" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="_LightUpperBody" />
+        <field name="ItemGroup" type="StringStatObjectFieldDefinition" value="ARM_Ranger_UpperBody" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ActPart" />
+        <field name="ItemColor" type="StringStatObjectFieldDefinition" value="OdinHUN_01" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="ARM_OdinHUN_Tracker_LowerBody" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="_LightLowerBody" />
+        <field name="ItemGroup" type="StringStatObjectFieldDefinition" value="ARM_Ranger_LowerBody" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ActPart" />
+        <field name="ItemColor" type="StringStatObjectFieldDefinition" value="OdinHUN_01" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="ARM_OdinHUN_Tracker_Gloves" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="_LightGloves" />
+        <field name="ItemGroup" type="StringStatObjectFieldDefinition" value="ARM_Ranger_Gloves" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ActPart" />
+        <field name="ItemColor" type="StringStatObjectFieldDefinition" value="OdinHUN_01" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="ARM_OdinHUN_Tracker_Boots" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="_LightBoots" />
+        <field name="ItemGroup" type="StringStatObjectFieldDefinition" value="ARM_Ranger_Boots" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ActPart" />
+        <field name="ItemColor" type="StringStatObjectFieldDefinition" value="OdinHUN_01" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="ARM_OdinHUN_Tracker_Helmet" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="_LightHelmet" />
+        <field name="ItemGroup" type="StringStatObjectFieldDefinition" value="ARM_Ranger_Helmet" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ActPart" />
+        <field name="ItemColor" type="StringStatObjectFieldDefinition" value="OdinHUN_01" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

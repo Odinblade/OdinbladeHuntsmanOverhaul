@@ -10,3 +10,59 @@ new equipment "Summon_OdinHUN_Deer_Equip"
 add equipmentgroup
 add equipment entry "_Summon_OdinHUN_Deer"
 
+new equipment "OdinHUN_Class_Tracker_Preview"
+add equipmentgroup
+add equipment entry "ARM_OdinHUN_Tracker_Helmet"
+add equipmentgroup
+add equipment entry "ARM_OdinHUN_Tracker_UpperBody"
+add equipmentgroup
+add equipment entry "ARM_OdinHUN_Tracker_LowerBody"
+add equipmentgroup
+add equipment entry "ARM_OdinHUN_Tracker_Gloves"
+add equipmentgroup
+add equipment entry "ARM_OdinHUN_Tracker_Boots"
+add equipmentgroup
+add equipment entry "WPN_Ranger_Bow_Elves"
+
+new equipment "OdinHUN_Class_Tracker_Start"
+add equipmentgroup
+add equipment entry "ARM_Purge_UpperBody"
+add equipmentgroup
+add equipment entry "ARM_Purge_LowerBody"
+add equipmentgroup
+add equipment entry "WPN_CraftedBow"
+add equipmentgroup
+add equipment entry "POTION_Minor_Healing_Potion"
+add equipmentgroup
+add equipment entry "WPN_Arrow_Fire_A"
+add equipmentgroup
+add equipment entry "WPN_Arrow_KO_A"
+add equipmentgroup
+add equipment entry "SCROLL_Resurrect"
+add equipmentgroup
+add equipment entry "CONT_Backpack_A_SourceHunter"
+
+new equipment "OdinHUN_Class_Tracker_Start_Undead"
+add equipmentgroup
+add equipment entry "ARM_Purge_UpperBody"
+add equipmentgroup
+add equipment entry "ARM_Purge_LowerBody"
+add equipmentgroup
+add equipment entry "ARM_Purge_Helmet"
+add equipmentgroup
+add equipment entry "ARM_Purge_Boots"
+add equipmentgroup
+add equipment entry "ARM_Purge_Gloves"
+add equipmentgroup
+add equipment entry "WPN_CraftedBow"
+add equipmentgroup
+add equipment entry "CON_Potion_Poison_A"
+add equipmentgroup
+add equipment entry "WPN_Arrow_Fire_A"
+add equipmentgroup
+add equipment entry "WPN_Arrow_KO_A"
+add equipmentgroup
+add equipment entry "SCROLL_Resurrect"
+add equipmentgroup
+add equipment entry "CONT_Backpack_A_SourceHunter"
+

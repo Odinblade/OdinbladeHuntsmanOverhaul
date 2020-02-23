@@ -15,18 +15,6 @@
     </stat_object>
     <stat_object is_substat="false">
       <fields>
-        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_ARROWSPRAY_TEMP" />
-        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
-        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Arrow Spray" />
-        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="|Character is crippled. Cured by Rested.|" />
-        <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
-        <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="28" enumeration_type_name="FormatStringColor" />
-        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_GP_Status_Crippled_01:Dummy_BodyFX" />
-        <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_LethalFocus" />
-      </fields>
-    </stat_object>
-    <stat_object is_substat="false">
-      <fields>
         <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_NIMBLE" />
         <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
         <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Nimble" />
@@ -46,10 +34,11 @@
         <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Vulnerable" />
         <field name="Icon" type="StringStatObjectFieldDefinition" value="OBHUN_Skill_NowhereToHide" />
         <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="28" enumeration_type_name="FormatStringColor" />
-        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinNECRO_Status_OathOfDesecration_01:Dummy_BodyFX" />
+        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Status_Vulnerable:Dummy_BodyFX" />
         <field name="StatsId" type="StringStatObjectFieldDefinition" value="Stats_OdinHUN_Vulnerable" />
         <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_Vulnerable" />
         <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Character has been exposed by an expert marksman." />
+        <field name="ApplyEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Status_Vulnerable_Apply:Dummy_OverheadFX" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -59,10 +48,11 @@
         <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Vulnerable" />
         <field name="Icon" type="StringStatObjectFieldDefinition" value="OBHUN_Skill_NowhereToHide" />
         <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="28" enumeration_type_name="FormatStringColor" />
-        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinNECRO_Status_OathOfDesecration_01:Dummy_BodyFX" />
+        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Status_Vulnerable:Dummy_BodyFX" />
         <field name="StatsId" type="StringStatObjectFieldDefinition" value="Stats_OdinHUN_Vulnerable_Double" />
         <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_Vulnerable" />
         <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Character has been exposed by an expert marksman." />
+        <field name="ApplyEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Status_Vulnerable_Apply:Dummy_OverheadFX" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -259,10 +249,10 @@
         <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_SAVVYHUNTER" />
         <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
         <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Savvy Hunter" />
-        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="|Character is crippled. Cured by Rested.|" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Your &lt;font color='#dbdbdb'&gt;crafted arrows&lt;/font&gt; deal 25% increased damage, and you have a 50% chance to recover &lt;font color='#dbdbdb'&gt;crafted grenades&lt;/font&gt; after use." />
         <field name="Icon" type="StringStatObjectFieldDefinition" value="OBHUN_Skill_SavvyHunter" />
         <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="28" enumeration_type_name="FormatStringColor" />
-        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_GP_Status_Crippled_01:Dummy_BodyFX" />
+        <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Status_SavvyHunter:Dummy_OverheadFX" />
         <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_SavvyHunter" />
       </fields>
     </stat_object>

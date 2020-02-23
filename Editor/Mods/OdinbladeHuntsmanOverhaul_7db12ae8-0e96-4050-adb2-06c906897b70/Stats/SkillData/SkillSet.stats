@@ -14,31 +14,17 @@
         <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Cone_OdinHUN_Summon_TurbulantWind" />
       </fields>
     </stat_object>
-    <stat_object is_substat="true">
-      <fields>
-        <field name="Name" type="NameStatObjectFieldDefinition" value="Summon_OdinHUN_Owl_substat" />
-        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Target_OdinHUN_Summon_Haze" />
-        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="Summon_OdinHUN_Owl" />
-      </fields>
-    </stat_object>
     <stat_object is_substat="false">
       <fields>
         <field name="Name" type="NameStatObjectFieldDefinition" value="Summon_OdinHUN_Bear" />
-        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Shout_EnemyTaunt" />
+        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Shout_EnemyWhirlwind" />
       </fields>
     </stat_object>
     <stat_object is_substat="true">
       <fields>
         <field name="Name" type="NameStatObjectFieldDefinition" value="New_Stat_0_substat_0" />
         <field name="Using" type="BaseClassStatObjectFieldDefinition" value="Summon_OdinHUN_Bear" />
-        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Rush_EnemyBatteringRam" />
-      </fields>
-    </stat_object>
-    <stat_object is_substat="true">
-      <fields>
-        <field name="Name" type="NameStatObjectFieldDefinition" value="Summon_OdinHUN_Bear_substat" />
         <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Target_EnemyFortify" />
-        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="Summon_OdinHUN_Bear" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -54,11 +40,24 @@
         <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Dome_OdinHUN_SporeShrooms_Summon" />
       </fields>
     </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_Class_Tracker" />
+        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Target_OdinHUN_Summon_AnimalCompanion" />
+      </fields>
+    </stat_object>
     <stat_object is_substat="true">
       <fields>
-        <field name="Name" type="NameStatObjectFieldDefinition" value="New_Stat_0_substat_1" />
-        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Shout_OdinHUN_Summon_SongOfTheDryads" />
-        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="Summon_OdinHUN_Deer" />
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinNECRO_Class_Bloodtide_substat_0" />
+        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Projectile_OdinHUN_HuntersTrap" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="OdinHUN_Class_Tracker" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="true">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinNECRO_Class_Bloodtide_substat_1" />
+        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Target_FirstAid" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="OdinHUN_Class_Tracker" />
       </fields>
     </stat_object>
   </stat_objects>

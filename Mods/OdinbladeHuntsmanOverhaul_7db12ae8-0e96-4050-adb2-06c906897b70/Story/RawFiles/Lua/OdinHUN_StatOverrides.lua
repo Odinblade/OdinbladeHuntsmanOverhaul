@@ -14,5 +14,4 @@ OdinHUN_StatOverrides = {
     Shout_OdinHUN_Camouflage = {
         SkillProperties = "Set Invisible for 1 turn(s)."
     },
-    
 }

@@ -19,5 +19,45 @@
         <field name="1" type="StatReferenceStatObjectFieldDefinition" stat_name="_Summon_OdinHUN_Deer" />
       </fields>
     </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_Class_Tracker_Preview" />
+        <field name="1" type="StatReferenceStatObjectFieldDefinition" stat_name="ARM_OdinHUN_Tracker_Helmet" />
+        <field name="2" type="StatReferenceStatObjectFieldDefinition" stat_name="ARM_OdinHUN_Tracker_UpperBody" />
+        <field name="3" type="StatReferenceStatObjectFieldDefinition" stat_name="ARM_OdinHUN_Tracker_LowerBody" />
+        <field name="4" type="StatReferenceStatObjectFieldDefinition" stat_name="ARM_OdinHUN_Tracker_Gloves" />
+        <field name="5" type="StatReferenceStatObjectFieldDefinition" stat_name="ARM_OdinHUN_Tracker_Boots" />
+        <field name="6" type="StatReferenceStatObjectFieldDefinition" stat_name="WPN_Ranger_Bow_Elves" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_Class_Tracker_Start" />
+        <field name="1" type="StatReferenceStatObjectFieldDefinition" stat_name="ARM_Purge_UpperBody" />
+        <field name="2" type="StatReferenceStatObjectFieldDefinition" stat_name="ARM_Purge_LowerBody" />
+        <field name="3" type="StatReferenceStatObjectFieldDefinition" stat_name="WPN_CraftedBow" />
+        <field name="4" type="StatReferenceStatObjectFieldDefinition" stat_name="POTION_Minor_Healing_Potion" />
+        <field name="5" type="StatReferenceStatObjectFieldDefinition" stat_name="WPN_Arrow_Fire_A" />
+        <field name="6" type="StatReferenceStatObjectFieldDefinition" stat_name="WPN_Arrow_KO_A" />
+        <field name="7" type="StatReferenceStatObjectFieldDefinition" stat_name="SCROLL_Resurrect" />
+        <field name="8" type="StatReferenceStatObjectFieldDefinition" stat_name="CONT_Backpack_A_SourceHunter" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_Class_Tracker_Start_Undead" />
+        <field name="1" type="StatReferenceStatObjectFieldDefinition" stat_name="ARM_Purge_UpperBody" />
+        <field name="2" type="StatReferenceStatObjectFieldDefinition" stat_name="ARM_Purge_LowerBody" />
+        <field name="3" type="StatReferenceStatObjectFieldDefinition" stat_name="ARM_Purge_Helmet" />
+        <field name="4" type="StatReferenceStatObjectFieldDefinition" stat_name="ARM_Purge_Boots" />
+        <field name="5" type="StatReferenceStatObjectFieldDefinition" stat_name="ARM_Purge_Gloves" />
+        <field name="6" type="StatReferenceStatObjectFieldDefinition" stat_name="WPN_CraftedBow" />
+        <field name="7" type="StatReferenceStatObjectFieldDefinition" stat_name="CON_Potion_Poison_A" />
+        <field name="8" type="StatReferenceStatObjectFieldDefinition" stat_name="WPN_Arrow_Fire_A" />
+        <field name="9" type="StatReferenceStatObjectFieldDefinition" stat_name="WPN_Arrow_KO_A" />
+        <field name="10" type="StatReferenceStatObjectFieldDefinition" stat_name="SCROLL_Resurrect" />
+        <field name="11" type="StatReferenceStatObjectFieldDefinition" stat_name="CONT_Backpack_A_SourceHunter" />
+      </fields>
+    </stat_object>
   </stat_objects>
 </stats>

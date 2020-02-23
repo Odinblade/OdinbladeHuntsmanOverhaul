@@ -56,12 +56,12 @@
         <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Nowhere to Hide" />
         <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="&lt;font color='#F7BA14'&gt;Passive effect&lt;/font&gt;: &lt;br&gt;At the start of combat, mark the farthest &lt;font color='#aa3938'&gt;enemy&lt;/font&gt; character from you as &lt;font color='#81AB00'&gt;Vulnerable&lt;/font&gt;, reducing their &lt;font color=&quot;#c80030&quot;&gt;Resistances by [1]%&lt;/font&gt;. &lt;font size='16'&gt;&lt;br&gt;---------------------------------------------------------------------&lt;/font&gt;&lt;br&gt;Using this skill will double the potency of &lt;font color='#81AB00'&gt;Vulnerable&lt;/font&gt;, instead reducing their &lt;font color=&quot;#c80030&quot;&gt;Resistances by [2]%&lt;/font&gt;." />
         <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
-        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_earth_01_start" />
-        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_earth_01_loop" />
-        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Earth_Prepare_Earth_SteelSkin_Foot_01,KeepRot,Detach:Dummy_Root:foot01;RS3_FX_Skills_Earth_Prepare_Earth_SteelSkin_Foot_02,KeepRot,Detach:Dummy_Root:foot02;RS3_FX_Skills_Earth_Prepare_Earth_SteelSkin_Root_01,KeepRot,Detach:Dummy_Root:root01" />
-        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_self_earth_01_cast" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_touch_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_touch_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Prepare_08:Dummy_Root;RS3_FX_Skills_Ranger_Prepare_Hand_01:Dummy_L_HandFX,Dummy_R_HandFX" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_target_touch_01_cast" />
         <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
-        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Earth_Cast_Self_Earth_SteelSkin_Root_01:root;RS3_FX_Skills_Earth_Cast_Self_Earth_SteelSkin_Root_01:Dummy_R_Hand:Dummy_L_Hand" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Ranger_Cast_BowHand_01:Dummy_R_Hand:Dummy_L_Hand" />
         <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
         <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
         <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
@@ -269,7 +269,7 @@
         <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
         <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_shout_01_start" />
         <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_shout_01_loop" />
-        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Prepare_03:Dummy_Root;" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Prepare_09,KeepRot;" />
         <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_shout_01_cast" />
         <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
         <field name="CastEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Earth_Cast_Self_Earth_SteelSkin_Root_01:root;RS3_FX_Skills_Earth_Cast_Self_Earth_SteelSkin_Root_01:Dummy_R_Hand:Dummy_L_Hand" />
@@ -297,22 +297,22 @@
         <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
         <field name="Autocast" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
         <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="RangerLore 1; Summoning 1" />
-        <field name="Icon" type="StringStatObjectFieldDefinition" value="CHANGEME" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBHUN_Skill_PrimalRoar" />
         <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Primal Roar" />
-        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Whilst active, your bow attacks and skills create an additional &lt;font color='#FCD203'&gt;homing arrow&lt;/font&gt;. The &lt;font color='#FCD203'&gt;homing arrow&lt;/font&gt; tracks your original target, dealing [1]. &lt;br&gt;&lt;br&gt;The &lt;font color='#FCD203'&gt;homing arrow&lt;/font&gt; can critically strike and launches only if your target it at least 6m away from you. &lt;br&gt;&lt;br&gt;This damage type is modified by &lt;font color='#81AB00'&gt;Adaptation&lt;/font&gt;." />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Command your &lt;font color='#9440B3'&gt;Animal Companion&lt;/font&gt; to let out a roar, dealing damage and applying a status to &lt;font color='#aa3938'&gt;enemies&lt;/font&gt; within a 4m radius: &lt;br&gt;&lt;br&gt; - &lt;font color='#2e719e'&gt;Noctis&lt;/font&gt;: &lt;font color='#7D71D9'&gt;Air damage&lt;/font&gt; and &lt;font color='#ffffff'&gt;Deafen&lt;/font&gt; &lt;br&gt; - &lt;font color='#40B606'&gt;Elkahoof&lt;/font&gt;: &lt;font color='#65C900'&gt;Poison damage&lt;/font&gt; and &lt;font color='#7F00FF'&gt;Entangle&lt;/font&gt; &lt;br&gt; - &lt;font color='#B97A57'&gt;Grizzle&lt;/font&gt;: &lt;font color='#a8a8a8'&gt;Physical damage&lt;/font&gt; and &lt;font color='#C80030'&gt;Taunt&lt;/font&gt;" />
         <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
         <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_shout_01_start" />
         <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_shout_01_loop" />
-        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Prepare_03:Dummy_Root;" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Prepare_04:Dummy_Root;" />
         <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_shout_01_cast" />
         <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
-        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Earth_Cast_Self_Earth_SteelSkin_Root_01:root;RS3_FX_Skills_Earth_Cast_Self_Earth_SteelSkin_Root_01:Dummy_R_Hand:Dummy_L_Hand" />
         <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
         <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
         <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
         <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
         <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Skill:Projectile_OdinHUN_SeekingArrows_Shot:Damage;" />
         <field name="StatsDescription" type="TranslatedStringStatObjectFieldDefinition" value="Skill:Projectile_OdinHUN_SeekingArrows_Shot:Damage;" />
+        <field name="Requirements" type="StringStatObjectFieldDefinition" value="Tag ODINHUN_ANIMALCOMPANION" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -322,7 +322,7 @@
         <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="0" />
         <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="0" />
         <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="ENTANGLED,100,1;" />
-        <field name="AreaRadius" type="IntegerStatObjectFieldDefinition" value="5" />
+        <field name="AreaRadius" type="IntegerStatObjectFieldDefinition" value="4" />
         <field name="AddWeaponRange" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
         <field name="DeathType" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="Death Type" />
         <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Character;Enemy" />
@@ -333,10 +333,10 @@
         <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
         <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_water_01_start" />
         <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_water_01_loop" />
-        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinGEO_Prepare_05,KeepRot;" />
-        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_water_01_cast" />
-        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="castsurface" />
-        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="OdinGEO_Impact_06:root:cast" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Prepare_07,KeepRot;" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="attack1" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Impact_03:root" />
         <field name="CastEffectTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
         <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="0" />
         <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
@@ -355,7 +355,7 @@
         <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="0" />
         <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="0" />
         <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="DEAF,100,1" />
-        <field name="AreaRadius" type="IntegerStatObjectFieldDefinition" value="5" />
+        <field name="AreaRadius" type="IntegerStatObjectFieldDefinition" value="4" />
         <field name="AddWeaponRange" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
         <field name="DeathType" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="Death Type" />
         <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Character;Enemy" />
@@ -366,7 +366,7 @@
         <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
         <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_touch_01_start" />
         <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_touch_01_loop" />
-        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinGEO_Prepare_05,KeepRot;" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Prepare_07,KeepRot;" />
         <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_target_touch_01_cast" />
         <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
         <field name="CastEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Cast_02:root" />
@@ -388,7 +388,7 @@
         <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="0" />
         <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="0" />
         <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="TAUNTED,100,1" />
-        <field name="AreaRadius" type="IntegerStatObjectFieldDefinition" value="5" />
+        <field name="AreaRadius" type="IntegerStatObjectFieldDefinition" value="4" />
         <field name="AddWeaponRange" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
         <field name="DeathType" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="Death Type" />
         <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Character;Enemy" />
@@ -399,10 +399,10 @@
         <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
         <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_water_01_start" />
         <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_water_01_loop" />
-        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinGEO_Prepare_05,KeepRot;" />
-        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_water_01_cast" />
-        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="castsurface" />
-        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="OdinGEO_Impact_06:root:cast" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Prepare_07,KeepRot;" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_shout_01_cast" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Voodoo_Cast_Curse_Shout_Root_01;RS3_FX_Skills_Voodoo_Cast_Taunt_Icon_01:Dummy_OverheadFX:shout" />
         <field name="CastEffectTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
         <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="0" />
         <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />

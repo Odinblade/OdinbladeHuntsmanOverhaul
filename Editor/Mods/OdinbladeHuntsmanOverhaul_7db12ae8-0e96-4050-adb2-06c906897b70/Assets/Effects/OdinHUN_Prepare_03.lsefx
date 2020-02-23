@@ -4741,9 +4741,9 @@
                   <rampchanneldata>
                     <rampchannel type="Spline" id="93b34a52-eef2-4f88-80f6-19e3126188ca">
                       <keyframes>
-                        <keyframe time="0" value="15979035" />
-                        <keyframe time="0.5011628" value="-2131504613" />
-                        <keyframe time="1" value="15979035" />
+                        <keyframe time="0" value="6205187" />
+                        <keyframe time="0.5011628" value="-2141278461" />
+                        <keyframe time="1" value="6205187" />
                       </keyframes>
                     </rampchannel>
                   </rampchanneldata>
@@ -10342,12 +10342,12 @@
               <data>
                 <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000">
                   <rampchanneldata>
-                    <rampchannel type="Linear" id="329fc981-abb2-422d-a808-ffa6f62fb778">
+                    <rampchannel type="Spline" id="329fc981-abb2-422d-a808-ffa6f62fb778">
                       <keyframes>
-                        <keyframe time="0" value="32768" />
-                        <keyframe time="0.6002972" value="854839835" />
-                        <keyframe time="0.8291233" value="854839835" />
-                        <keyframe time="1" value="15979035" />
+                        <keyframe time="0" value="6205187" />
+                        <keyframe time="0.2420708" value="-1503744253" />
+                        <keyframe time="0.7077698" value="-1470189821" />
+                        <keyframe time="1" value="6205187" />
                       </keyframes>
                     </rampchannel>
                   </rampchanneldata>

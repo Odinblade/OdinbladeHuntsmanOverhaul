@@ -48,7 +48,6 @@ DB_OBHUN_EA_ExcludedSkill("Projectile_StunningArrow", 1000);
 DB_OBHUN_EA_ExcludedSkill("Projectile_WaterArrow", 1000);
 
 //Skills which have unique damage calculation
-// DB_OBHUN_EA_ExcludedSkill("Projectile_ArrowSpray", 3450);
 DB_OBHUN_EA_ExcludedSkill("Projectile_OdinHUN_PowerShot", 1000);
 //END_REGION
 

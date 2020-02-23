@@ -133,7 +133,6 @@ SetVisible(_Summon, 0);
 RemoveStatus(_Owner, "OdinHUN_NATURALBOND");
 CharacterDie((CHARACTERGUID)_Summon, 0, "None");
 
-
 // When player summons a new summon, play VFX and hide old summon before it is removed (death animation workaround)
 IF
 CharacterStatusApplied(_NewSummon, "SUMMONING", _)
@@ -156,6 +155,18 @@ PlayEffectAtPosition("RS3_FX_Skills_Totem_Impact_Summon_Poison_01", _X, _Y, _Z);
 SetVisible(_Summon, 0);
 ClearTag(_Owner, "ODINHUN_ANIMALCOMPANION");
 NRD_DebugLog("[OdinHUN:Story] PROC_OBHUN_ClearFlag_AnimalCompanion Tag removed");
+
+IF
+CharacterDied(_Summon)
+AND
+DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon)
+AND
+IsTagged(_Summon, "ODINHUN_IS_ANIMALCOMPANION", 1)
+AND
+GetPosition(_Summon, _X, _Y, _Z)
+THEN
+PlayEffectAtPosition("RS3_FX_Skills_Totem_Impact_Summon_Poison_01", _X, _Y, _Z);
+ClearTag(_Owner, "ODINHUN_ANIMALCOMPANION");
 //END_REGION
 
 //REGION Other interactions

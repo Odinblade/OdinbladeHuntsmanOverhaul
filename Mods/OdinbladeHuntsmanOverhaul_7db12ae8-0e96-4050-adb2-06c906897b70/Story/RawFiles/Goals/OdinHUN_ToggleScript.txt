@@ -5,21 +5,21 @@ INITSECTION
 KBSECTION
 //REGION Generic Script Toggle - credit to LL.
 PROC
-OBHUN_ToggleScript_Enable((STRING)_Script)
+OBCORE_ToggleScript_Enable((STRING)_Script)
 AND
 NOT SysIsActive(_Script)
 THEN
 SysActivateGoal(_Script);
 
 PROC
-OBHUN_ToggleScript_Disable((STRING)_Script)
+OBCORE_ToggleScript_Disable((STRING)_Script)
 AND
 SysIsActive(_Script)
 THEN
 SysCompleteGoal(_Script);
 
 PROC
-OBHUN_ToggleScript_Disable((STRING)_Script, (STRING)_UsersDB)
+OBCORE_ToggleScript_Disable((STRING)_Script, (STRING)_UsersDB)
 AND
 SysIsActive(_Script)
 AND
@@ -37,7 +37,7 @@ AND
 NOT DB_OBHUN_Elemental_Arrowhead_Users(_Character)
 THEN
 DB_OBHUN_Elemental_Arrowhead_Users(_Character);
-OBHUN_ToggleScript_Enable("OdinHUN_ElementalArrowheads");
+OBCORE_ToggleScript_Enable("OdinHUN_ElementalArrowheads");
 
 IF
 CharacterStatusRemoved(_Character, _Status, _)
@@ -45,23 +45,21 @@ AND
 DB_OBHUN_Elemental_Arrowhead(_Status, _)
 THEN
 NOT DB_OBHUN_Elemental_Arrowhead_Users(_Character);
-OBHUN_ToggleScript_Disable("OdinHUN_ElementalArrowheads", "DB_OBHUN_Elemental_Arrowhead_Users");
+OBCORE_ToggleScript_Disable("OdinHUN_ElementalArrowheads", "DB_OBHUN_Elemental_Arrowhead_Users");
 //END_REGION
 
-// //REGION OBHUN_ARROWSPRAY_TOGGLESCRIPT
-// IF
-// CharacterUsedSkill(_Character, "Projectile_ArrowSpray", _, _)
-// THEN
-// // OBHUN_ToggleScript_Enable("OdinHUN_Skills_ArrowSpray");
-// ApplyStatus(_Character, "OdinHUN_ARROWSPRAY", 6.0, 1, _Character);
-// ProcObjectTimer(_Character, "OdinHUN_ARROWSPRAY", 2650);
+//REGION OBHUN_ARROWSPRAY_TOGGLESCRIPT
+IF
+CharacterUsedSkill(_Character, "Projectile_ArrowSpray", _, _)
+THEN
+OBCORE_ToggleScript_Enable("OdinHUN_Skills_ArrowSpray");
+ProcObjectTimer(_Character, "OdinHUN_ARROWSPRAY", 3450);
 
-// PROC
-// ProcObjectTimerFinished(_Character, "OdinHUN_ARROWSPRAY")
-// THEN
-// RemoveStatus(_Character, "OdinHUN_ARROWSPRAY");
-// // OBHUN_ToggleScript_Disable("OdinHUN_Skills_ArrowSpray");
-// //END_REGION
+PROC
+ProcObjectTimerFinished(_Character, "OdinHUN_ARROWSPRAY")
+THEN
+OBCORE_ToggleScript_Disable("OdinHUN_Skills_ArrowSpray");
+//END_REGION
 
 //REGION OBHUN_NTH_TOGGLESCRIPT
 IF
@@ -69,7 +67,7 @@ SkillActivated(_Character, "Shout_OdinHUN_NowhereToHide")
 AND
 NOT DB_OBHUN_NTH_Users(_Character)
 THEN
-OBHUN_ToggleScript_Enable("OdinHUN_NowhereToHide");
+OBCORE_ToggleScript_Enable("OdinHUN_NowhereToHide");
 DB_OBHUN_NTH_Users(_Character);
 
 IF
@@ -77,7 +75,7 @@ SkillDeactivated(_Character, "Shout_OdinHUN_NowhereToHide")
 AND
 DB_OBHUN_NTH_Users(_Character)
 THEN
-OBHUN_ToggleScript_Disable("OdinHUN_NowhereToHide", "DB_OBHUN_NTH_Users");
+OBCORE_ToggleScript_Disable("OdinHUN_NowhereToHide", "DB_OBHUN_NTH_Users");
 NOT DB_OBHUN_NTH_Users(_Character);
 //END_REGION
 EXITSECTION

@@ -1,0 +1,91 @@
+treasure itemtypes "Common","Uncommon","Rare","Epic","Legendary","Divine","Unique"
+new treasuretable "ST_OdinHUN_NewSpells"
+new subtable "1,1"
+StartLevel "1"
+object category "I_SKILLBOOK_Ranger_OdinHUN_AnimalCompanion",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "1"
+object category "I_SKILLBOOK_Ranger_OdinHUN_HuntersTrap",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "4"
+object category "I_SKILLBOOK_Ranger_OdinHUN_SavvyHunter",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "4"
+object category "I_SKILLBOOK_Ranger_OdinHUN_PrimalRoar",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "4"
+object category "I_SKILLBOOK_Ranger_OdinHUN_NaturalBond",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "9"
+object category "I_SKILLBOOK_Ranger_OdinHUN_Camouflage",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "13"
+object category "I_SKILLBOOK_Ranger_OdinHUN_PowerShot",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "13"
+object category "I_SKILLBOOK_Ranger_OdinHUN_NowhereToHide",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "16"
+object category "I_SKILLBOOK_Ranger_OdinHUN_SeekingArrows",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "13"
+object category "I_SKILLBOOK_Ranger_OdinHUN_TheHunt",1,0,0,0,0,0,0,0
+new treasuretable "ST_OdinHUN_Trader"
+new subtable "1,1"
+StartLevel "1"
+object category "T_ST_OdinHUN_NewSpells",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "1"
+object category "I_SKILLBOOK_Ranger_FirstAid",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "1"
+object category "I_SKILLBOOK_Ranger_ElementalArrowheads",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "1"
+object category "I_SKILLBOOK_Ranger_PinDown",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "1"
+object category "I_SKILLBOOK_Ranger_Ricochet",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "4"
+object category "I_SKILLBOOK_Ranger_Multishot",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "4"
+object category "I_SKILLBOOK_Ranger_SkyShot",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "4"
+object category "I_SKILLBOOK_Ranger_TacticalRetreat",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "9"
+object category "I_SKILLBOOK_Ranger_ReactionShot",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "9"
+object category "I_SKILLBOOK_Ranger_BallisticShot",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "9"
+object category "I_SKILLBOOK_Ranger_PiercingShot",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "9"
+object category "I_SKILLBOOK_Ranger_Mark",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "13"
+object category "I_SKILLBOOK_Ranger_Farsight",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "16"
+object category "I_SKILLBOOK_Ranger_Snipe",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "9"
+object category "I_SKILLBOOK_Ranger_ArrowSpray",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "16"
+object category "I_SKILLBOOK_Ranger_RainOfArrows",1,0,0,0,0,0,0,0
+new treasuretable "ST_Skillbook_RangerTrainer"
+CanMerge 1
+new subtable "1,1"
+StartLevel "1"
+object category "T_ST_OdinHUN_NewSpells",1,0,0,0,0,0,0,0
+new treasuretable "FTJ_Skillbook_RangerTrainer"
+CanMerge 1
+new subtable "1,1"
+StartLevel "1"
+object category "T_ST_OdinHUN_NewSpells",1,0,0,0,0,0,0,0
