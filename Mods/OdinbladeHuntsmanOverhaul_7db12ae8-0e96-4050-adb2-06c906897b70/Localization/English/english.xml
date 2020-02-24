@@ -1,5 +1,6 @@
 <contentList>
 	<content contentuid="h67e90c1eg8eefg4313ga2efg34d42f163756" OT="tag" Comment="For replacing 'Requires tag' when using tag requirements"></content>
+	<content contentuid="h3a0e0946g2b6bg49d4g93c2g9e61ee4910cd">[1] increases the damage bonus when attacking from high ground. Each point also increases damage you deal with crafted grenades by +5%.</content>
 	<content contentuid="hf6de4a60g219eg46dag837fg2be39d71238d" Source="OdinHUN_Dialog_AnimalCompanion.lsj">Which Animal Companion will you call to your aid?</content>
 	<content contentuid="h132862c6g1b79g4d09g93e5g933c9ac41a4c" Source="OdinHUN_Dialog_AnimalCompanion.lsj">Noctis, the Night Owl.</content>
 	<content contentuid="hbb9e4335gdf50g426fg86cag17bd45c5bdf0" Source="OdinHUN_Dialog_AnimalCompanion.lsj">Grizzle, the Mountain Bear.</content>
@@ -9,7 +10,7 @@
 	<content contentuid="h38682350ga82ag49a2g87ccgdbb0042893d5" Source="OdinHUN_Vendor.lsj">*Take my leave*</content>
 	<content contentuid="h79aec4a6g9ca8g4898gad88gec11d15d248d" Source="OdinHUN_Vendor.lsj">A pleasure. Be sure to watch your step  - you never know what... &lt;i&gt;surprises&lt;/i&gt;... may come your way.</content>
 	<content contentuid="habd5259ag590fg4999gbb2cgcea01da7656f" Source="OdinHUN_Vendor.lsj">Nothing compares to the thrill of a hunt; the precision, the danger, the fear. I suspect you know this feeling well.</content>
-	<content contentuid="h9a4b810cg2aa9g4e33gb8d6gcb8741d412f4" Source="_merged.lsf">|Hunting skills are skills for archers and rangers. High Finesse improves these skills. Read this book to learn this skill.|</content>
+	<content contentuid="h9a4b810cg2aa9g4e33gb8d6gcb8741d412f4" Source="_merged.lsf">Hunting skills are skills for archers and rangers. High Finesse improves these skills. Read this book to learn this skill.</content>
 	<content contentuid="hcf97a6e7ga0ebg4fe3ga4dcg393c9c87423f" Source="_merged.lsf">Skillbooks</content>
 	<content contentuid="h12c92493gc0edg4e9bga7cag5eba19f5d729" Source="0239a45c-2988-4da4-a539-b9f1e20c3397.lsf"></content>
 	<content contentuid="h3a8c0402g04e4g4ebcg97b0gd4299238d517" Source="065038d4-441e-44b7-9d59-e63cb25d24c4.lsf">Noctis, the Night Owl</content>

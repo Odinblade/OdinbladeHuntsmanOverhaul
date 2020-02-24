@@ -6,7 +6,7 @@
         <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_01" />
         <field name="Primary Color" type="ColorStatObjectFieldDefinition" value="#FF755A4D" />
         <field name="Secondary Color" type="ColorStatObjectFieldDefinition" value="#254739" />
-        <field name="Tertiary Color" type="ColorStatObjectFieldDefinition" value="#FF008000" />
+        <field name="Tertiary Color" type="ColorStatObjectFieldDefinition" value="#FF006400" />
       </fields>
     </stat_object>
   </stat_objects>

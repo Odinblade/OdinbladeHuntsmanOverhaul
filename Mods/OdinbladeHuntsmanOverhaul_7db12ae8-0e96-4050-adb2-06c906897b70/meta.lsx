@@ -40,7 +40,7 @@
                 <node id="ModuleInfo">
                     <attribute id="Author" value="Odinblade" type="30" />
                     <attribute id="CharacterCreationLevelName" value="" type="22" />
-                    <attribute id="Description" value="&lt;font color=&apos;#fbd478&apos;&gt;REQUIRES: OdinCore - Mod Services&lt;/font&gt;. &lt;br&gt;&lt;br&gt;This mod overhauls all existing &lt;font color=&apos;#5A9646&apos;&gt;Huntsman&lt;/font&gt; skills, as well as adding plenty of new ones into the mix, in order to deliver a lethal &lt;font color=&apos;#5A9646&apos;&gt;Huntsman&lt;/font&gt; skill tree." type="30" />
+                    <attribute id="Description" value="&lt;font color=&apos;#fbd478&apos;&gt;REQUIRES: OdinCore - Mod Services and Norbyte&apos;s Script Extender&lt;/font&gt;. &lt;br&gt;&lt;br&gt;This mod overhauls all existing &lt;font color=&apos;#5A9646&apos;&gt;Huntsman&lt;/font&gt; skills, as well as adding plenty of new ones into the mix, in order to deliver a lethal &lt;font color=&apos;#5A9646&apos;&gt;Huntsman&lt;/font&gt; skill tree." type="30" />
                     <attribute id="DescriptionName" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
                     <attribute id="DisplayName" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
                     <attribute id="Folder" value="OdinbladeHuntsmanOverhaul_7db12ae8-0e96-4050-adb2-06c906897b70" type="30" />
