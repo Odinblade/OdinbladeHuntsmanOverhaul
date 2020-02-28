@@ -20,6 +20,49 @@ THEN
 NRD_GameActionDestroy(_Handle);
 NOT DB_OBHUN_ReactionShot(_Character, _Handle);
 //END_REGION
+
+//REGION Prevent jumping
+IF
+CharacterStatusApplied(_Enemy, "GROUNDED", _Player)
+AND
+CharacterIsEnemy(_Enemy, (CHARACTERGUID)_Player, 1)
+THEN
+NRD_DebugLog("[OdinHUN:Story] Launching iteratejumps");
+NRD_CharacterIterateSkills(_Enemy, "OdinHUN_RS_IterateJumps");
+
+//Checks enemy skills for any Jump skills and removes them
+IF
+NRD_SkillIteratorEvent("OdinHUN_RS_IterateJumps", _Enemy, _SkillId, 1, 1)
+AND
+StringSub(_SkillId, 0, 4, "Jump")
+AND
+NRD_SkillGetCooldown(_Enemy, _SkillId, _CD)
+AND
+_CD < 12.0
+AND
+NRD_RealToString(_CD, _CDString)
+THEN
+DB_OBHUN_RS_Grounded(_Enemy, _SkillId, _CD);
+CharacterRemoveSkill(_Enemy, _SkillId); //AI didn't like NRD_SkillSetCooldown on prior turn -> could still use the skill
+
+//Readds any removed Jump skill and sets their cooldown to (original-1)
+IF
+CharacterStatusRemoved(_Enemy, "GROUNDED", _)
+AND
+DB_OBHUN_RS_Grounded(_Enemy, _SkillId, _CD)
+AND
+StringConcatenate("[OdinHUN:Story] Setting skill back to original: ", _SkillId, _DebugLog)
+AND
+NRD_RealToString(_CD, _CDString)
+AND
+RealSubtract(_CD, 6.0, _NewCD)
+AND
+StringConcatenate("[OdinHUN:Story] Current CD: ", _CDString, _DebugLogCD)
+THEN
+CharacterAddSkill(_Enemy, _SkillId);
+NRD_SkillSetCooldown(_Enemy, _SkillId, _NewCD);
+NOT DB_OBHUN_RS_Grounded(_Enemy, _SkillId, _CD);
+//END_REGION
 EXITSECTION
 
 ENDEXITSECTION

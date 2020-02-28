@@ -52,10 +52,10 @@
 	<content contentuid="hbb9e4335gdf50g426fg86cag17bd45c5bdf0" Source="OdinHUN_Dialog_AnimalCompanion.lsj">Grizzle, the Mountain Bear.</content>
 	<content contentuid="h938ce001g93e0g49ebg8aa3gecb766153a39" Source="OdinHUN_Dialog_AnimalCompanion.lsj">Elkahoof, the Forest Deer.</content>
 	<content contentuid="he5f86789gf1a2g466bg8c04g564ee8b9f205" Source="OdinHUN_Test.lsj">Well hi!</content>
-	<content contentuid="h397abe22g729ag46b3ga5bag9cb5113944be" Source="OdinHUN_Vendor.lsj">I would like to trade.</content>
-	<content contentuid="h38682350ga82ag49a2g87ccgdbb0042893d5" Source="OdinHUN_Vendor.lsj">*Take my leave*</content>
-	<content contentuid="h79aec4a6g9ca8g4898gad88gec11d15d248d" Source="OdinHUN_Vendor.lsj">A pleasure. Be sure to watch your step  - you never know what... &lt;i&gt;surprises&lt;/i&gt;... may come your way.</content>
-	<content contentuid="habd5259ag590fg4999gbb2cgcea01da7656f" Source="OdinHUN_Vendor.lsj">Nothing compares to the thrill of a hunt; the precision, the danger, the fear. I suspect you know this feeling well.</content>
+	<content contentuid="h1c775fafg5d0bg467eg9364g10ae30100119" Source="OdinHUN_Vendor.lsj">A pleasure. Be sure to watch your step  - you never know what... &lt;i&gt;surprises&lt;/i&gt;... may come your way.</content>
+	<content contentuid="ha76225abga929g4de6gabc7gcf1910663c93" Source="OdinHUN_Vendor.lsj">Nothing compares to the thrill of a hunt; the precision, the danger, the fear. I suspect you know this feeling well.</content>
+	<content contentuid="h1ddd7819g0583g4deag8c5dg18fc492ee000" Source="OdinHUN_Vendor.lsj">*Take my leave*</content>
+	<content contentuid="h581a0eb8gf0c1g49d0gbdfegf891e99aac4f" Source="OdinHUN_Vendor.lsj">I would like to trade.</content>
 	<content contentuid="h423e4ef5g32b6g4ad0ga1d4gb7fac1ce726c" Source="Projectile_Description.lsb" Key="Projectile_ArrowSpray_Description">Spray arrows in a large cone. Each arrow deals between [1] and [2] based on distance between you and the target.</content>
 	<content contentuid="ha146fa4fg6d4eg41d5g895eg1414bc5b28ff" Source="Projectile_Description.lsb" Key="Projectile_BallisticShot_Description">Fire a shot which deals [1] and gains 5% bonus damage per 1m distance to the target.</content>
 	<content contentuid="h3bc5dba9g365bg4ab8g88b6g825464dce5de" Source="Projectile_Description.lsb" Key="Projectile_Mark_Description">Toss a grenade which &lt;font color=&apos;#81AB00&apos;&gt;Marks&lt;/font&gt; hit &lt;font color=&apos;#aa3938&apos;&gt;enemies&lt;/font&gt;, preventing them from going &lt;font color=&apos;#639594&apos;&gt;Invisible&lt;/font&gt; and reducing their &lt;font color=&quot;#c80030&quot;&gt;Dodge Chance by [1]%&lt;/font&gt;. &lt;br&gt;&lt;br&gt;Hitting an &lt;font color=&apos;#639594&apos;&gt;Invisible&lt;/font&gt; target with this skill will reveal them.</content>

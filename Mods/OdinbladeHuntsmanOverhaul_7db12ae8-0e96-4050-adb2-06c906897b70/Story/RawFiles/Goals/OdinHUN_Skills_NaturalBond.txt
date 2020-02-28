@@ -85,6 +85,15 @@ THEN
 NRD_HitAddDamage(_SharedHit, _DamageType, _SharedDamage);
 NRD_HitSetInt(_SharedHit, "Hit", 1);
 NRD_HitExecute(_SharedHit);
+
+//Remove the statuses if the owner deactivates the skill
+IF
+SkillDeactivated(_Owner, "Shout_OdinHUN_NaturalBond")
+AND
+DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon)
+THEN
+RemoveStatus(_Owner, "OdinHUN_NATURALBOND");
+RemoveStatus(_Summon, "OdinHUN_NATURALBOND");
 //END_REGION
 EXITSECTION
 

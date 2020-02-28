@@ -1,5 +1,5 @@
 local function SessionLoading()
-    Ext.Print("OdinHUN:Bootstrap.lua] Session is loading.")
+    Ext.Print("[OdinHUN:Bootstrap.lua] Session is loading.")
 end
 
 -- Credit to LaughingLeader/Norbyte for providing the base of this function
@@ -28,7 +28,7 @@ end
 
 local ModuleLoading = function ()
     Ext.Print("[OdinHUN:Bootstrap.lua] Module is loading.")
-    -- OverrideStats()
+    OverrideStats()
 end
 
 Ext.Require("7db12ae8-0e96-4050-adb2-06c906897b70", "OdinHUN_StatOverrides.lua")

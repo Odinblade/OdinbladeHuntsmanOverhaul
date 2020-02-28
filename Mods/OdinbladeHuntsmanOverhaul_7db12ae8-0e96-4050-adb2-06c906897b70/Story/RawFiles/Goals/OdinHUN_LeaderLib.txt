@@ -1,0 +1,15 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+PROC
+LeaderLib_Mods_OnVersionChanged(7db12ae8-0e96-4050-adb2-06c906897b70, (INTEGER)_LastVersion, (INTEGER)_NextVersion)
+AND
+NOT DB_OBHUN_RegisteredLeaderLibSettings(1)
+THEN
+DB_OBHUN_RegisteredLeaderLibSettings(1);
+DB_LeaderLib_ModApi_RegisterPreset("OdinbladeClasses", "Tracker", "Tracker [Odinblade's Huntsman Overhaul]", "OdinbladeHuntsmanOverhaul_IsActive");
+EXITSECTION
+
+ENDEXITSECTION

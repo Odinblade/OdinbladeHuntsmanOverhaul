@@ -102,10 +102,21 @@ THEN
 SetTag(_Owner, "ODINHUN_ANIMALCOMPANION");
 PlayEffect(_Summon, "RS3_FX_Skills_Totem_Impact_Summon_Poison_01");
 CharacterSetAnimationOverride(_Owner, "");
-PlayAnimation(_Owner, "Whistle_01");
+ProcObjectTimer(_Owner, "OdinHUN_AC_WHISTLE_ANIMATION", 150);
+ProcObjectTimer(_Owner, "OdinHUN_AC_WHISTLE_SFX", 500);
 NOT DB_OBHUN_AnimalCompanion_Prepare(_Owner, _X, _Y, _Z, _FxHandle);
 DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon);
 // NRD_DebugLog("[OdinHUN:Story] Animal Companion successfully summoned");
+
+PROC
+ProcObjectTimerFinished(_Owner, "OdinHUN_AC_WHISTLE_ANIMATION")
+THEN
+PlayAnimation(_Owner, "Whistle_01");
+
+PROC
+ProcObjectTimerFinished(_Owner, "OdinHUN_AC_WHISTLE_SFX")
+THEN
+PlaySound(_Owner, "Humans_Hero_Female_ABC_Custom_Whistle_01");
 //END_REGION
 
 //REGION Animal Companion dismissal logic
@@ -187,6 +198,34 @@ ApplyStatus(_Owner, "OdinHUN_CAMOUFLAGE_HEAL", 0.0, 1, _Owner);
 ApplyStatus(_Summon, "INVISIBLE", 6.0, 1, _Owner);
 ApplyStatus(_Summon, "OdinHUN_CAMOUFLAGE_HEAL", 0.0, 1, _Owner);
 PlayEffect(_Summon, "OdinHUN_Impact_02");
+//END_REGION
+
+//REGION Ladder malarchy
+// Player has climbed a ladder, queue a teleport for AC
+IF
+CharacterStatusRemoved(_Owner, "CLIMBING", _)
+AND
+CharacterIsInCombat(_Owner, 0)
+AND
+DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon)
+THEN
+ProcObjectTimer(_Owner, "OdinHUN_LADDER", 300);
+
+// Teleport the AC to the player
+PROC
+ProcObjectTimerFinished((CHARACTERGUID)_Owner, "OdinHUN_LADDER")
+AND
+DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon)
+THEN
+TeleportTo(_Summon, _Owner);
+
+// If player starts climbing a ladder, cancel queued AC teleports
+IF
+CharacterStatusApplied(_Owner, "CLIMBING", _)
+AND
+CharacterIsInCombat(_Owner, 0)
+THEN
+ProcObjectTimerCancel(_Owner, "OdinHUN_LADDER");
 //END_REGION
 EXITSECTION
 

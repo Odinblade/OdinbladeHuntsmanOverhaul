@@ -1,6 +1,7 @@
 Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
+// DB_OBHUN_SA_ExcludedWeapon("WPN_Riftshot_BonusUniques_23f4ab46-309c-4bdf-b788-77412b4fcef1");
 
 KBSECTION
 IF
@@ -18,8 +19,7 @@ GetDistanceTo(_Dealer, _Target, _Distance)
 AND
 _Distance >= 6
 THEN
-// NRD_DebugLog("[OdinHUN:Story] Preparing a Seeking Arrow...");
-DB_OBHUN_SeekingArrows(_Target, _Dealer);
+DB_OBHUN_SeekingArrows(_Target, (GUIDSTRING)_Dealer);
 
 IF
 NRD_OnHit(_Target, _Dealer, _Damage, _HitHandle)
@@ -31,6 +31,8 @@ AND
 NRD_StatusGetString(_Target, _HitHandle, "SkillId", _SkillID)
 AND
 NRD_StatusGetString(_Target, _HitHandle, "DamageType", _DamageType)
+AND
+_DamageType != "Shadow" // Fix for incompatibilities with modded bows which deal part Shadow-damage as an on-hit status
 AND
 _SkillID != "Projectile_OdinHUN_SeekingArrows_Shot"
 AND
