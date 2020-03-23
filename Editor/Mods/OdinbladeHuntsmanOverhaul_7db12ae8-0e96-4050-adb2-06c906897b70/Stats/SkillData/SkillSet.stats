@@ -14,6 +14,13 @@
         <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Cone_OdinHUN_Summon_TurbulantWind" />
       </fields>
     </stat_object>
+    <stat_object is_substat="true">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="Summon_OdinHUN_Owl_substat" />
+        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Shout_OdinHUN_Summon_FavourableWind" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="Summon_OdinHUN_Owl" />
+      </fields>
+    </stat_object>
     <stat_object is_substat="false">
       <fields>
         <field name="Name" type="NameStatObjectFieldDefinition" value="Summon_OdinHUN_Bear" />
@@ -27,6 +34,13 @@
         <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Target_EnemyFortify" />
       </fields>
     </stat_object>
+    <stat_object is_substat="true">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="Summon_OdinHUN_Bear_substat" />
+        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Rush_EnemyBullRush" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="Summon_OdinHUN_Bear" />
+      </fields>
+    </stat_object>
     <stat_object is_substat="false">
       <fields>
         <field name="Name" type="NameStatObjectFieldDefinition" value="Summon_OdinHUN_Deer" />
@@ -38,6 +52,13 @@
         <field name="Name" type="NameStatObjectFieldDefinition" value="New_Stat_1" />
         <field name="Using" type="BaseClassStatObjectFieldDefinition" value="Summon_OdinHUN_Deer" />
         <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Dome_OdinHUN_SporeShrooms_Summon" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="true">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="Summon_OdinHUN_Deer_substat" />
+        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Rush_EnemyBatteringRam" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="Summon_OdinHUN_Deer" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -58,6 +79,87 @@
         <field name="Name" type="NameStatObjectFieldDefinition" value="OdinNECRO_Class_Bloodtide_substat_1" />
         <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Target_FirstAid" />
         <field name="Using" type="BaseClassStatObjectFieldDefinition" value="OdinHUN_Class_Tracker" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="Summon_OdinHUN_Deer_Swole" />
+        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Target_EnemyRestoration" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="true">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="New_Stat_2" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="Summon_OdinHUN_Deer_Swole" />
+        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Dome_OdinHUN_SporeShrooms_Summon" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="true">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="New_Stat_0_substat_1" />
+        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Rush_EnemyBatteringRam" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="Summon_OdinHUN_Deer_Swole" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="true">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="Summon_OdinHUN_Deer_Swole_substat" />
+        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Projectile_EnemyChainHeal" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="Summon_OdinHUN_Deer_Swole" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="Summon_OdinHUN_Bear_Swole" />
+        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Shout_EnemyWhirlwind" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="true">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="New_Stat_3" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="Summon_OdinHUN_Bear_Swole" />
+        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Target_EnemyFortify" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="true">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="New_Stat_4" />
+        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Rush_EnemyBullRush" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="Summon_OdinHUN_Bear_Swole" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="true">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="Summon_OdinHUN_Bear_Swole_substat" />
+        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Target_EnemyEnrage" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="Summon_OdinHUN_Bear_Swole" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="Summon_OdinHUN_Owl_Swole" />
+        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Projectile_EnemyFlight" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="true">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="New_Stat_5" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="Summon_OdinHUN_Owl_Swole" />
+        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Cone_OdinHUN_Summon_TurbulantWind" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="true">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="New_Stat_6" />
+        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Shout_OdinHUN_Summon_FavourableWind" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="Summon_OdinHUN_Owl_Swole" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="true">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="Summon_OdinHUN_Owl_Swole_substat" />
+        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="MultiStrike_OdinHUN_Summon_BlinkStrike" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="Summon_OdinHUN_Owl_Swole" />
       </fields>
     </stat_object>
   </stat_objects>

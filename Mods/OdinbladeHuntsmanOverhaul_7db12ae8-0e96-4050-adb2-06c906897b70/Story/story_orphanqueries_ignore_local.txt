@@ -1,1 +1,2 @@
 DB_LeaderLib_ModApi_RegisterPreset 4
+DB_OBHUN_GrenadeSkill 2

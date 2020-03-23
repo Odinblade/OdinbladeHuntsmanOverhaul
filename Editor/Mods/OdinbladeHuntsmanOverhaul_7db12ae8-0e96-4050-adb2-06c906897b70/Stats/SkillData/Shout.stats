@@ -170,7 +170,6 @@
         <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
         <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Potion:Stats_SteelSkin:Armor" />
         <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="null" />
-        <field name="Requirements" type="StringStatObjectFieldDefinition" value="Tag ODINHUN_ANIMALCOMPANION" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -266,7 +265,7 @@
         <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="RangerLore 2" />
         <field name="Icon" type="StringStatObjectFieldDefinition" value="OBHUN_Skill_SavvyHunter" />
         <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Savvy Hunter" />
-        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Using this skill immediately refreshes the cooldown of &lt;font color='#dbdbdb'&gt;Hunter's Trap&lt;/font&gt;. &lt;br&gt;&lt;br&gt;For the next 2 turns, your &lt;font color='#dbdbdb'&gt;crafted arrows&lt;/font&gt; deal 25% increased damage, and you have a 50% chance to recover &lt;font color='#dbdbdb'&gt;crafted grenades&lt;/font&gt; after use." />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Using this skill immediately refreshes the cooldown of &lt;font color='#dbdbdb'&gt;Hunter's Trap&lt;/font&gt;. &lt;br&gt;&lt;br&gt;For the next 2 turns, your &lt;font color='#dbdbdb'&gt;crafted arrows&lt;/font&gt; deal 25% increased damage and you recover &lt;font color='#dbdbdb'&gt;basic grenades&lt;/font&gt; after use." />
         <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
         <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_shout_01_start" />
         <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_shout_01_loop" />
@@ -413,6 +412,17 @@
         <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="10" />
         <field name="DamageType" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="Damage Type" />
         <field name="IsEnemySkill" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_Summon_FavourableWind" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="FavourableWind" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="IsEnemySkill" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_cone_air_01_cast" />
       </fields>
     </stat_object>
   </stat_objects>

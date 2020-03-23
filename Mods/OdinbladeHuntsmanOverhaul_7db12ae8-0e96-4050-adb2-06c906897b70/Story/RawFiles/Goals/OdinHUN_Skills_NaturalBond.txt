@@ -15,6 +15,7 @@ THEN
 ApplyStatus(_Owner, "OdinHUN_NATURALBOND", -1.0, 1, _Owner);
 ApplyStatus(_Summon, "OdinHUN_NATURALBOND", -1.0, 1, _Owner);
 
+
 //Case: has status -> remove it
 IF
 CharacterUsedSkill(_Owner, "Shout_OdinHUN_NaturalBond", _, _)
@@ -25,6 +26,25 @@ HasActiveStatus(_Owner, "OdinHUN_NATURALBOND", 1)
 THEN
 RemoveStatus(_Owner, "OdinHUN_NATURALBOND");
 RemoveStatus(_Summon, "OdinHUN_NATURALBOND");
+
+IF
+CharacterUsedSkill(_Owner, "Shout_OdinHUN_NaturalBond", _, _)
+AND
+NOT DB_OBHUN_AnimalCompanion_Instance(_Owner, _)
+AND
+HasActiveStatus(_Owner, "OdinHUN_NATURALBOND", 1)
+THEN
+RemoveStatus(_Owner, "OdinHUN_NATURALBOND");
+
+//Owner has Natural Bond and calls a new Animal Companion
+PROC
+PROC_OBHUN_NaturalBond_Apply((CHARACTERGUID)_Summon, (GUIDSTRING)_Owner)
+// AND
+// DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon)
+AND
+HasActiveStatus(_Owner, "OdinHUN_NATURALBOND", 1)
+THEN
+ApplyStatus(_Summon, "OdinHUN_NATURALBOND", -1.0, 1, _Owner);
 
 //Owner is hit by damage which does not originate from the summon
 IF
@@ -94,6 +114,13 @@ DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon)
 THEN
 RemoveStatus(_Owner, "OdinHUN_NATURALBOND");
 RemoveStatus(_Summon, "OdinHUN_NATURALBOND");
+
+IF
+SkillDeactivated(_Owner, "Shout_OdinHUN_NaturalBond")
+AND
+NOT DB_OBHUN_AnimalCompanion_Instance(_Owner, _)
+THEN
+RemoveStatus(_Owner, "OdinHUN_NATURALBOND");
 //END_REGION
 EXITSECTION
 

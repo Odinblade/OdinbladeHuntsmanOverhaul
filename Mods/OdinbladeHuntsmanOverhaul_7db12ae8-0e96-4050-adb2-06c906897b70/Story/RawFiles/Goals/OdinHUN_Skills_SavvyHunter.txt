@@ -8,17 +8,10 @@ CharacterUsedSkill(_Character, _SkillId, _, _)
 AND
 HasActiveStatus(_Character, "OdinHUN_SAVVYHUNTER", 1)
 AND
-DB_OBHUN_GrenadeSkill(_SkillId, _ItemTemplate)
-AND
-Random(100, _Random)
-AND
-_Random >= 50
-AND
-StringConcatenate("[OdinHUN:Story] Expert Hunter grenade proc: ", _SkillId, _DebugMsg)
+DB_OBHUN_CraftedGrenadeSkill(_SkillId, _ItemTemplate, 1)
 THEN
 CharacterStatusText(_Character, "Grenade refunded!");
 ItemTemplateAddTo(_ItemTemplate, _Character, 1);
-NRD_DebugLog(_DebugMsg);
 
 IF
 CharacterUsedSkill(_Character, "Shout_OdinHUN_SavvyHunter", _, _)

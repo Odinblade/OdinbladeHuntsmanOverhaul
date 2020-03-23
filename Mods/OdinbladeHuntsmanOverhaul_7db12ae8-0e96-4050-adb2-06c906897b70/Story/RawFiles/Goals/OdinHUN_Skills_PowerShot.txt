@@ -15,7 +15,7 @@ AND
 GetVarFloat(_Character, "OBHUN_AP", _CharAP)
 THEN
 DB_OBHUN_PowerShot(_Character, _CharAP);
-ApplyStatus(_Character, "OdinHUN_POWERSHOT", 1.0, 1);
+ObjectSetFlag(_Character, "OdinHUN_POWERSHOT");
 ProcObjectTimer((CHARACTERGUID)_Character, "OBHUN_END_POWERSHOT", 1000);
 
 PROC
@@ -24,13 +24,13 @@ AND
 DB_OBHUN_PowerShot(_Character, _CharAP)
 THEN
 NOT DB_OBHUN_PowerShot(_Character, _CharAP);
-RemoveStatus((CHARACTERGUID)_Character, "OdinHUN_POWERSHOT");
+ObjectClearFlag(_Character, "OdinHUN_POWERSHOT");
 
 //Perform Power Shot skill
 IF
 NRD_OnPrepareHit(_Target, _Dealer, _, _HitHandle)
 AND
-HasActiveStatus(_Dealer, "OdinHUN_POWERSHOT", 1)
+ObjectGetFlag(_Dealer, "OdinHUN_POWERSHOT", 1)
 AND
 DB_OBHUN_PowerShot(_Dealer, _UsedAP)
 AND

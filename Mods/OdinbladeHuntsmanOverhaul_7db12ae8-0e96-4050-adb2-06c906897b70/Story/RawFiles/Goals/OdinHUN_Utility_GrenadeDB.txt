@@ -1,0 +1,135 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+//Grenade skills
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_ArmorPiercing", "e057dc4a-3921-4740-a5ac-a4ca6a7a32f7", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_ArmorPiercing_-1", "e057dc4a-3921-4740-a5ac-a4ca6a7a32f7", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_BlessedIce", "4b70b9dc-ac99-415c-bfc8-15cd6dc9aa7d", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_BlessedIce_-1", "4b70b9dc-ac99-415c-bfc8-15cd6dc9aa7d", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_BlessedOilFlask", "d44fa069-7708-4c0f-a924-f66a75802113", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_BlessedOilFlask_-1", "d44fa069-7708-4c0f-a924-f66a75802113", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_ChemicalWarfare", "bdff5d65-29ef-425c-9096-a119e4de228f", 1);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_ChemicalWarfare_-1", "bdff5d65-29ef-425c-9096-a119e4de228f", 1);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_CursedMolotov", "4f63b088-f686-4e09-8c0f-16df6504f0ea", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_CursedMolotov_-1", "4f63b088-f686-4e09-8c0f-16df6504f0ea", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_CursedPoisonFlask", "f216b8d2-4158-4ce6-b8c9-15e920a6add4", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_CursedPoisonFlask_-1", "f216b8d2-4158-4ce6-b8c9-15e920a6add4", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Flashbang", "a71888d9-9d3f-4004-96c3-bbc1a158c3f6", 1);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Flashbang_-1", "a71888d9-9d3f-4004-96c3-bbc1a158c3f6", 1);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Holy", "f7ecad76-b074-4164-a99f-9262d3cd66db", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Holy_-1", "f7ecad76-b074-4164-a99f-9262d3cd66db", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Ice", "a16947e3-5f2f-42c7-b05b-7cdaeb204d28", 1);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Ice_-1", "a16947e3-5f2f-42c7-b05b-7cdaeb204d28", 1);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Love", "22cd2247-45d7-432c-93bd-782777af3b33", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Love_-1", "22cd2247-45d7-432c-93bd-782777af3b33", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_MindMaggot", "2b8f5417-b1f4-4978-983b-a59dc67d903f", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_MindMaggot_-1", "2b8f5417-b1f4-4978-983b-a59dc67d903f", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Molotov", "5208b121-64fa-4704-8924-c61c576e1ac5", 1);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Molotov_-1", "5208b121-64fa-4704-8924-c61c576e1ac5", 1);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_MustardGas", "2cba3327-1650-4749-89ce-daeb6139aa17", 1);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_MustardGas_-1", "2cba3327-1650-4749-89ce-daeb6139aa17", 1);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Nailbomb", "c2dac4cd-724b-4179-b72b-84e0d9ffa7a1", 1);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Nailbomb_-1", "c2dac4cd-724b-4179-b72b-84e0d9ffa7a1", 1);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_OilFlask", "54b64fbb-86bf-4f8d-a5c3-a25eac3f8d9d", 1);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_OilFlask_-1", "54b64fbb-86bf-4f8d-a5c3-a25eac3f8d9d", 1);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_PoisonFlask", "6409a204-1ad0-4082-89b9-1edca837da2a", 1);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_PoisonFlask_-1", "6409a204-1ad0-4082-89b9-1edca837da2a", 1);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_SmokeBomb", "0c16cc46-26f9-4c07-b334-7905a10591ea", 1);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_SmokeBomb_-1", "0c16cc46-26f9-4c07-b334-7905a10591ea", 1);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Taser", "29373e1d-5f91-490e-89dd-747042a1d6c7", 1);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Taser_-1", "29373e1d-5f91-490e-89dd-747042a1d6c7", 1);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Terror", "cbdc1f53-1acf-4288-bdb2-3ab085d27f29", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Terror_-1", "cbdc1f53-1acf-4288-bdb2-3ab085d27f29", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Tremor", "220f7257-faa9-4bc4-903b-ae52765948ea", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Tremor_-1", "220f7257-faa9-4bc4-903b-ae52765948ea", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_WaterBalloon", "ee4b83e0-b2dc-4880-a974-af7742e6e960", 1);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_WaterBalloon_-1", "ee4b83e0-b2dc-4880-a974-af7742e6e960", 1);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_WaterBlessedBalloon", "40ce7ae0-d0a9-4d76-b638-4bbd2814075f", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_WaterBlessedBalloon_-1", "40ce7ae0-d0a9-4d76-b638-4bbd2814075f", 0);
+DB_OBHUN_CraftedGrenadeSkill("ProjectileStrike_Grenade_ClusterBomb", "f70ee2c6-9dda-4eed-b59b-75e4256c9059", 0);
+DB_OBHUN_CraftedGrenadeSkill("ProjectileStrike_Grenade_ClusterBomb_-1", "f70ee2c6-9dda-4eed-b59b-75e4256c9059", 0);
+DB_OBHUN_CraftedGrenadeSkill("ProjectileStrike_Grenade_CursedClusterBomb", "d9e9a62c-0266-440d-9501-a6c2c43a22f6", 0);
+DB_OBHUN_CraftedGrenadeSkill("ProjectileStrike_Grenade_CursedClusterBomb_-1", "d9e9a62c-0266-440d-9501-a6c2c43a22f6", 0);
+
+//Gift Bag - Crafting Overhaul
+//Smokebombs
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_SmokeBomb_Ice", "b8c3acfa-5193-4f43-832b-ccb96ada0c23", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_SmokeBomb_Ice_1", "b8c3acfa-5193-4f43-832b-ccb96ada0c23", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_SmokeBomb_Molotov", "779cba2f-a031-4d23-a16a-14a98c1ca7d9", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_SmokeBomb_Molotov_1", "779cba2f-a031-4d23-a16a-14a98c1ca7d9", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_SmokeBomb_OilFlask", "0d2e2b90-9954-4ab9-845c-4c7d16fd92c6", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_SmokeBomb_OilFlask_1", "0d2e2b90-9954-4ab9-845c-4c7d16fd92c6", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_SmokeBomb_PoisonFlask", "a14edc4e-4c31-4b9d-bf4c-e6fc6c5972c5", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_SmokeBomb_PoisonFlask_1", "a14edc4e-4c31-4b9d-bf4c-e6fc6c5972c5", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_SmokeBomb_WaterBalloon", "f90b762d-3fdc-4c3e-95bc-594eb7cdfc25", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_SmokeBomb_WaterBalloon_1", "f90b762d-3fdc-4c3e-95bc-594eb7cdfc25", 0);
+
+//Nailbombs
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Nailbomb_Ice", "c1b579e8-09ba-4e4a-9e32-ba3a08f242e9", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Nailbomb_Ice_1", "c1b579e8-09ba-4e4a-9e32-ba3a08f242e9", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Nailbomb_Molotov", "67f9927b-50af-487f-a03a-285193f68d65", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Nailbomb_Molotov_1", "67f9927b-50af-487f-a03a-285193f68d65", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Nailbomb_OilFlask", "84512488-35c9-4bb4-92d3-ca8962332b1c", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Nailbomb_OilFlask_1", "84512488-35c9-4bb4-92d3-ca8962332b1c", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Nailbomb_PoisonFlask", "3f5db754-1aa9-47a6-8e8a-66211e5a66d0", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Nailbomb_PoisonFlask_1", "3f5db754-1aa9-47a6-8e8a-66211e5a66d0", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Nailbomb_WaterBalloon", "acead653-68a2-4376-81c6-a3d6d6aa5f92", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Nailbomb_WaterBalloon_1", "acead653-68a2-4376-81c6-a3d6d6aa5f92", 0);
+
+//Mustard Gas
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_MustardGas_Ice", "2f3031e0-8107-479a-976d-ecbe90c64321", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_MustardGas_Ice_1", "2f3031e0-8107-479a-976d-ecbe90c64321", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_MustardGas_Molotov", "cce5ea0e-62fe-428c-b733-b854feab9e80", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_MustardGas_Molotov_1", "cce5ea0e-62fe-428c-b733-b854feab9e80", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_MustardGas_OilFlask", "90281362-5f79-4361-a39d-963a4adda70b", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_MustardGas_OilFlask_1", "90281362-5f79-4361-a39d-963a4adda70b", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_MustardGas_PoisonFlask", "b955f95b-c1ee-4c57-a4c0-330b8eaafcf5", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_MustardGas_PoisonFlask_1", "b955f95b-c1ee-4c57-a4c0-330b8eaafcf5", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_MustardGas_WaterBalloon", "5c91071d-51ce-43fc-9e51-f1932e0ba824", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_MustardGas_WaterBalloon_1", "5c91071d-51ce-43fc-9e51-f1932e0ba824", 0);
+
+//Taser
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Taser_Ice", "6872d00a-f5ba-493a-a62a-17145134e5b3", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Taser_Ice_1", "6872d00a-f5ba-493a-a62a-17145134e5b3", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Taser_Molotov", "66a22cd0-cd79-4540-9fd5-83e998a91451", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Taser_Molotov_1", "66a22cd0-cd79-4540-9fd5-83e998a91451", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Taser_OilFlask", "0c08d718-686f-4c55-ac49-caa56cd2718a", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Taser_OilFlask_1", "0c08d718-686f-4c55-ac49-caa56cd2718a", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Taser_PoisonFlask", "6d98efb3-9d69-49ef-bf9c-5f54b037aab2", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Taser_PoisonFlask_1", "6d98efb3-9d69-49ef-bf9c-5f54b037aab2", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Taser_WaterBalloon", "03f0b168-cde0-46d9-9135-cc5a0407b1ac", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Taser_WaterBalloon_1", "03f0b168-cde0-46d9-9135-cc5a0407b1ac", 0);
+
+//Flashbang
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Flashbang_Ice", "55288b53-0b48-4d5a-8875-abe10ee68e1d", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Flashbang_Ice_1", "55288b53-0b48-4d5a-8875-abe10ee68e1d", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Flashbang_Molotov", "1bf1d9ae-dafd-4101-ae47-cda4de84bb92", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Flashbang_Molotov_1", "1bf1d9ae-dafd-4101-ae47-cda4de84bb92", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Flashbang_OilFlask", "d13a02a4-86c2-4045-850c-4bfa8dd46dd6", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Flashbang_OilFlask_1", "d13a02a4-86c2-4045-850c-4bfa8dd46dd6", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Flashbang_PoisonFlask", "cc32cd14-5e2a-4242-9c59-e3c50c87afac", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Flashbang_PoisonFlask_1", "cc32cd14-5e2a-4242-9c59-e3c50c87afac", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Flashbang_WaterBalloon", "76aaeb66-74bf-4059-a036-d33429ee4bff", 0);
+DB_OBHUN_CraftedGrenadeSkill("Projectile_Grenade_Flashbang_WaterBalloon", "76aaeb66-74bf-4059-a036-d33429ee4bff", 0);
+
+// GlobalSetFlag("OdinHUN_Fix_V2_DB");
+KBSECTION
+// IF
+// SavegameLoaded(_,_,_,_)
+// AND
+// NOT DB_GlobalFlag("OdinHUN_Fix_V2_DB")
+// THEN
+// GlobalSetFlag("OdinHUN_Fix_V2_DB");
+// NRD_DebugLog("[OdinHUN:Story] Save fix: Applying...");
+// PROC_OBHUN_Fix_Savegame_GrenadeDBs();
+
+// PROC
+// PROC_OBHUN_Fix_Savegame_GrenadeDBs()
+// AND
+// DB_OBHUN_GrenadeSkill(_SkillId, _ItemTemplate)
+// THEN
+// NOT DB_OBHUN_GrenadeSkill(_SkillId, _ItemTemplate);
+// NRD_DebugLog("[OdinHUN:Story] Save fix: Cleared one old DB_OBHUN_GrenadeSkill entry.");
+EXITSECTION
+
+ENDEXITSECTION

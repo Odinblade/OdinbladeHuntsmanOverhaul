@@ -279,3 +279,4 @@ DB_ARX_Pipes_SurfaceTransformations 2
 DB_RC_WH_AmbushersOne 2
 DB_GLO_ExperienceAgent 1OpenMessageBoxChoice 3
 DB_ApplyPreset 2DialogGetInvolvedNPC 2IsSwitch 1DB_LeaderLib_ModApi_RegisterPreset 4
+DB_OBHUN_GrenadeSkill 2

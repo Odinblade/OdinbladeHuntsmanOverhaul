@@ -9,7 +9,7 @@ NRD_OnHit(_Target, _Dealer, _Damage, _HitHandle)
 AND
 NRD_StatusGetString(_Target, _HitHandle, "SkillId", _SkillId)
 AND
-DB_OBHUN_GrenadeSkill(_SkillId, _ItemTemplate)
+DB_OBHUN_CraftedGrenadeSkill(_SkillId, _ItemTemplate, _)
 AND
 CharacterGetAbility((CHARACTERGUID)_Dealer, "RangerLore", _HuntsmanPointsInt)
 AND
@@ -35,7 +35,7 @@ Integer(_TotalDamage, _FinalDamage)
 THEN
 NRD_HitStatusClearDamage(_Target, _HitHandle, _DamageType);
 NRD_HitStatusAddDamage(_Target, _HitHandle, _DamageType, _FinalDamage);
-NRD_DebugLog("[OdinHUN:Story] Grenade amp success!");
+// NRD_DebugLog("[OdinHUN:Story] Grenade amp success!");
 EXITSECTION
 
 ENDEXITSECTION

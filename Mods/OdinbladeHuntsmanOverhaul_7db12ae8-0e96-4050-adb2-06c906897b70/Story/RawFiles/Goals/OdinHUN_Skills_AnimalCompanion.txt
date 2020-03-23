@@ -5,7 +5,27 @@ DB_OBHUN_AnimalCompanion_Template("OdinHUN_AC_Owl", "065038d4-441e-44b7-9d59-e63
 DB_OBHUN_AnimalCompanion_Template("OdinHUN_AC_Bear", "4b40c81d-dd6b-4618-a4b3-fc709ceee764", "134e04ec-404a-4f8a-bb06-78fe397bb670");
 DB_OBHUN_AnimalCompanion_Template("OdinHUN_AC_Deer", "fa245b33-29b5-4a50-b6f2-87d6c83717f0", "0c09b07d-c535-4083-8be0-a31f27548163");
 
+GlobalSetFlag("OdinHUN_Fix_V1_DB");
+
 KBSECTION
+IF
+SavegameLoaded(_,_,_,_)
+AND
+NOT DB_GlobalFlag("OdinHUN_Fix_V1_DB")
+THEN
+GlobalSetFlag("OdinHUN_Fix_V1_DB");
+NRD_DebugLog("[OdinHUN:Story] Save fix: Applying...");
+PROC_OBHUN_Fix_Savegame_DBs();
+
+PROC
+PROC_OBHUN_Fix_Savegame_DBs()
+AND
+DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon)
+THEN
+NOT DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon);
+PROC_OBHUN_ClearAnimalCompanion((CHARACTERGUID)_Owner);
+NRD_DebugLog("[OdinHUN:Story] Save fix: Cleared one dead DB_OBHUN_AnimalCompanion_Instance entry.");
+
 //REGION Skill activation
 // Gives the player the Dismiss Animal Companion innate skill
 IF
@@ -63,7 +83,7 @@ _SumPoints < 10
 THEN
 StopLoopEffect(_FxHandle);
 PROC_OBHUN_ClearAnimalCompanion(_Owner);
-RemoveStatus(_Owner, "OdinHUN_NATURALBOND");
+// RemoveStatus(_Owner, "OdinHUN_NATURALBOND");
 ObjectClearFlag(_Owner, _Flag);
 PROC_OBHUN_AnimalCompanion_Summon(_Owner, _SmallTemplate);
 
@@ -81,7 +101,7 @@ _SumPoints > 9
 THEN
 StopLoopEffect(_FxHandle);
 PROC_OBHUN_ClearAnimalCompanion(_Owner);
-RemoveStatus(_Owner, "OdinHUN_NATURALBOND");
+// RemoveStatus(_Owner, "OdinHUN_NATURALBOND");
 ObjectClearFlag(_Owner, _Flag);
 PROC_OBHUN_AnimalCompanion_Summon(_Owner, _SwoleTemplate);
 
@@ -104,6 +124,7 @@ PlayEffect(_Summon, "RS3_FX_Skills_Totem_Impact_Summon_Poison_01");
 CharacterSetAnimationOverride(_Owner, "");
 ProcObjectTimer(_Owner, "OdinHUN_AC_WHISTLE_ANIMATION", 150);
 ProcObjectTimer(_Owner, "OdinHUN_AC_WHISTLE_SFX", 500);
+PROC_OBHUN_NaturalBond_Apply(_Summon, _Owner);
 NOT DB_OBHUN_AnimalCompanion_Prepare(_Owner, _X, _Y, _Z, _FxHandle);
 DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon);
 // NRD_DebugLog("[OdinHUN:Story] Animal Companion successfully summoned");
@@ -141,7 +162,7 @@ ClearTag(_Owner, "ODINHUN_ANIMALCOMPANION");
 NOT DB_OBHUN_AnimalCompanion_Instance(_Owner, (CHARACTERGUID)_Summon);
 PlayEffectAtPosition("RS3_FX_Skills_Totem_Impact_Summon_Poison_01", _X, _Y, _Z);
 SetVisible(_Summon, 0);
-RemoveStatus(_Owner, "OdinHUN_NATURALBOND");
+// RemoveStatus(_Owner, "OdinHUN_NATURALBOND");
 CharacterDie((CHARACTERGUID)_Summon, 0, "None");
 
 // When player summons a new summon, play VFX and hide old summon before it is removed (death animation workaround)
@@ -178,15 +199,10 @@ GetPosition(_Summon, _X, _Y, _Z)
 THEN
 PlayEffectAtPosition("RS3_FX_Skills_Totem_Impact_Summon_Poison_01", _X, _Y, _Z);
 ClearTag(_Owner, "ODINHUN_ANIMALCOMPANION");
+NOT DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon);
 //END_REGION
 
 //REGION Other interactions
-// Set Ironbark on Elkahoof when they use Song of the Dryads
-IF
-CharacterUsedSkill(_Summon, "Shout_OdinHUN_Summon_SongOfTheDryads", _, _)
-THEN
-ApplyStatus(_Summon, "OdinGEO_Ironbark", 12.0, 1, _Summon);
-
 // Logic for the Camouflage companion skill
 IF
 CharacterStatusApplied(_Owner, "OdinHUN_PROC_CAMOUFLAGE", _)
@@ -226,6 +242,48 @@ AND
 CharacterIsInCombat(_Owner, 0)
 THEN
 ProcObjectTimerCancel(_Owner, "OdinHUN_LADDER");
+//END_REGION
+
+//REGION Waypoint malarchy
+// Should work anyway, but just in case
+IF
+CharacterTeleportToWaypoint(_Owner, _)
+AND
+DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon)
+AND
+CharacterIsInCombat(_Summon, 0)
+THEN
+TeleportTo(_Summon, _Owner);
+
+// When another party member teleports a chained group, iterate each party member
+IF
+CharacterTeleportToWaypoint(_Teleporter, _)
+THEN
+DB_OBHUN_TeleportParty(_Teleporter);
+IterateParty(_Teleporter, "OdinHUN_TP_Party");
+ProcObjectTimer(_Teleporter, "OdinHUN_TP_Party_Timeout", 200);
+
+// If party member is grouped with a teleporter, teleport ACs of the party member too
+IF
+StoryEvent((CHARACTERGUID)_Owner, "OdinHUN_TP_Party")
+AND
+DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon)
+AND
+DB_OBHUN_TeleportParty(_Teleporter)
+AND
+CharactersAreGrouped(_Teleporter, _Owner, 1)
+AND
+CharacterIsInCombat(_Summon, 0)
+THEN
+TeleportTo(_Summon, _Owner);
+
+// Cleanup
+PROC
+ProcObjectTimerFinished((CHARACTERGUID)_Teleporter, "OdinHUN_TP_Party_Timeout")
+AND
+DB_OBHUN_TeleportParty(_Teleporter)
+THEN
+NOT DB_OBHUN_TeleportParty(_Teleporter);
 //END_REGION
 EXITSECTION
 

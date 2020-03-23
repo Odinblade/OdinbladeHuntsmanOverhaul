@@ -242,6 +242,7 @@
         <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Status_NaturalBond:Dummy_BodyFX" />
         <field name="StackId" type="StringStatObjectFieldDefinition" value="Stack_OdinHUN_NaturalBond" />
         <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Character is &lt;font color='#40b606'&gt;splitting 25% of damage&lt;/font&gt; taken with their &lt;font color='#81AB00'&gt;Natural Bond&lt;/font&gt; &lt;font color='#88a25b'&gt;ally&lt;/font&gt;." />
+        <field name="StackPriority" type="IntegerStatObjectFieldDefinition" value="1" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -249,7 +250,7 @@
         <field name="Name" type="NameStatObjectFieldDefinition" value="OdinHUN_SAVVYHUNTER" />
         <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
         <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Savvy Hunter" />
-        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Your &lt;font color='#dbdbdb'&gt;crafted arrows&lt;/font&gt; deal 25% increased damage, and you have a 50% chance to recover &lt;font color='#dbdbdb'&gt;crafted grenades&lt;/font&gt; after use." />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Your &lt;font color='#dbdbdb'&gt;crafted arrows&lt;/font&gt; deal 25% increased damage, and you recover &lt;font color='#dbdbdb'&gt;basic grenades&lt;/font&gt; after use." />
         <field name="Icon" type="StringStatObjectFieldDefinition" value="OBHUN_Skill_SavvyHunter" />
         <field name="FormatColor" type="EnumerationStatObjectFieldDefinition" value="28" enumeration_type_name="FormatStringColor" />
         <field name="StatusEffect" type="StringStatObjectFieldDefinition" value="OdinHUN_Status_SavvyHunter:Dummy_OverheadFX" />
