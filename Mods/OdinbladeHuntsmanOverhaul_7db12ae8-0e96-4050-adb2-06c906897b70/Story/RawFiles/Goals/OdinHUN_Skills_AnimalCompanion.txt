@@ -165,7 +165,7 @@ SetVisible(_Summon, 0);
 // RemoveStatus(_Owner, "OdinHUN_NATURALBOND");
 CharacterDie((CHARACTERGUID)_Summon, 0, "None");
 
-// When player summons a new summon, play VFX and hide old summon before it is removed (death animation workaround)
+// When player summons a new AC, play VFX and hide old summon before it is removed (death animation workaround)
 IF
 CharacterStatusApplied(_NewSummon, "SUMMONING", _)
 AND
@@ -179,6 +179,8 @@ _NewSummon != _Summon
 AND
 HasActiveStatus(_Summon, "SUMMONING", 0)
 AND
+IsTagged(_NewSummon, "ODINHUN_IS_ANIMALCOMPANION", 1)
+AND
 IsTagged(_Summon, "ODINHUN_IS_ANIMALCOMPANION", 1)
 AND
 GetPosition(_Summon, _X, _Y, _Z)
@@ -186,8 +188,10 @@ THEN
 PlayEffectAtPosition("RS3_FX_Skills_Totem_Impact_Summon_Poison_01", _X, _Y, _Z);
 SetVisible(_Summon, 0);
 ClearTag(_Owner, "ODINHUN_ANIMALCOMPANION");
-NRD_DebugLog("[OdinHUN:Story] PROC_OBHUN_ClearFlag_AnimalCompanion Tag removed");
+CharacterSetHitpointsPercentage(_Summon, 0.0);
+// NRD_DebugLog("[OdinHUN:Story] PROC_OBHUN_ClearFlag_AnimalCompanion Tag removed");
 
+// AC died and cleanup is needed
 IF
 CharacterDied(_Summon)
 AND
@@ -199,7 +203,25 @@ GetPosition(_Summon, _X, _Y, _Z)
 THEN
 PlayEffectAtPosition("RS3_FX_Skills_Totem_Impact_Summon_Poison_01", _X, _Y, _Z);
 ClearTag(_Owner, "ODINHUN_ANIMALCOMPANION");
+SetVisible(_Summon, 0);
 NOT DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon);
+
+//AC died and cleanup is not needed
+IF
+CharacterDied(_Summon)
+AND
+NOT DB_OBHUN_AnimalCompanion_Instance(_, _Summon)
+AND
+IsTagged(_Summon, "ODINHUN_IS_ANIMALCOMPANION", 1)
+AND
+CharacterGetOwner(_Summon, _Owner)
+AND
+GetPosition(_Summon, _X, _Y, _Z)
+THEN
+// PlayEffectAtPosition("RS3_FX_Skills_Totem_Impact_Summon_Poison_01", _X, _Y, _Z);
+ClearTag(_Owner, "ODINHUN_ANIMALCOMPANION");
+SetVisible(_Summon, 0);
+// NOT DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon);
 //END_REGION
 
 //REGION Other interactions
