@@ -11,7 +11,7 @@ INIT
 	EXTERN STRING:%DialogKey="GEN_AD_DisarmTrap"
 	ITEM:__Me
 	EXTERN FLOAT:%Radius=2.0
-	EXTERN FLOAT:%DeploymentTime=6.0
+	EXTERN FLOAT:%DeploymentTime=0.1
 	EXTERN FLOAT:%ExplosionDelayTime=1.0
 	EXTERN FLOAT:%LifeTime=60.0
 	
@@ -66,20 +66,6 @@ ACTIONS
 		Set(%Exploded,1)
 	ELSE
 		RETURN()
-	ENDIF
-	
-	IF "!c1"
-		GetLevelOverrideCurrent(__Me, _TrapLevel)
-	THEN
-		Set(_TrapLevel, -1)
-	ENDIF
-	
-	IF "c1"
-		IsEqual(_Character,null)
-	THEN
-		ExplodeAt(__Me,%MineProjectile,_TrapLevel,__Me)
-	ELSE
-		ExplodeAt(__Me,%MineProjectile,_TrapLevel,_Character)
 	ENDIF
 	ItemEvent(__Me, "OBHUN_Trap_Detonated")
 	StopLoopEffect(%EffectHandle)

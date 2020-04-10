@@ -33,7 +33,7 @@
                             <attribute id="MD5" value="" type="23" />
                             <attribute id="Name" value="OdinCore - Mod Services" type="22" />
                             <attribute id="UUID" value="4bcb0f56-d4dd-4241-9285-0f5710913edb" type="22" />
-                            <attribute id="Version" value="302055426" type="4" />
+                            <attribute id="Version" value="302055427" type="4" />
                         </node>
                     </children>
                 </node>
@@ -55,7 +55,7 @@
                     <attribute id="Tags" value="" type="30" />
                     <attribute id="Type" value="Add-on" type="22" />
                     <attribute id="UUID" value="7db12ae8-0e96-4050-adb2-06c906897b70" type="22" />
-                    <attribute id="Version" value="268697602" type="4" />
+                    <attribute id="Version" value="268763136" type="4" />
                     <children>
                         <node id="PublishVersion">
                             <attribute id="Version" value="909321303" type="4" />

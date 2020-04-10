@@ -187,7 +187,7 @@ GetPosition(_Summon, _X, _Y, _Z)
 THEN
 PlayEffectAtPosition("RS3_FX_Skills_Totem_Impact_Summon_Poison_01", _X, _Y, _Z);
 SetVisible(_Summon, 0);
-ClearTag(_Owner, "ODINHUN_ANIMALCOMPANION");
+// ClearTag(_Owner, "ODINHUN_ANIMALCOMPANION");
 CharacterSetHitpointsPercentage(_Summon, 0.0);
 // NRD_DebugLog("[OdinHUN:Story] PROC_OBHUN_ClearFlag_AnimalCompanion Tag removed");
 
@@ -219,7 +219,7 @@ AND
 GetPosition(_Summon, _X, _Y, _Z)
 THEN
 // PlayEffectAtPosition("RS3_FX_Skills_Totem_Impact_Summon_Poison_01", _X, _Y, _Z);
-ClearTag(_Owner, "ODINHUN_ANIMALCOMPANION");
+// ClearTag(_Owner, "ODINHUN_ANIMALCOMPANION");
 SetVisible(_Summon, 0);
 // NOT DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon);
 //END_REGION

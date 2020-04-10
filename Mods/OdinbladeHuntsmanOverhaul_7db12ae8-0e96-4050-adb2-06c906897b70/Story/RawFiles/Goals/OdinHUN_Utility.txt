@@ -97,8 +97,18 @@ DB_OBHUN_TrapType("ARROWHEAD_WATER", "OdinHUN_DMG_TRAP_WATER", "RS3_FX_Skills_Wa
 DB_OBHUN_TrapType("ARROWHEAD_POISON", "OdinHUN_DMG_TRAP_POISON", "OdinHUN_TrapImpact_Poison", "OdinHUN_OVERLAY_TRAP_POISON");
 DB_OBHUN_TrapType("ARROWHEAD_FIRE", "OdinHUN_DMG_TRAP_FIRE", "RS3_FX_Skills_Fire_Impact_03", "OdinHUN_OVERLAY_TRAP_FIRE");
 DB_OBHUN_TrapType("ARROWHEAD_OIL", "OdinHUN_DMG_TRAP_EARTH", "OdinHUN_TrapImpact_Oil", "OdinHUN_OVERLAY_TRAP_OIL");
-DB_OBHUN_TrapType("ARROWHEAD_BLOOD", "OdinHUN_DMG_TRAP_PHYSICAL", "", "");
+DB_OBHUN_TrapType("ARROWHEAD_BLOOD", "OdinHUN_DMG_TRAP_BLOOD", "", "");
 DB_OBHUN_TrapType("ARROWHEAD_ELECTRIC", "OdinHUN_DMG_TRAP_AIR", "RS3_FX_Skills_Air_LightningBolt_Impact_01", "OdinHUN_OVERLAY_TRAP_AIR");
+
+DB_OBHUN_TrapImpactStatus("OdinHUN_DMG_TRAP_WATER", "CHILLED");
+DB_OBHUN_TrapImpactStatus("OdinHUN_DMG_TRAP_POISON", "POISONED");
+DB_OBHUN_TrapImpactStatus("OdinHUN_DMG_TRAP_FIRE", "BURNING");
+DB_OBHUN_TrapImpactStatus("OdinHUN_DMG_TRAP_EARTH", "SLOWED");
+DB_OBHUN_TrapImpactStatus("OdinHUN_DMG_TRAP_BLOOD", "BLEEDING");
+DB_OBHUN_TrapImpactStatus("OdinHUN_DMG_TRAP_AIR", "SHOCKED");
+DB_OBHUN_TrapImpactStatus("OdinHUN_DMG_TRAP_PHYSICAL", "");
+
+GlobalSetFlag("OdinHUN_Fix_V2_DB");
 //END_REGION
 
 //REGION Dialog
@@ -119,6 +129,32 @@ DB_Dialogs(OdinHUN_Trader_000_fcd2e068-756f-4975-9fa9-b1d27d00159b, "OdinHUN_Ven
 //END_REGION
 
 KBSECTION
+IF
+SavegameLoaded(_,_,_,_)
+AND
+NOT DB_GlobalFlag("OdinHUN_Fix_V2_DB")
+THEN
+GlobalSetFlag("OdinHUN_Fix_V2_DB");
+NRD_DebugLog("[OdinHUN:Story] Save fix: Applying...");
+PROC_OBHUN_Fix_Savegame_TrapDBs();
+
+PROC
+PROC_OBHUN_Fix_Savegame_TrapDBs()
+AND
+DB_OBHUN_TrapType("ARROWHEAD_BLOOD", "OdinHUN_DMG_TRAP_PHYSICAL", "", "")
+THEN
+NOT DB_OBHUN_TrapType("ARROWHEAD_BLOOD", "OdinHUN_DMG_TRAP_PHYSICAL", "", "");
+DB_OBHUN_TrapImpactStatus("OdinHUN_DMG_TRAP_WATER", "CHILLED");
+DB_OBHUN_TrapImpactStatus("OdinHUN_DMG_TRAP_POISON", "POISONED");
+DB_OBHUN_TrapImpactStatus("OdinHUN_DMG_TRAP_FIRE", "BURNING");
+DB_OBHUN_TrapImpactStatus("OdinHUN_DMG_TRAP_EARTH", "SLOWED");
+DB_OBHUN_TrapImpactStatus("OdinHUN_DMG_TRAP_BLOOD", "BLEEDING");
+DB_OBHUN_TrapImpactStatus("OdinHUN_DMG_TRAP_AIR", "SHOCKED");
+DB_OBHUN_TrapImpactStatus("OdinHUN_DMG_TRAP_PHYSICAL", "");
+// PROC_OBHUN_ClearAnimalCompanion((CHARACTERGUID)_Owner);
+NRD_DebugLog("[OdinHUN:Story] Save fix: Cleared old Blood trap DB entry.");
+
+
 //REGION Set dialog on Huntsman vendor on existing saves
 IF
 GameStarted(_Region, _)
