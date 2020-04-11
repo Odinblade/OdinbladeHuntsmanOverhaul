@@ -109,6 +109,7 @@ DB_OBHUN_TrapImpactStatus("OdinHUN_DMG_TRAP_AIR", "SHOCKED");
 DB_OBHUN_TrapImpactStatus("OdinHUN_DMG_TRAP_PHYSICAL", "");
 
 GlobalSetFlag("OdinHUN_Fix_V2_DB");
+GlobalSetFlag("OdinHUN_Fix_V3_DB");
 //END_REGION
 
 //REGION Dialog
@@ -138,6 +139,15 @@ GlobalSetFlag("OdinHUN_Fix_V2_DB");
 NRD_DebugLog("[OdinHUN:Story] Save fix: Applying...");
 PROC_OBHUN_Fix_Savegame_TrapDBs();
 
+IF
+SavegameLoaded(_,_,_,_)
+AND
+NOT DB_GlobalFlag("OdinHUN_Fix_V3_DB")
+THEN
+GlobalSetFlag("OdinHUN_Fix_V3_DB");
+NRD_DebugLog("[OdinHUN:Story] Save fix: Applying...");
+PROC_OBHUN_Fix_Savegame_TrapDBs2();
+
 PROC
 PROC_OBHUN_Fix_Savegame_TrapDBs()
 AND
@@ -151,8 +161,16 @@ DB_OBHUN_TrapImpactStatus("OdinHUN_DMG_TRAP_EARTH", "SLOWED");
 DB_OBHUN_TrapImpactStatus("OdinHUN_DMG_TRAP_BLOOD", "BLEEDING");
 DB_OBHUN_TrapImpactStatus("OdinHUN_DMG_TRAP_AIR", "SHOCKED");
 DB_OBHUN_TrapImpactStatus("OdinHUN_DMG_TRAP_PHYSICAL", "");
-// PROC_OBHUN_ClearAnimalCompanion((CHARACTERGUID)_Owner);
 NRD_DebugLog("[OdinHUN:Story] Save fix: Cleared old Blood trap DB entry.");
+
+// I'm lazy don't hate me
+PROC
+PROC_OBHUN_Fix_Savegame_TrapDBs2()
+AND
+NOT DB_OBHUN_TrapType("ARROWHEAD_BLOOD", "OdinHUN_DMG_TRAP_BLOOD", "", "")
+THEN
+DB_OBHUN_TrapType("ARROWHEAD_BLOOD", "OdinHUN_DMG_TRAP_BLOOD", "", "");
+NRD_DebugLog("[OdinHUN:Story] Save fix: Added Blood trap DB entry.");
 
 
 //REGION Set dialog on Huntsman vendor on existing saves
