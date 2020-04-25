@@ -8,14 +8,14 @@ FLOAT:_CharMaxAP
 INT:_CharAPInt
 
 ON
-	OnCharacterEvent(_Character, "OBHUN_RETRIEVE_AP")
+	OnCharacterEvent(_Character, "OBHUN_USE_POWERSHOT")
 ACTIONS
 IF "c1&c2"
 	CharacterGetStat(_CharAP, _Character, ActionPoints)
 	CharacterGetStat(_CharMaxAP, _Character, APMaximum)
 THEN
 	//SetVar(_Character, "OBHUN_AP", _CharAP)
-	SetVar(_Character, "OBNHUN_MaxAP", _CharMaxAP)
+	//SetVar(_Character, "OBNHUN_MaxAP", _CharMaxAP)
 	Cast(_CharAPInt, _CharAP)
 	IF "c1"
 		IsGreaterThen(_CharAPInt, 4)
@@ -27,6 +27,6 @@ THEN
 		CharacterUseActionPoints(_Character, _CharAPInt)
 		//SetVar(_Character, "OBHUN_AP", _CharAP)
 	ENDIF
-	SetVar(_Character, "OBHUN_AP", _CharAP)
-	CharacterEvent(_Character, "OBHUN_Found_AP")
+	//SetVar(_Character, "OBHUN_AP", _CharAP)
+	//CharacterEvent(_Character, "OBHUN_Found_AP")
 ENDIF

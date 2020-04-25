@@ -1,7 +1,8 @@
 {
+    "RequiredExtensionVersion": 43,
+    "ModTable": "OdinHUN",
     "FeatureFlags": [
         "OsirisExtensions",
-        "Lua",
-        "Preprocessor"
+        "Lua"
     ]
 }

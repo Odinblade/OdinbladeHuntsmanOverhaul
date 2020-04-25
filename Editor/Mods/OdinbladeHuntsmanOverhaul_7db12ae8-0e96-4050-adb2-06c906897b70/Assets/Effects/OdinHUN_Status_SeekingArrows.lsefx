@@ -7359,12 +7359,12 @@
               <data>
                 <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000">
                   <rampchanneldata>
-                    <rampchannel type="Linear" id="0eb7bfda-4934-450c-a5f9-a08d0a0d409c">
+                    <rampchannel type="Spline" id="0eb7bfda-4934-450c-a5f9-a08d0a0d409c">
                       <keyframes>
                         <keyframe time="0" value="15979035" />
-                        <keyframe time="0.1256281" value="821285403" />
+                        <keyframe time="0.0777868" value="821285403" />
                         <keyframe time="0.3055811" value="821285403" />
-                        <keyframe time="0.6714679" value="838062619" />
+                        <keyframe time="0.7228098" value="821285403" />
                         <keyframe time="1" value="15979035" />
                       </keyframes>
                     </rampchannel>
@@ -7388,17 +7388,19 @@
               <data>
                 <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000">
                   <rampchanneldata>
-                    <rampchannel type="Linear" id="e2f86345-2166-4c71-856d-6de3347295a5" selected="False">
+                    <rampchannel type="Linear" id="e2f86345-2166-4c71-856d-6de3347295a5" selected="True">
                       <keyframes>
                         <keyframe time="0" value="1" />
+                        <keyframe time="0.1283547" value="2" />
                         <keyframe time="0.2988954" value="1.999984" />
                         <keyframe time="1" value="2" />
                       </keyframes>
                     </rampchannel>
-                    <rampchannel type="Linear" id="ae76c285-1825-42a4-bf59-0421900e1bf1" selected="True">
+                    <rampchannel type="Linear" id="ae76c285-1825-42a4-bf59-0421900e1bf1" selected="False">
                       <keyframes>
-                        <keyframe time="0" value="1" />
-                        <keyframe time="0.3031966" value="3" />
+                        <keyframe time="0" value="0.9999921" />
+                        <keyframe time="0.1225204" value="3" />
+                        <keyframe time="0.3031966" value="2.999976" />
                         <keyframe time="1" value="3" />
                       </keyframes>
                     </rampchannel>

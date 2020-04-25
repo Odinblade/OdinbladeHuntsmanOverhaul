@@ -4,19 +4,39 @@ INITSECTION
 
 KBSECTION
 //REGION Power Shot damage
+//Character uses less than 4AP
 IF
 CharacterUsedSkill(_Character, "Projectile_OdinHUN_PowerShot", _, _)
-THEN
-SetStoryEvent((GUIDSTRING)_Character, "OBHUN_RETRIEVE_AP");
-
-IF
-StoryEvent(_Character, "OBHUN_Found_AP")
 AND
-GetVarFloat(_Character, "OBHUN_AP", _CharAP)
+NOT DB_OBHUN_PowerShot(_Character, _)
+AND
+NRD_CharacterGetStatInt(_Character, "CurrentAP", _IntAP)
+AND
+_IntAP <= 4
 THEN
-DB_OBHUN_PowerShot(_Character, _CharAP);
+PROC_OBHUN_InstigatePowerShot(_Character, _IntAP);
+
+//Character uses 4AP
+IF
+CharacterUsedSkill(_Character, "Projectile_OdinHUN_PowerShot", _, _)
+AND
+NOT DB_OBHUN_PowerShot(_Character, _)
+AND
+NRD_CharacterGetStatInt(_Character, "CurrentAP", _IntAP)
+AND
+_IntAP > 4
+THEN
+PROC_OBHUN_InstigatePowerShot(_Character, 4);
+
+PROC
+PROC_OBHUN_InstigatePowerShot((CHARACTERGUID)_Character, (INTEGER)_IntAP)
+AND
+Real(_IntAP, _RealAP)
+THEN
+DB_OBHUN_PowerShot((GUIDSTRING)_Character, _RealAP);
+SetStoryEvent(_Character, "OBHUN_USE_POWERSHOT");
 ObjectSetFlag(_Character, "OdinHUN_POWERSHOT");
-ProcObjectTimer((CHARACTERGUID)_Character, "OBHUN_END_POWERSHOT", 1000);
+ProcObjectTimer((CHARACTERGUID)_Character, "OBHUN_END_POWERSHOT", 1250);
 
 PROC
 ProcObjectTimerFinished(_Character, "OBHUN_END_POWERSHOT")

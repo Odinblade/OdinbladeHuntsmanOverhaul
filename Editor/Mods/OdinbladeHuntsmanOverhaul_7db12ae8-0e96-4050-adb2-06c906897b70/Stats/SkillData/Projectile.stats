@@ -29,7 +29,7 @@
         <field name="Icon" type="StringStatObjectFieldDefinition" value="Skill_Ranger_ArrowSpray" />
         <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Arrow Spray" />
         <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Spray arrows in a large cone. Each arrow deals between [1] and [2] based on distance between you and the target." />
-        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Damage;Skill:Projectile_OdinHUN_Tooltip_ArrowSpray:Damage;" />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Damage;OdinHUN_TT_ArrowSpray" />
         <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_weapon_01_start" />
         <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_weapon_01_loop" />
         <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Air_Prepare_Weapon_ArrowSpray_Root_01,KeepRot:Dummy_Root;RS3_FX_Skills_Air_Prepare_Weapon_ArrowSpray_ArrowFX_01:Dummy_ProjectileFX" />
@@ -308,7 +308,7 @@
         <field name="Icon" type="StringStatObjectFieldDefinition" value="Skill_Ranger_Snipe" />
         <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Assassinate" />
         <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Snipe your target with meticulous aim, dealing [1]. &lt;br&gt;&lt;br&gt;When used from &lt;font color='#639594'&gt;Invisibility&lt;/font&gt; or whilst &lt;font color='#639594'&gt;Sneaking&lt;/font&gt;, the shot gains 50% bonus damage, dealing [2]." />
-        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Damage;Skill:Projectile_OdinHUN_Tooltip_Assassinate:Damage;" />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Damage;OdinHUN_TT_Assassinate" />
         <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_weapon_01_start" />
         <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_weapon_01_loop" />
         <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Air_Prepare_Weapon_Snipe_Root_01,KeepRot:Dummy_Root;RS3_FX_Skills_Air_Prepare_Weapon_Snipe_ArrowFX_01:Dummy_ProjectileFX" />

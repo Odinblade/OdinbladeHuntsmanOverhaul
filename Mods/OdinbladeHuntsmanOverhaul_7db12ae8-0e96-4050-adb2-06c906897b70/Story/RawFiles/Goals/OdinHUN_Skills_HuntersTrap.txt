@@ -9,6 +9,7 @@ CharacterUsedSkillAtPosition(_Character, _X, _Y, _Z, "Projectile_OdinHUN_Hunters
 THEN
 DB_OBHUN_Trap_Spawn(_Character, _X, _Y, _Z);
 ProcObjectTimer(_Character, "OdinHUN_TRAP_SPAWN", 2000);
+ApplyStatus(_Character, "OdinNECRO_DEBUG_AP_ADD", 0.0);
 // NRD_DebugLog("[OdinHUN:Story] Trap thrown");
 
 PROC
@@ -21,6 +22,7 @@ AND
 CharacterGetLevel(_Character, _Level)
 THEN
 // NRD_DebugLog("[OdinHUN:Story] Trap spawned");
+ApplyStatus(_Character, "OdinNECRO_DEBUG_AP_REMOVE", 0.0);
 NOT DB_OBHUN_Trap_Spawn(_Character, _X, _Y, _Z);
 ItemLevelUpTo(_Trap, _Level);
 ItemSetOwner(_Trap, _Character);
