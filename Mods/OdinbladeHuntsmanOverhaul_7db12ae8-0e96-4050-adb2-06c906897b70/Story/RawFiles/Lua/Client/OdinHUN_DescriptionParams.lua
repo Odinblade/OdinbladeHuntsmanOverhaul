@@ -1,7 +1,7 @@
 Ext.Require("Shared/OdinHUN_SharedData.lua")
 Ext.Require("Shared/OdinHUN_StatOverrides.lua")
 
--- Credit: LaughingLeader
+-- Credit: LaughingLeader <3
 local DamageTypeHandles = {
     None = {Handle="h8a070775gc251g4f34g9086gb1772f7e2cff",Content="pure damage", Color="#CD1F1F"},
     Physical = {Handle="h40782d69gbfaeg40cegbe3cg370ef44e3980",Content="physical damage", Color="#a8a8a8"},
@@ -18,7 +18,7 @@ local DamageTypeHandles = {
     Water = {Handle="h8cdcfeedg357eg4877ga69egc05dbe9c68a4",Content="water damage", Color="#4197E2"},
 }
 
--- Credit: LaughingLeader
+-- Credit: LaughingLeader <3
 local function GetDamageText(damageType, damageValue)
     local entry = DamageTypeHandles[damageType]
     if entry ~= nil then
@@ -50,41 +50,52 @@ local function GetGrenadeBoostVal(character, skill)
 end
 
 -- Changes damage range formatting to match element type from Elemental Arrowheads
-local function GetEARange(character, skill)
+local function GetEARange(character, skill, status)
     local damageRange = Game.Math.GetSkillDamageRange(character, skill)
-    local min = ""
-    local max = ""
-    local type = "None"
+    local min = 0
+    local max = 0
+    local convertedType = HuntsmanOverhaul.EAStatuses[status]
 
     for damageType, damage in pairs(damageRange) do
         type = damageType
-        min = math.floor(damage[1])
-        max = math.floor(damage[2])
-    end
-
-    for status,data in pairs(HuntsmanOverhaul.EAStatuses) do
-        if character.Character:GetStatus(status) ~= nil then
-            type = data
-            -- TODO:- Add boosted values
-            
-            -- local weaponDamage = Game.Math.CalculateWeaponDamageRange(character, character.MainWeapon)
-            -- min = min + ((0.15*0.7)*weaponDamage["Physical"][1])
-            -- max = max + ((0.25*0.7)*weaponDamage["Physical"][2])
-        end
+        min = min + math.floor(damage[1])
+        max = max + math.floor(damage[2])
     end
 
     local rangeText = min.."-"..max
-    local damageRangeParam = GetDamageText(type, rangeText)
+    local damageRangeParam = GetDamageText(convertedType, rangeText)
 
     return damageRangeParam
 end
 
-local function OdinHUN_BeginEACheck(skill, character)
+-- Function used to get the damage of skills with an extra damage param, e.g. Arrow Spray. Called when a char does not have an EA status active
+local function GetTooltipDamageParam(character, skill)
+    local damageRange = Game.Math.GetSkillDamageRange(character, skill)
+    local min = 0
+    local max = 0
+    local damageRangeText = nil
+
+    for damageType, damage in pairs(damageRange) do
+        min = math.floor(damage[1])
+        max = math.floor(damage[2])
+        local rangeText = min.."-"..max
+
+        if damageRangeText ~= nil then
+            damageRangeText = damageRangeText.." + "..GetDamageText(damageType, rangeText)
+        else
+            damageRangeText = GetDamageText(damageType, rangeText)
+        end
+    end
+    return damageRangeText
+end
+
+-- Checks if the skill satisfies the requirements to be considered for EA damage
+local function OdinHUN_BeginEACheck(skill, character, status)
     local craftedArrow = HuntsmanOverhaul.CraftedArrows[skill.Name]
     if craftedArrow == nil then --Skill is not a crafted arrow
         local mainWeapon = character.MainWeapon
         if skill.UseWeaponDamage == "Yes" and Game.Math.IsRangedWeapon(mainWeapon) and skill.DamageType ~= "Piercing" then
-            local status, result = xpcall(GetEARange, debug.traceback, character, skill)
+            local status, result = xpcall(GetEARange, debug.traceback, character, skill, status)
             return result
         end
     end
@@ -100,14 +111,30 @@ local function OdinHUN_SkillGetDescriptionParam(skill, character, isFromItem, pa
             return result
         end
         if skill.Requirement == "RangedWeapon" then
-            local result = OdinHUN_BeginEACheck(skill, character)
-            return result
+            for status, data in pairs(HuntsmanOverhaul.EAStatuses) do
+                if character.Character:GetStatus(status) ~= nil then
+                    local result = OdinHUN_BeginEACheck(skill, character, status)
+                    return result
+                end
+            end
         end
     else
         local tooltipDamageParam = HuntsmanOverhaul.TooltipStatuses[param]
         if tooltipDamageParam ~= nil then
             tooltipDamageParam = Ext.GetStat(tooltipDamageParam, nil)
-            local result = OdinHUN_BeginEACheck(tooltipDamageParam, character)
+            local result = ""
+            local match = false
+
+            for status,data in pairs(HuntsmanOverhaul.EAStatuses) do
+                if character.Character:GetStatus(status) ~= nil then
+                    result = OdinHUN_BeginEACheck(tooltipDamageParam, character, status)
+                    match = true
+                    break
+                end
+            end
+            if match == false then
+                result = GetTooltipDamageParam(character, tooltipDamageParam)
+            end
             return result
         end
     end
