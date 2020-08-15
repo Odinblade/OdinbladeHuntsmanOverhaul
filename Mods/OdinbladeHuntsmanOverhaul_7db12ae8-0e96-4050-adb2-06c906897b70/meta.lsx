@@ -26,14 +26,14 @@
                             <attribute id="MD5" value="" type="23" />
                             <attribute id="Name" value="Divinity: Original Sin 2" type="22" />
                             <attribute id="UUID" value="1301db3d-1f54-4e98-9be5-5094030916e4" type="22" />
-                            <attribute id="Version" value="372645092" type="4" />
+                            <attribute id="Version" value="373234071" type="4" />
                         </node>
                         <node id="ModuleShortDesc">
                             <attribute id="Folder" value="OdinCore_4bcb0f56-d4dd-4241-9285-0f5710913edb" type="30" />
                             <attribute id="MD5" value="" type="23" />
                             <attribute id="Name" value="OdinCore - Mod Services" type="22" />
                             <attribute id="UUID" value="4bcb0f56-d4dd-4241-9285-0f5710913edb" type="22" />
-                            <attribute id="Version" value="302055428" type="4" />
+                            <attribute id="Version" value="302252032" type="4" />
                         </node>
                     </children>
                 </node>
@@ -55,7 +55,7 @@
                     <attribute id="Tags" value="" type="30" />
                     <attribute id="Type" value="Add-on" type="22" />
                     <attribute id="UUID" value="7db12ae8-0e96-4050-adb2-06c906897b70" type="22" />
-                    <attribute id="Version" value="268828673" type="4" />
+                    <attribute id="Version" value="268828674" type="4" />
                     <children>
                         <node id="PublishVersion">
                             <attribute id="Version" value="909321303" type="4" />

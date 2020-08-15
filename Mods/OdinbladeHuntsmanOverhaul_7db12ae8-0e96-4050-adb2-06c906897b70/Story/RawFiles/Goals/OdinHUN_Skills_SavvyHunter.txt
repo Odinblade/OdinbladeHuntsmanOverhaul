@@ -46,7 +46,7 @@ StringConcatenate("[OdinHUN:Story] Expert Hunter crafted amp: ", _SkillId, _Debu
 THEN
 NRD_HitStatusClearDamage(_Target, _HitHandle, _PreDamageType);
 NRD_HitStatusAddDamage(_Target, _HitHandle, _PreDamageType, _FinalDamage);
-NRD_DebugLog(_DebugMsg);
+// NRD_DebugLog(_DebugMsg);
 EXITSECTION
 
 ENDEXITSECTION

@@ -37,7 +37,7 @@ QRY_OBHUN_Adaption(_TrapOwner, _Status)
 THEN
 DB_OBHUN_Trap_Active(_TrapOwner, _Trap, _DamageStatus, _VFX);
 ApplyStatus(_Trap, _OverlayStatus, -1.0);
-//NRD_DebugLog(_DamageStatus);
+// NRD_DebugLog(_DamageStatus);
 
 PROC
 OBHUN_Trap_PrepareDetonation((CHARACTERGUID)_TrapOwner, (ITEMGUID)_Trap)

@@ -52,17 +52,19 @@ end
 -- Changes damage range formatting to match element type from Elemental Arrowheads
 local function GetEARange(character, skill, status)
     local damageRange = Game.Math.GetSkillDamageRange(character, skill)
-    local min = 0
-    local max = 0
+    local totalMin = 0
+    local totalMax = 0
     local convertedType = HuntsmanOverhaul.EAStatuses[status]
 
     for damageType, damage in pairs(damageRange) do
         type = damageType
-        min = min + math.floor(damage[1])
-        max = max + math.floor(damage[2])
+        local min = damage.Min or damage[1]
+        local max = damage.Max or damage[2]
+        totalMin = totalMin + math.floor(min)
+        totalMax = totalMax + math.floor(max)
     end
 
-    local rangeText = min.."-"..max
+    local rangeText = totalMin.."-"..totalMax
     local damageRangeParam = GetDamageText(convertedType, rangeText)
 
     return damageRangeParam
@@ -71,14 +73,12 @@ end
 -- Function used to get the damage of skills with an extra damage param, e.g. Arrow Spray. Called when a char does not have an EA status active
 local function GetTooltipDamageParam(character, skill)
     local damageRange = Game.Math.GetSkillDamageRange(character, skill)
-    local min = 0
-    local max = 0
     local damageRangeText = nil
 
     for damageType, damage in pairs(damageRange) do
-        min = math.floor(damage[1])
-        max = math.floor(damage[2])
-        local rangeText = min.."-"..max
+        local min = damage.Min or damage[1]
+        local max = damage.Max or damage[2]
+        local rangeText = math.floor(min).."-"..math.floor(max)
 
         if damageRangeText ~= nil then
             damageRangeText = damageRangeText.." + "..GetDamageText(damageType, rangeText)
