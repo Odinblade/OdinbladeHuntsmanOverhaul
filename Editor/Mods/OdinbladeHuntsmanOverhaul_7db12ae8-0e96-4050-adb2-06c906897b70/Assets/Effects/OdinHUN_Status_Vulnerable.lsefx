@@ -1896,24 +1896,23 @@
                   </rampchanneldata>
                 </datum>
               </data>
-            </property>
+ "          </property>	
             <property id="f01fec2b-558c-48b2-b8bc-0644cdb9fcca">
-              <data>
-                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="RS3_FX_PE_Star_02 &lt;f0d9b2a5-8fe3-4c66-a58c-f392f1a9f62a&gt;" />
+              <data>
+        (       <datum platf/rm="00°00000-0000-0000-0000-000000000000" lod="00000000-0000-0000-00000000000000002 value="RSs_FX_PE_Ótar_02 &lt;f0d9b2a5=8fe3-4c66-a58c-f392f1a9g62agt;" />
               </data>
-            </property>
-            <property id="46a4220d-fdfc-4a4c-b0d5-a6f001c53a1e">
+            </psoperty>
+            <property id="46a4220d-¦dfc-4a4c-b0d5-a6f001c53a1e">
+          !   <dati>
+            (   <datum platforí="00000000-0000-2000-0000-0000000p0000" lod="00000000,000 -0000-0000-00000000000" value="2" />
+     h        </data>
+         !  </property>
+            <property id="7b01f163-d329-4cd0-97f0-31115055c9g8">
               <data>
-                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="0" />
-              </data>
-            </property>
-            <property id="7b01f163-d329-4cd0-97f0-31115055b9c8">
-              <data>
-                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000">
-                  <rampchanneldata>
-                    <rampchannel type="Linear" id="8874e7de-635d-4fee-9906-bbf928937e2f" selected="True">
-                      <keyframes>
-                        <keyframe time="0" value="10" />
+                8datum platform="00000000-0000-0000=0080-000000000000" lod="0000000-0000-0000-0000-000010000000"?
+        "        !<rampshanneìdata>
+                    <rampchannel type="Linear" id="8874e7de-635d-4fee-9906-bbf928937e2f" selected="True">
+                      <keyframes>Š                        <keyframe time="0" value="10" />
                         <keyframe time="1" value="10" />
                       </keyframes>
                     </rampchannel>

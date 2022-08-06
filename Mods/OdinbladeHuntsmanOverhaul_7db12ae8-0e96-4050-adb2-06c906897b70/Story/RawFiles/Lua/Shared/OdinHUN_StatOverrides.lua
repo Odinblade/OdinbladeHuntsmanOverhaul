@@ -1,15 +1,13 @@
-local function SessionLoading()
-    Ext.Print("[OdinHUN:Bootstrap.lua] Session is loading.")
-end
+Ext.Require("Shared/OdinHUN_SharedData.lua")
 
--- Credit to LaughingLeader/Norbyte for providing the base of this function
-local function OverrideStats()
+-- Credit: LaughingLeader and Norbyte for base of this function
+function OverrideStats()
     local total_changes = 0
     local total_stats = 0
     local debug_print = false
     local description = ""
 
-    for statname,overrides in pairs(OdinHUN_StatOverrides) do
+    for statname,overrides in pairs(HuntsmanOverhaul_StatOverrides) do
         for property,value in pairs(overrides) do
             if debug_print then Ext.Print("[OdinHUN:Bootstrap.lua] Overriding stat: " .. statname .. " (".. property ..") = \"".. value .."\"") end
             if property == "SkillCustomDescription" then 
@@ -26,12 +24,3 @@ local function OverrideStats()
 
     Ext.Print("[OdinHUN:Bootstrap.lua] Changed ("..tostring(total_changes)..") properties in ("..tostring(total_stats)..") stats.")
 end
-
-local ModuleLoading = function ()
-    Ext.Print("[OdinHUN:Bootstrap.lua] Module is loading.")
-    OverrideStats()
-end
-
-Ext.Require("7db12ae8-0e96-4050-adb2-06c906897b70", "OdinHUN_StatOverrides.lua")
-Ext.RegisterListener("ModuleLoading", ModuleLoading)
-Ext.RegisterListener("SessionLoading", SessionLoading)

@@ -2300,7 +2300,7 @@
           </modules>
         </component>
       </track>
-      <track name="Track" muted="False" locked="False" mutestateoverride="None">
+      <track name="Track" muted="True" locked="False" mutestateoverride="None">
         <component class="Model" start="0" end="0.9999999" instancename="d291584f-dc03-492f-9aeb-ad104c9c3a18">
           <properties>
             <property id="ef1d7d1e-02b6-4548-80d9-5ef2fbcda237">

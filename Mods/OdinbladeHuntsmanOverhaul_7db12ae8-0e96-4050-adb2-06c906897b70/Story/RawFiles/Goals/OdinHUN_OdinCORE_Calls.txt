@@ -2,6 +2,9 @@ Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
 //DB_OBCORE_EnemySkill_Pair("","");
+DB_OBCORE_EnemySkill_Pair("Projectile_EnemySnipe", "Shout_OdinHUN_Enemy_NowhereToHide");
+DB_OBCORE_EnemySkill_Pair("Projectile_EnemyMark", "Shout_OdinHUN_Enemy_NowhereToHide");
+DB_OBCORE_EnemySkill_Pair("Projectile_EnemyPiercingShot", "Shout_OdinHUN_Enemy_NowhereToHide");
 
 // DB_OBCORE_CustomVendor((GUIDSTRING)_Vendor, (STRING)_Dialog);
 //Fort Joy

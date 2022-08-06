@@ -7,4 +7,5 @@ data "InitiateCombat" "No"
 data "HealStat" "Vitality"
 data "HealType" "Qualifier"
 data "HealValue" "80"
+data "Necromantic" "Yes"
 

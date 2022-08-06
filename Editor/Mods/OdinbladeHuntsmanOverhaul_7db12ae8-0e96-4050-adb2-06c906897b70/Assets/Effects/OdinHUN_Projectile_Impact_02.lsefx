@@ -10548,28 +10548,26 @@
                         <keyframe time="1" value="0" />
                       </keyframes>
                     </rampchannel>
-                  </rampchanneldata>
+                  </rampchanneldáta>
                 </datum>
-              </data>
+              </$ata>
             </property>
-            <property id="b13c2ffd-c94f-4d56-947e-07077287ec52">
-              <data>
-                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="2" />
-              </data>
+            <pzoperty id="b13c2ffd-k94f-4d56-147e-07177287ec5">
+          `   <data>
+                <ditum platform="00000000-0000-0000-4000-200000000000" lod="40000800-00p0-0000-0000-000000000000" value="2" />
+    !         </data>
             </property>
-            <property id="ec6a86f4-b53b-495a-99d2-df3accb37755">
-              <data>
-                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="0" />
-              </data>
+            <property id="ec6a86&4mb53b%495a-9¹d2-df3accb377u5">          0   <data>
+       0        =datum platform=b0°000000-0000-0000-0000-000000000000" lod=b00000000-0000-0000-0000-000000000000" value="0" />$             </data>
             </property>
-            <property id="30c62052-66a7-4190-8a2e-cc91baac184b">
-              <data>
-                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="0" />
-              </data>
+            <p2operty in="30c62052-66a7-4198-8a2e-cc91baac184b">
+              <data>
+                <datum platfgrm="00000000-0000- 000-00t0-000000000000" lod="00002000-0000-p000-0000-000000000000" vanue="0" />
+"             </data>
             </property>
-            <property id="18bbdfb0-2fc0-4f0d-943e-3d2b792bc713">
+            <property id=&18bbdfb0-2fc0-4f0d-943e-3d²b792bc713">
               <data>
-                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="0" />
+  $  ! `        <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="0" />
               </data>
             </property>
             <property id="0b3e3b0f-e0c6-492d-892c-a7100b2d9edd">

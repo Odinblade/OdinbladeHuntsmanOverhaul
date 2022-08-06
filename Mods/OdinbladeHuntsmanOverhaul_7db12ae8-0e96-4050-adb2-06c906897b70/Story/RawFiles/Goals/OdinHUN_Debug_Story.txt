@@ -19,13 +19,30 @@ CharacterAddGold(_Char, 100000);
 CharacterAddSkill(_Char, "Jump_TacticalRetreat");
 
 CharacterAddSkill(_Char, "Projectile_ArrowSpray");
+CharacterAddSkill(_Char, "Projectile_BallisticShot");
 CharacterAddSkill(_Char, "Projectile_Mark");
 CharacterAddSkill(_Char, "Projectile_Multishot");
+CharacterAddSkill(_Char, "Projectile_PiercingShot");
 CharacterAddSkill(_Char, "Projectile_PinDown");
-CharacterAddSkill(_Char, "Projectile_OdinHUN_HeavyShot");
+CharacterAddSkill(_Char, "Projectile_Snipe");
+CharacterAddSkill(_Char, "Projectile_OdinHUN_HuntersTrap");
+CharacterAddSkill(_Char, "Projectile_OdinHUN_PowerShot");
+CharacterAddSkill(_Char, "Projectile_OdinHUN_TheHunt");
+
+CharacterAddSkill(_Char, "ProjectileStrike_RainOfArrows");
+
+CharacterAddSkill(_Char, "Shout_OdinHUN_Camouflage");
+CharacterAddSkill(_Char, "Shout_OdinHUN_NaturalBond");
+CharacterAddSkill(_Char, "Shout_OdinHUN_NowhereToHide");
+CharacterAddSkill(_Char, "Shout_OdinHUN_PrimalRoar");
+CharacterAddSkill(_Char, "Shout_OdinHUN_SavvyHunter");
+CharacterAddSkill(_Char, "Shout_OdinHUN_SeekingArrows");
 
 CharacterAddSkill(_Char, "Target_ElementalArrowheads");
+CharacterAddSkill(_Char, "Target_Farsight");
 CharacterAddSkill(_Char, "Target_FirstAid");
+CharacterAddSkill(_Char, "Target_ReactionShot");
+CharacterAddSkill(_Char, "Target_OdinHUN_Summon_AnimalCompanion");
 
 IF
 TextEventSet("odinblade_luareset")
