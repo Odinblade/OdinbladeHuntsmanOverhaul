@@ -13,6 +13,10 @@ NOT DB_OBHUN_SeekingArrows(_Target, _Dealer)
 AND
 DB_OBHUN_EA_HitType((INTEGER)_CompatibleHitType)
 AND
+NRD_HitGetInt(_HitHandle, "FromShacklesOfPain", 0)
+AND
+NRD_HitGetInt(_HitHandle, "Reflection", 0)
+AND
 NRD_HitGetInt(_HitHandle, "HitType", _CompatibleHitType)
 AND
 GetDistanceTo(_Dealer, _Target, _Distance)

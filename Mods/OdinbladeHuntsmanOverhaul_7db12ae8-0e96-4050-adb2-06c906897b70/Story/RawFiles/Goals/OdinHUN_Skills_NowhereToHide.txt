@@ -12,6 +12,17 @@ DB_OBHUN_NTH_Users(_Hunter)
 THEN
 DB_OBHUN_NTH_TEMP_FARTHEST(_Hunter, _Hunter, 0.0);
 SetStoryEvent(_Hunter, "OBHUN_NTH_START");
+
+IF
+ObjectEnteredCombat((CHARACTERGUID)_Hunter, _Combat)
+AND
+NOT DB_IsPlayer(_Hunter)
+AND
+CharacterHasSkill(_Hunter, "Shout_OdinHUN_Enemy_NowhereToHide", 1)
+THEN
+DB_OBHUN_NTH_Users(_Hunter);
+DB_OBHUN_NTH_TEMP_FARTHEST(_Hunter, _Hunter, 0.0);
+SetStoryEvent(_Hunter, "OBHUN_NTH_START");
 //END_REGION
 
 //REGION Main logic

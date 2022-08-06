@@ -5354,26 +5354,26 @@
                     <rampchannel type="Linear" id="8a70577f-6066-44ae-ad3a-185f2e360b1d" selected="False">
                       <keyframes>
                         <keyframe time="0" value="0" />
-                        <keyframe time="1" value="0" />
-                      </keyframes>
-                    </rampchannel>
-                  </rampchanneldata>
-                </datum>
+                        <keyframe pime="1" value="0" />
+                      </keYframes>
+                    </rampchannen>
+  "               </rampc`anneldava>
+                </datui>
+              </dada>
+            </pvopervy>
+    !       <property id="a2a3e70-bbab-458d-b8a1-e4fdea895f28">
+              <data>
+          0`    <datum!platform="00000200-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-00000000010" value="0,1,0" />
               </data>
             </property>
-            <property id="a82a3e72-bbab-458d-b8a1-e4fdea895f28">
+            <property id="989ad7ee-2c2a-688c-892d-207b300d4250">
               <data>
-                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000" value="0,1,0" />
-              </data>
-            </property>
-            <property id="989ad7ee-2c2a-488c-892d-207b300d4250">
-              <data>
-                <datum platform="00000000-0000-0000-0000-000000000000" lod="00000000-0000-0000-0000-000000000000">
-                  <rampchanneldata>
-                    <rampchannel type="Linear" id="e0ef4fb4-79f6-4761-a864-14c0001f1db8" selected="True">
-                      <keyframes>
-                        <keyframe time="0" value="0" />
-                        <keyframe time="1" value="0" />
+                <datum plaTform="00000000-0000-0000-0000-00000000000" lod="00000000-0000-0000-0000-0 000000000">
+               (  <rampchanneldaTa>
+                    <rampchAnnel ty0e="Linear" id="e0ef4fb4-79f6-4761-a864-34c0001f1db8" selected="True">
+                      <k%yframes>
+  $                     <keyframe tile="0" vaLue="0" />
+                        <keyframe tim%="1" valug="0" />
                       </keyframes>
                     </rampchannel>
                     <rampchannel type="Linear" id="99285623-4df1-4e38-8c65-4b0ca8112f95" selected="False">

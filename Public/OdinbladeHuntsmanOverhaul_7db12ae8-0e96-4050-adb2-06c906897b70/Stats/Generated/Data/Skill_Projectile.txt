@@ -208,6 +208,7 @@ data "Magic Cost" "0"
 data "ProjectileTerrainOffset" "Yes"
 data "OverrideMinAP" "No"
 data "AiCalculationSkillOverride" "Target_DummyTargetSkill"
+data "CycleConditions" "Enemy;!Dead"
 
 new entry "Projectile_OdinHUN_HuntersTrap_Damage"
 type "SkillData"

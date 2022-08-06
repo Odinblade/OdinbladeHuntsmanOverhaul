@@ -3,16 +3,64 @@ SubGoalCombiner SGC_AND
 INITSECTION
 
 KBSECTION
+// Grenade refund - max 2 per turn
 IF
 CharacterUsedSkill(_Character, _SkillId, _, _)
 AND
 HasActiveStatus(_Character, "OdinHUN_SAVVYHUNTER", 1)
 AND
 DB_OBHUN_CraftedGrenadeSkill(_SkillId, _ItemTemplate, 1)
+AND
+DB_OBHUN_SavvyHunter_GrenadeRefund(_Character, _Count)
+AND
+_Count < 2
+AND
+IntegerSum(_Count, 1, _NewCount)
+AND
+IntegerSubtract(2, _NewCount, _RemainingInt)
+AND
+IntegertoString(_RemainingInt, _CounterString)
+AND
+StringConcatenate("Grenade refunded! Remaining uses this turn:", _CounterString, _StatusTextString)
 THEN
-CharacterStatusText(_Character, "Grenade refunded!");
+NOT DB_OBHUN_SavvyHunter_GrenadeRefund(_Character, _Count);
+DB_OBHUN_SavvyHunter_GrenadeRefund(_Character, _NewCount);
+CharacterStatusText(_Character, _StatusTextString);
 ItemTemplateAddTo(_ItemTemplate, _Character, 1);
 
+// Set initial refresh counter to 0 on status apply/refresh
+IF
+CharacterStatusApplied(_Character, "OdinHUN_SAVVYHUNTER", _)
+THEN
+DB_OBHUN_SavvyHunter_GrenadeRefund(_Character, 0);
+
+IF
+CharacterStatusRemoved(_Character, "OdinHUN_SAVVYHUNTER", _)
+AND
+DB_OBHUN_SavvyHunter_GrenadeRefund(_Character, _Count)
+THEN
+NOT DB_OBHUN_SavvyHunter_GrenadeRefund(_Character, _Count);
+
+// Init refund counter on turn start
+IF
+ObjectTurnStarted((CHARACTERGUID)_Character)
+AND
+HasActiveStatus(_Character, "OdinHUN_SAVVYHUNTER", 1)
+THEN
+DB_OBHUN_SavvyHunter_GrenadeRefund(_Character, 0);
+
+// Remove refund counter on turn end
+IF
+ObjectTurnEnded((CHARACTERGUID)_Character)
+AND
+HasActiveStatus(_Character, "OdinHUN_SAVVYHUNTER", 1)
+AND
+DB_OBHUN_SavvyHunter_GrenadeRefund(_Character, _Count)
+THEN
+NOT DB_OBHUN_SavvyHunter_GrenadeRefund(_Character, _Count);
+
+
+// Trap cooldown reduction
 IF
 CharacterUsedSkill(_Character, "Shout_OdinHUN_SavvyHunter", _, _)
 AND
@@ -21,6 +69,7 @@ THEN
 CharacterRemoveSkill(_Character, "Projectile_OdinHUN_HuntersTrap");
 CharacterAddSkill(_Character, "Projectile_OdinHUN_HuntersTrap", 0);
 
+// Crafted arrow boost
 IF
 NRD_OnHit(_Target, _Dealer, _, _HitHandle)
 AND
@@ -41,8 +90,6 @@ AND
 RealProduct(_RealDamage, 1.25, _RealAddDamage)
 AND
 Integer(_RealAddDamage, _FinalDamage)
-AND
-StringConcatenate("[OdinHUN:Story] Expert Hunter crafted amp: ", _SkillId, _DebugMsg)
 THEN
 NRD_HitStatusClearDamage(_Target, _HitHandle, _PreDamageType);
 NRD_HitStatusAddDamage(_Target, _HitHandle, _PreDamageType, _FinalDamage);
