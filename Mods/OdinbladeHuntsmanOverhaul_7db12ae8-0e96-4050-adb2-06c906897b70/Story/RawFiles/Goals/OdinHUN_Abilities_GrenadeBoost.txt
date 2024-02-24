@@ -30,22 +30,15 @@ AND
 RealSum(_GrenadeMultiplierRAW, 1.0, _GrenadeMultiplier)
 AND
 RealProduct(_GrenadeMultiplier, _RealDamage, _TotalDamage)
-// AND
-// RealSum(_ExtraDamage, _RealDamage, _TotalDamage)
 AND
 Integer(_TotalDamage, _FinalDamage)
 AND
 NRD_IntegerToString(_Damage, _DebugPreDamage)
 AND
 NRD_IntegerToString(_FinalDamage, _DebugTotalDamage)
-// AND
-// NRD_RealToString(_TotalDamage, _DebugTotalDamage)
 THEN
 NRD_HitStatusClearDamage(_Target, _HitHandle, _DamageType);
 NRD_HitStatusAddDamage(_Target, _HitHandle, _DamageType, _FinalDamage);
-// NRD_DebugLog("[OdinHUN:Story] Grenade amp success!");
-// NRD_DebugLog(_DebugPreDamage);
-// NRD_DebugLog(_DebugTotalDamage);
 EXITSECTION
 
 ENDEXITSECTION

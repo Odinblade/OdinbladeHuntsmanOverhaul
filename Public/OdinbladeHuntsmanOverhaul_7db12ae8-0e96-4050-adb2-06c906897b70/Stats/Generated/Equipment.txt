@@ -10,6 +10,10 @@ new equipment "Summon_OdinHUN_Deer_Equip"
 add equipmentgroup
 add equipment entry "_Summon_OdinHUN_Deer"
 
+new equipment "Summon_OdinHUN_SoulWolf_Equip"
+add equipmentgroup
+add equipment entry "_Summon_OdinHUN_SoulWolf"
+
 new equipment "OdinHUN_Class_Tracker_Preview"
 add equipmentgroup
 add equipment entry "ARM_OdinHUN_Tracker_Helmet"

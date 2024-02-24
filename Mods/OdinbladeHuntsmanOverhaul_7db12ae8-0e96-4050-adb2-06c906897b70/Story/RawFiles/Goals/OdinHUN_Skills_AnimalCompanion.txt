@@ -40,6 +40,8 @@ CharacterAddSkill((CHARACTERGUID)_Owner, "Shout_OdinHUN_Dismiss_AnimalCompanion"
 // Removes the Dismiss Animal Companion innate skill when the user deactivates the Animal Companion skill
 IF
 SkillDeactivated(_Owner, "Target_OdinHUN_Summon_AnimalCompanion")
+AND
+CharacterHasSkill(_Owner, "Target_OdinHUN_Summon_SoulWolf", 0)
 THEN
 CharacterRemoveSkill((CHARACTERGUID)_Owner, "Shout_OdinHUN_Dismiss_AnimalCompanion");
 PROC_OBHUN_ClearAnimalCompanion(_Owner);
@@ -83,7 +85,6 @@ _SumPoints < 10
 THEN
 StopLoopEffect(_FxHandle);
 PROC_OBHUN_ClearAnimalCompanion(_Owner);
-// RemoveStatus(_Owner, "OdinHUN_NATURALBOND");
 ObjectClearFlag(_Owner, _Flag);
 PROC_OBHUN_AnimalCompanion_Summon(_Owner, _SmallTemplate);
 
@@ -101,7 +102,6 @@ _SumPoints > 9
 THEN
 StopLoopEffect(_FxHandle);
 PROC_OBHUN_ClearAnimalCompanion(_Owner);
-// RemoveStatus(_Owner, "OdinHUN_NATURALBOND");
 ObjectClearFlag(_Owner, _Flag);
 PROC_OBHUN_AnimalCompanion_Summon(_Owner, _SwoleTemplate);
 
@@ -127,7 +127,6 @@ ProcObjectTimer(_Owner, "OdinHUN_AC_WHISTLE_SFX", 500);
 PROC_OBHUN_NaturalBond_Apply(_Summon, _Owner);
 NOT DB_OBHUN_AnimalCompanion_Prepare(_Owner, _X, _Y, _Z, _FxHandle);
 DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon);
-// NRD_DebugLog("[OdinHUN:Story] Animal Companion successfully summoned");
 
 PROC
 ProcObjectTimerFinished(_Owner, "OdinHUN_AC_WHISTLE_ANIMATION")
@@ -158,11 +157,9 @@ AND
 GetPosition((GUIDSTRING)_Summon, _X, _Y, _Z)
 THEN
 ClearTag(_Owner, "ODINHUN_ANIMALCOMPANION");
-// NRD_DebugLog("[OdinHUN:Story] PROC_OBHUN_ClearAnimalCompanion Tag removed");
 NOT DB_OBHUN_AnimalCompanion_Instance(_Owner, (CHARACTERGUID)_Summon);
 PlayEffectAtPosition("RS3_FX_Skills_Totem_Impact_Summon_Poison_01", _X, _Y, _Z);
 SetVisible(_Summon, 0);
-// RemoveStatus(_Owner, "OdinHUN_NATURALBOND");
 CharacterDie((CHARACTERGUID)_Summon, 0, "None");
 
 // When player summons a new AC, play VFX and hide old summon before it is removed (death animation workaround)
@@ -187,9 +184,7 @@ GetPosition(_Summon, _X, _Y, _Z)
 THEN
 PlayEffectAtPosition("RS3_FX_Skills_Totem_Impact_Summon_Poison_01", _X, _Y, _Z);
 SetVisible(_Summon, 0);
-// ClearTag(_Owner, "ODINHUN_ANIMALCOMPANION");
 CharacterSetHitpointsPercentage(_Summon, 0.0);
-// NRD_DebugLog("[OdinHUN:Story] PROC_OBHUN_ClearFlag_AnimalCompanion Tag removed");
 
 // AC died and cleanup is needed
 IF
@@ -218,10 +213,7 @@ CharacterGetOwner(_Summon, _Owner)
 AND
 GetPosition(_Summon, _X, _Y, _Z)
 THEN
-// PlayEffectAtPosition("RS3_FX_Skills_Totem_Impact_Summon_Poison_01", _X, _Y, _Z);
-// ClearTag(_Owner, "ODINHUN_ANIMALCOMPANION");
 SetVisible(_Summon, 0);
-// NOT DB_OBHUN_AnimalCompanion_Instance(_Owner, _Summon);
 //END_REGION
 
 //REGION Other interactions

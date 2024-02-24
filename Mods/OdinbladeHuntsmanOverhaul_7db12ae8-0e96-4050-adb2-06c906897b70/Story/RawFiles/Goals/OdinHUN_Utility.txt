@@ -185,7 +185,6 @@ ObjectGetFlag(_Vendor, "OdinHUN_DIALOG", 0)
 THEN
 DB_Dialogs((CHARACTERGUID)_Vendor, "OdinHUN_Vendor");
 ObjectSetFlag((GUIDSTRING)_Vendor, "OdinHUN_DIALOG");
-// NRD_DebugLog("[OdinHUN:Story] Setting vendor dialog");
 //END_REGION
 
 //REGION Apply Elemental Arrowheads damage
@@ -198,17 +197,6 @@ _PreDamageType != "Piercing"
 THEN
 NRD_HitClearAllDamage(_HitHandle);
 NRD_HitAddDamage(_HitHandle, _ConvertedDamageType, _Damage);
-
-// //Crit roll, used for status hits, e.g. Barrage bonus. TODO MIGHT BE UNUSED!
-// PROC
-// OBHUN_ApplyEAHit((INTEGER64)_HitHandle, (STRING)_PreDamageType, (STRING)_ConvertedDamageType, (INTEGER)_Damage, (INTEGER)_IsStatus, (GUIDSTRING)_Target, (GUIDSTRING)_Dealer)
-// AND
-// _IsStatus == 1
-// AND
-// _PreDamageType != "Piercing"
-// THEN
-// NRD_HitClearAllDamage(_HitHandle);
-// NRD_HitAddDamage(_HitHandle, _ConvertedDamageType, _Damage);
 //END_REGION
 
 //REGION Excluded skill status flag
@@ -250,10 +238,6 @@ NOT DB_OBHUN_Elemental_Arrowhead_Users((CHARACTERGUID)_Dealer)
 THEN
 DB_OBHUN_DeterminedType_Temp(_Dealer, _PreDamageType);
 DB_NOOP(1);
-
-//REGION
-
-//END_REGION
 EXITSECTION
 
 ENDEXITSECTION

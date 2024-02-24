@@ -10,7 +10,6 @@ THEN
 DB_OBHUN_Trap_Spawn(_Character, _X, _Y, _Z);
 ProcObjectTimer(_Character, "OdinHUN_TRAP_SPAWN", 2000);
 ApplyStatus(_Character, "OdinNECRO_DEBUG_AP_ADD", 0.0);
-// NRD_DebugLog("[OdinHUN:Story] Trap thrown");
 
 PROC
 ProcObjectTimerFinished((CHARACTERGUID)_Character, "OdinHUN_TRAP_SPAWN")
@@ -21,7 +20,6 @@ CreateItemTemplateAtPosition("e805d0d2-a522-4189-85dc-7d45b724f77e", _X, _Y, _Z,
 AND
 CharacterGetLevel(_Character, _Level)
 THEN
-// NRD_DebugLog("[OdinHUN:Story] Trap spawned");
 ApplyStatus(_Character, "OdinNECRO_DEBUG_AP_REMOVE", 0.0);
 NOT DB_OBHUN_Trap_Spawn(_Character, _X, _Y, _Z);
 ItemLevelUpTo(_Trap, _Level);
@@ -37,7 +35,6 @@ QRY_OBHUN_Adaption(_TrapOwner, _Status)
 THEN
 DB_OBHUN_Trap_Active(_TrapOwner, _Trap, _DamageStatus, _VFX);
 ApplyStatus(_Trap, _OverlayStatus, -1.0);
-// NRD_DebugLog(_DamageStatus);
 
 PROC
 OBHUN_Trap_PrepareDetonation((CHARACTERGUID)_TrapOwner, (ITEMGUID)_Trap)
@@ -55,7 +52,6 @@ DB_OBHUN_Trap_Active(_TrapOwner, _Trap, _DamageStatus, _VFX)
 AND
 DB_OBHUN_TrapImpactStatus(_DamageStatus, _UtilityStatus)
 THEN
-// NRD_DebugLog("[OdinHUN:Story] Trap damage status applied");
 ApplyStatus(_Target, _DamageStatus, 0.0, 1, _TrapOwner);
 ProcObjectTimer(_Trap, "OdinHUN_TRAP_CLEANUP", 500);
 
@@ -118,7 +114,6 @@ NRD_ProjectileSetVector3("TargetPosition", _X, _Y, _Z);
 NRD_ProjectileSetGuidString("Caster", _Trap);
 NRD_ProjectileSetGuidString("Target", _Trap);
 NRD_ProjectileLaunch();
-// NRD_DebugLog("[OdinHUN:Story] Trap exploded");
 PlayEffectAtPosition(_VFX, _X, _Y, _Z);
 
 IF
