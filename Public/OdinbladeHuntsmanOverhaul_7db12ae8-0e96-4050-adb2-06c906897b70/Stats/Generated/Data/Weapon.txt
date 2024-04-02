@@ -110,7 +110,7 @@ data "InventoryTab" "Hidden"
 
 new entry "_Summon_OdinHUN_Bear"
 type "Weapon"
-using "_NpcClubs"
+using "_NpcUnarmed"
 data "ItemGroup" "EMPTY"
 data "Act part" "0"
 data "IsTwoHanded" "No"
