@@ -9,6 +9,8 @@ NRD_OnPrepareHit(_Target, _Dealer, _Damage, _HitHandle)
 AND
 HasActiveStatus(_Dealer, "OdinHUN_SEEKINGARROWS", 1)
 AND
+_Target != _Dealer
+AND
 NOT DB_OBHUN_SeekingArrows(_Target, _Dealer)
 AND
 DB_OBHUN_EA_HitType((INTEGER)_CompatibleHitType)
@@ -18,10 +20,6 @@ AND
 NRD_HitGetInt(_HitHandle, "Reflection", 0)
 AND
 NRD_HitGetInt(_HitHandle, "HitType", _CompatibleHitType)
-AND
-GetDistanceTo(_Dealer, _Target, _Distance)
-AND
-_Distance >= 6
 THEN
 DB_OBHUN_SeekingArrows(_Target, (GUIDSTRING)_Dealer);
 
@@ -57,6 +55,8 @@ PROC_OBHUN_SeekingArrows_Launch(_Dealer, _Target, _dX, _Y, _dZ,_tX, _tY, _dZ);
 // Launch Seeking Arrows, dealing default damage (for skills with unique damage calculations)
 PROC
 PROC_OBHUN_SeekingArrows_Launch((GUIDSTRING)_Dealer, (GUIDSTRING)_Target, (REAL)_dX, (REAL)_Y, (REAL)_dZ, (REAL)_tX, (REAL)_tY, (REAL)_tZ)
+AND
+DB_OBHUN_SeekingArrows(_Target, _Dealer)
 THEN
 NRD_ProjectilePrepareLaunch();
 NRD_ProjectileSetString("SkillId", "Projectile_OdinHUN_SeekingArrows_Shot");
@@ -65,16 +65,7 @@ NRD_ProjectileSetVector3("TargetPosition", _tX, _tY, _tZ);
 NRD_ProjectileSetGuidString("Caster", _Dealer);
 NRD_ProjectileSetGuidString("Target", _Target);
 NRD_ProjectileLaunch();
-ProcObjectTimer(_Dealer, "OdinHUN_SA_GRACEPERIOD", 1750);
-// NRD_DebugLog("[OdinHUN:Story] Seeking Arrow launched");
-
-PROC
-ProcObjectTimerFinished(_Dealer, "OdinHUN_SA_GRACEPERIOD")
-AND
-DB_OBHUN_SeekingArrows(_Target, _Dealer)
-THEN
 NOT DB_OBHUN_SeekingArrows(_Target, _Dealer);
-// NRD_DebugLog("[OdinHUN:Story] Grace period ended");
 EXITSECTION
 
 ENDEXITSECTION

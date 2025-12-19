@@ -6,6 +6,9 @@ DB_OBCORE_EnemySkill_Pair("Projectile_EnemySnipe", "Shout_OdinHUN_Enemy_NowhereT
 DB_OBCORE_EnemySkill_Pair("Projectile_EnemyMark", "Shout_OdinHUN_Enemy_NowhereToHide");
 DB_OBCORE_EnemySkill_Pair("Projectile_EnemyPiercingShot", "Shout_OdinHUN_Enemy_NowhereToHide");
 
+DB_OBCORE_EnemySkill_Pair("Projectile_EnemyMultishot", "Shout_OdinHUN_Enemy_SeekingArrows");
+DB_OBCORE_EnemySkill_Pair("Projectile_EnemyRicochet", "Shout_OdinHUN_Enemy_SeekingArrows");
+
 // DB_OBCORE_CustomVendor((GUIDSTRING)_Vendor, (STRING)_Dialog);
 //Fort Joy
 DB_OBCORE_CustomVendor(OdinHUN_Trader_000_37da6d1b-e548-4792-8e1e-b91604be55f4, "OdinHUN_Vendor"); //Fort Joy - Square
