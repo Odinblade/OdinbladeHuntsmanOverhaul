@@ -1,11 +1,15 @@
 Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
+DB_OBHUN_HuntersTrap_Skill("Projectile_OdinHUN_HuntersTrap");
+DB_OBHUN_HuntersTrap_Skill("Projectile_OdinHUN_Enemy_HuntersTrap");
 
 KBSECTION
 //REGION Trap skills
 IF
-CharacterUsedSkillAtPosition(_Character, _X, _Y, _Z, "Projectile_OdinHUN_HuntersTrap", _, _)
+CharacterUsedSkillAtPosition(_Character, _X, _Y, _Z, _Skill, _, _)
+AND
+DB_OBHUN_HuntersTrap_Skill(_Skill)
 THEN
 DB_OBHUN_Trap_Spawn(_Character, _X, _Y, _Z);
 ProcObjectTimer(_Character, "OdinHUN_TRAP_SPAWN", 2000);

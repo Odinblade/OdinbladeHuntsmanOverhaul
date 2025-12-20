@@ -2,15 +2,19 @@ Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
 //DB_OBCORE_EnemySkill_Pair("","");
-DB_OBCORE_EnemySkill_Pair("Projectile_EnemySnipe", "Shout_OdinHUN_Enemy_NowhereToHide");
 DB_OBCORE_EnemySkill_Pair("Projectile_EnemyMark", "Shout_OdinHUN_Enemy_NowhereToHide");
 DB_OBCORE_EnemySkill_Pair("Projectile_EnemyPiercingShot", "Shout_OdinHUN_Enemy_NowhereToHide");
+DB_OBCORE_EnemySkill_Pair("Projectile_EnemySnipe", "Shout_OdinHUN_Enemy_NowhereToHide");
 
 DB_OBCORE_EnemySkill_Pair("Projectile_EnemyMultishot", "Shout_OdinHUN_Enemy_SeekingArrows");
 DB_OBCORE_EnemySkill_Pair("Projectile_EnemyRicochet", "Shout_OdinHUN_Enemy_SeekingArrows");
 
 DB_OBCORE_EnemySkill_Pair("Projectile_EnemyBallisticShot", "Projectile_OdinHUN_Enemy_PowerShot");
 DB_OBCORE_EnemySkill_Pair("Projectile_EnemySkyShot", "Projectile_OdinHUN_Enemy_PowerShot");
+
+DB_OBCORE_EnemySkill_Pair("Projectile_EnemyLaunchBomber", "Projectile_OdinHUN_Enemy_HuntersTrap");
+DB_OBCORE_EnemySkill_Pair("Projectile_EnemyLaunchExplosiveTrap", "Projectile_OdinHUN_Enemy_HuntersTrap");
+DB_OBCORE_EnemySkill_Pair("Projectile_EnemyPinDown", "Projectile_OdinHUN_Enemy_HuntersTrap");
 
 // DB_OBCORE_CustomVendor((GUIDSTRING)_Vendor, (STRING)_Dialog);
 //Fort Joy
