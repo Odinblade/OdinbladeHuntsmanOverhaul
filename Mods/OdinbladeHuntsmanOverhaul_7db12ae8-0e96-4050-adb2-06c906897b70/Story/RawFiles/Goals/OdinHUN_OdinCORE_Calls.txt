@@ -1,21 +1,6 @@
 Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
-//DB_OBCORE_EnemySkill_Pair("","");
-DB_OBCORE_EnemySkill_Pair_Level("Projectile_EnemyMark", "Shout_OdinHUN_Enemy_NowhereToHide", 6);
-DB_OBCORE_EnemySkill_Pair_Level("Projectile_EnemyPiercingShot", "Shout_OdinHUN_Enemy_NowhereToHide", 6);
-DB_OBCORE_EnemySkill_Pair_Level("Projectile_EnemySnipe", "Shout_OdinHUN_Enemy_NowhereToHide", 6);
-
-DB_OBCORE_EnemySkill_Pair("Projectile_EnemyMultishot", "Shout_OdinHUN_Enemy_SeekingArrows");
-DB_OBCORE_EnemySkill_Pair("Projectile_EnemyRicochet", "Shout_OdinHUN_Enemy_SeekingArrows");
-
-DB_OBCORE_EnemySkill_Pair_Level("Projectile_EnemyBallisticShot", "Projectile_OdinHUN_Enemy_PowerShot", 4);
-DB_OBCORE_EnemySkill_Pair_Level("Projectile_EnemySkyShot", "Projectile_OdinHUN_Enemy_PowerShot", 4);
-
-DB_OBCORE_EnemySkill_Pair("Projectile_EnemyLaunchBomber", "Projectile_OdinHUN_Enemy_HuntersTrap");
-DB_OBCORE_EnemySkill_Pair("Projectile_EnemyLaunchExplosiveTrap", "Projectile_OdinHUN_Enemy_HuntersTrap");
-DB_OBCORE_EnemySkill_Pair("Projectile_EnemyPinDown", "Projectile_OdinHUN_Enemy_HuntersTrap");
-
 // DB_OBCORE_CustomVendor((GUIDSTRING)_Vendor, (STRING)_Dialog);
 //Fort Joy
 DB_OBCORE_CustomVendor(OdinHUN_Trader_000_37da6d1b-e548-4792-8e1e-b91604be55f4, "OdinHUN_Vendor"); //Fort Joy - Square
@@ -31,7 +16,34 @@ DB_OBCORE_CustomVendor(OdinHUN_Trader_000_a29391e5-59c0-4be0-b42a-810995dcd5f1, 
 
 //Arx
 DB_OBCORE_CustomVendor(OdinHUN_Trader_000_fcd2e068-756f-4975-9fa9-b1d27d00159b, "OdinHUN_Vendor"); //Arx Square
+
 KBSECTION
+IF
+GameStarted(_, _)
+THEN
+PROC_OBHUN_ConfigureEnemySkills();
+
+IF
+SavegameLoaded(_,_,_,_)
+THEN
+PROC_OBHUN_ConfigureEnemySkills();
+
+PROC
+PROC_OBHUN_ConfigureEnemySkills()
+THEN
+PROC_OBCORE_AddEnemySkillEntry("Projectile_EnemyMark", "Shout_OdinHUN_Enemy_NowhereToHide", 6);
+PROC_OBCORE_AddEnemySkillEntry("Projectile_EnemyPiercingShot", "Shout_OdinHUN_Enemy_NowhereToHide", 6);
+PROC_OBCORE_AddEnemySkillEntry("Projectile_EnemySnipe", "Shout_OdinHUN_Enemy_NowhereToHide", 6);
+
+PROC_OBCORE_AddEnemySkillEntry("Projectile_EnemyMultishot", "Shout_OdinHUN_Enemy_SeekingArrows");
+PROC_OBCORE_AddEnemySkillEntry("Projectile_EnemyRicochet", "Shout_OdinHUN_Enemy_SeekingArrows");
+
+PROC_OBCORE_AddEnemySkillEntry("Projectile_EnemyBallisticShot", "Projectile_OdinHUN_Enemy_PowerShot", 4);
+PROC_OBCORE_AddEnemySkillEntry("Projectile_EnemySkyShot", "Projectile_OdinHUN_Enemy_PowerShot", 4);
+
+PROC_OBCORE_AddEnemySkillEntry("Projectile_EnemyLaunchBomber", "Projectile_OdinHUN_Enemy_HuntersTrap");
+PROC_OBCORE_AddEnemySkillEntry("Projectile_EnemyLaunchExplosiveTrap", "Projectile_OdinHUN_Enemy_HuntersTrap");
+PROC_OBCORE_AddEnemySkillEntry("Projectile_EnemyPinDown", "Projectile_OdinHUN_Enemy_HuntersTrap");
 
 EXITSECTION
 
