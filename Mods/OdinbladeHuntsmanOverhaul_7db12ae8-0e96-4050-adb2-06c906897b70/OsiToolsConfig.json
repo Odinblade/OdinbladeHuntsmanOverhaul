@@ -1,5 +1,5 @@
 {
-    "RequiredExtensionVersion": 43,
+    "RequiredExtensionVersion": 60,
     "ModTable": "OdinHUN",
     "FeatureFlags": [
         "OsirisExtensions",
