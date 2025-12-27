@@ -1,13 +1,10 @@
 Ext.Require("Server/OdinHUN_SeekingArrows.lua")
 
-local function SessionLoading()
-    Ext.Print("[OdinHUN:BootstrapServer.lua] Session is loading.")
-end
+Ext.Events.SessionLoading:Subscribe(function (e)
+    print("[OdinHUN:BootstrapServer.lua] Session is loading.")
+end)
 
-local ModuleLoading = function ()
-    Ext.Print("[OdinHUN:BootstrapServer.lua] Module is loading.")
+Ext.Events.ModuleLoading:Subscribe(function (e)
+    print("[OdinHUN:BootstrapServer.lua] Module is loading.")
     OverrideStats()
-end
-
-Ext.RegisterListener("ModuleLoading", ModuleLoading)
-Ext.RegisterListener("SessionLoading", SessionLoading)
+end)
