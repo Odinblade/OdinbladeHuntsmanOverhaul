@@ -1,3 +1,5 @@
+Ext.Require("Server/OdinHUN_SeekingArrows.lua")
+
 local function SessionLoading()
     Ext.Print("[OdinHUN:BootstrapServer.lua] Session is loading.")
 end
