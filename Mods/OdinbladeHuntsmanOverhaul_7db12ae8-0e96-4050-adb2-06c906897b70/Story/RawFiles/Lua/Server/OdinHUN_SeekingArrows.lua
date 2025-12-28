@@ -1,15 +1,17 @@
 Ext.Require("Shared/OdinHUN_Utils.lua")
 
 Ext.Events.StatusHitEnter:Subscribe(function (e)
+    local casterObject = Ext.Entity.GetCharacter(e.Hit.StatusSourceHandle)
+    if casterObject == nil then
+        return
+    end
+
     local skillId = GetSkillEntryName(e.Hit.SkillId)
 
     -- End processing if the hit is already coming from a Seeking Arrows hit
     if skillId == "Projectile_OdinHUN_SeekingArrows_Shot" then
         return
     end
-
-    local casterObject = Ext.Entity.GetCharacter(e.Hit.StatusSourceHandle)
-    local casterGuid = casterObject.MyGuid
 
     if casterObject:GetStatus("OdinHUN_SEEKINGARROWS") then
         local isBow = false
@@ -25,6 +27,7 @@ Ext.Events.StatusHitEnter:Subscribe(function (e)
         end
 
         if isBow or skillRangedRequirement then
+            local casterGuid = casterObject.MyGuid
             local x, y, z = GetPosition(casterGuid)
             local targetGuid = Ext.Entity.GetGameObject(e.Hit.TargetHandle).MyGuid
 
