@@ -33,7 +33,7 @@ Ext.Events.StatusHitEnter:Subscribe(function (e)
 
             NRD_ProjectilePrepareLaunch()
             NRD_ProjectileSetString("SkillId", "Projectile_OdinHUN_SeekingArrows_Shot")
-            NRD_ProjectileSetVector3("SourcePosition", x, y + 1, z)
+            NRD_ProjectileSetVector3("SourcePosition", x, y + 1.5, z)
             NRD_ProjectileSetGuidString("TargetPosition", targetGuid)
             NRD_ProjectileSetGuidString("Caster", casterGuid)
             NRD_ProjectileSetGuidString("Target", targetGuid)
