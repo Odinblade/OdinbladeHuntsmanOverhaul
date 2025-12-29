@@ -35,8 +35,9 @@ PROC_OBCORE_AddEnemySkillEntry("Projectile_EnemyMark", "Shout_OdinHUN_Enemy_Nowh
 PROC_OBCORE_AddEnemySkillEntry("Projectile_EnemyPiercingShot", "Shout_OdinHUN_Enemy_NowhereToHide", 6);
 PROC_OBCORE_AddEnemySkillEntry("Projectile_EnemySnipe", "Shout_OdinHUN_Enemy_NowhereToHide", 6);
 
-PROC_OBCORE_AddEnemySkillEntry("Projectile_EnemyMultishot", "Shout_OdinHUN_Enemy_SeekingArrows");
-PROC_OBCORE_AddEnemySkillEntry("Projectile_EnemyRicochet", "Shout_OdinHUN_Enemy_SeekingArrows");
+PROC_OBCORE_AddEnemySkillEntry("Projectile_EnemyMultishot", "Shout_OdinHUN_Enemy_SeekingArrows", 8);
+PROC_OBCORE_AddEnemySkillEntry("Projectile_EnemyRicochet", "Shout_OdinHUN_Enemy_SeekingArrows", 8);
+PROC_OBCORE_AddEnemySkillEntry("Projectile_EnemyBallisticShot", "Shout_OdinHUN_Enemy_SeekingArrows", 8);
 
 PROC_OBCORE_AddEnemySkillEntry("Projectile_EnemyBallisticShot", "Projectile_OdinHUN_Enemy_PowerShot", 4);
 PROC_OBCORE_AddEnemySkillEntry("Projectile_EnemySkyShot", "Projectile_OdinHUN_Enemy_PowerShot", 4);
