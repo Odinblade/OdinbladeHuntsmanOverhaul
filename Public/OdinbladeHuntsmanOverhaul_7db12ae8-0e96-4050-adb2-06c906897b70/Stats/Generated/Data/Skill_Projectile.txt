@@ -603,7 +603,7 @@ data "AIFlags" ""
 data "Memory Cost" "0"
 data "ActionPoints" "4"
 data "Cooldown" "3"
-data "Damage Multiplier" "225"
+data "Damage Multiplier" "235"
 
 new entry "Projectile_OdinHUN_Enemy_HuntersTrap"
 type "SkillData"
