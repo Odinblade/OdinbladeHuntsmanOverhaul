@@ -107,7 +107,7 @@ local function OdinHUN_BeginEACheck(skill, character, status)
             return GetEARange(character, skill, status)
         end
     end
-    return Game.Math.GetSkillDamageRange(character, skill, character.MainWeapon, character.OffHandWeapon)
+    return Game.Math.GetSkillDamageRange(character, skill)
 end
 
 Ext.Events.SkillGetDescriptionParam:Subscribe(function (e)
